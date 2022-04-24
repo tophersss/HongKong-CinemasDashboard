@@ -1,0 +1,60 @@
+.leaflet-container {
+  width: 50vw;
+  height: 95vh;
+}
+
+/* second to last <g> to skip the first <g> screen element */
+svg > g:nth-child(n+2) > a {
+  cursor: pointer;
+}
+
+svg > g:nth-child(n+2) > a > text {
+  fill:rgb(0, 0, 0) !important;
+}
+
+/* https://colordesigner.io/gradient-generator */
+.freq-lv0 {
+  fill: rgb(228, 247, 212) !important;
+  stroke: rgb(228, 247, 212) !important;
+}
+
+.freq-lv1 {
+  fill: rgb(239, 225, 186) !important;
+  stroke: rgb(239, 225, 186) !important;
+}
+
+.freq-lv2 {
+  fill: rgb(246, 202, 160) !important;
+  stroke: rgb(246, 202, 160) !important;
+}
+
+.freq-lv3 {
+  fill: rgb(250, 179, 135) !important;
+  stroke: rgb(250, 179, 135) !important;
+}
+
+.freq-lv4 {
+  fill: rgb(253, 155, 110) !important;
+  stroke: rgb(253, 155, 110) !important;
+}
+
+.freq-lv5 {
+  fill: rgb(253, 130, 86) !important;
+  stroke: rgb(253, 130, 86) !important;
+}
+
+.freq-lv6 {
+  fill: rgb(251, 103, 62) !important;
+  stroke: rgb(251, 103, 62) !important;
+}
+
+.freq-lv7 {
+  fill: rgb(248, 71, 38) !important;
+  stroke: rgb(248, 71, 38) !important;
+}
+
+.freq-lv8 {
+  fill: rgb(244, 14, 9) !important;
+  stroke: rgb(244, 14, 9) !important;
+}
+
