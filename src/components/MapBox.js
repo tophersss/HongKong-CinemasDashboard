@@ -75,7 +75,7 @@ const MapBox = ({ setActiveHouse, setActiveCinema, activeDistance, setActiveDist
   const groupedByChain = groupBy(CinemasGeoInfo, "chain");
 
   return (
-    <MapContainer center={[22.36797, 114.11453]} zoom={13}>
+    <MapContainer center={[22.36797, 114.11453]} zoom={13} zoomControl={false}>
     <LayersControl position="topright">
       <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
         <TileLayer

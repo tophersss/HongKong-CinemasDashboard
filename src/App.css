@@ -1,6 +1,13 @@
 .leaflet-container {
   width: 100%;
-  height: 60vh;
+  height: 100vh;
+  position: fixed;
+  /* z-index: -99; */
+}
+
+.infoPanel-left .MuiPaper-root {
+  top: 20px;
+  left: 15px;
 }
 
 tr {

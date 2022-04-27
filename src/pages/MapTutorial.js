@@ -22,7 +22,7 @@ import {
   FeatureGroup,
 } from "react-leaflet";
 import L from "leaflet";
-import { Grid } from "@mui/material";
+import { Card, Grid, Paper } from "@mui/material";
 import ChartTheatresSalesOverHours from "../components/ChartTheatresSalesOverHours";
 import ChartHousesSales from "../components/ChartHousesSales";
 import MapBox from "../components/MapBox";
@@ -73,32 +73,55 @@ const MapTutorial = () => {
   ]);
 
   return (
-    // <div>map</div>
-    <Grid
-      container
-      sx={{
-        height: "100%",
-      }}
-      alignItems="center"
-      justifyContent="space-between"
-    // spacing={10}
-    // rowSpacing={12}
-    >
-      <Grid item xs={12} md={6}>
-        <MapBox
-          setActiveHouse={setActiveHouse}
-          setActiveCinema={setActiveCinema}
-          activeDistance={activeDistance}
-          setActiveDistance={setActiveDistance}
-        />
-      </Grid>
-      <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
-        <ChartHousesSales
+    <>
+      <MapBox
+        setActiveHouse={setActiveHouse}
+        setActiveCinema={setActiveCinema}
+        activeDistance={activeDistance}
+        setActiveDistance={setActiveDistance}
+      />
+      <div className="infoPanel-left">
+        <Grid container>
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper sx={{ position: "relative", overflow: "hidden", minHeight: "100px", width: "30em", display: "inline-block" }}>
+              <ChartHousesSales
                 hoveredTheatre={activeCinema}
                 activeHouse={activeHouse}
                 setActiveHouse={setActiveHouse}
               />
-        {/* <Grid container direction="column" justifyContent="center">
+            </Paper>
+          </Grid>
+          {/* <Grid item xs={0} md={9}>
+          </Grid> */}
+        </Grid>
+      </div>
+      {/* <Paper sx={{ position: "relative", overflow: "hidden", minHeight: "100px", width: "20em", display: "inline-block" }}>
+        <ChartHousesSales
+          hoveredTheatre={activeCinema}
+          activeHouse={activeHouse}
+          setActiveHouse={setActiveHouse}
+        />
+      </Paper> */}
+
+      {/* <Grid
+        container
+        sx={{
+          height: "100%",
+        }}
+        alignItems="center"
+        justifyContent="space-between"
+      // spacing={10}
+      // rowSpacing={12}
+      >
+        <Grid item xs={12} md={6}>
+        </Grid>
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+          <ChartHousesSales
+            hoveredTheatre={activeCinema}
+            activeHouse={activeHouse}
+            setActiveHouse={setActiveHouse}
+          /> */}
+      {/* <Grid container direction="column" justifyContent="center">
           <Grid item>
             <h3> {activeCinema == null ? "-" : activeCinema} </h3>
           </Grid>
@@ -114,13 +137,14 @@ const MapTutorial = () => {
 
           </Grid>
         </Grid> */}
-      </Grid>
-      <Grid item xs={12} md={2}>
-        <div>
-          <h3>Thurd Item</h3>
-        </div>
-      </Grid>
-    </Grid>
+      {/* </Grid>
+        <Grid item xs={12} md={2}>
+          <div>
+            <h3>Thurd Item</h3>
+          </div>
+        </Grid>
+      </Grid> */}
+    </>
   );
 };
 
