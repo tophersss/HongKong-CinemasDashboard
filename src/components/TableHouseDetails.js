@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 const TableHouseDetails = ({ houseDetailsObj }) => {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{  }} aria-label="simple table">
         <TableBody>
           <TableRow
             key={"price"}

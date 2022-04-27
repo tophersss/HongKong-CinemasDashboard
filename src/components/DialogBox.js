@@ -11,7 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
-import { house_seatplans } from "../data/HouseSeatplans";
+// import { house_seatplans } from "../data/HouseSeatplans";
 
 // ! - use to create Legends for seatplan frequency chart
 const level_color_dict = [
@@ -104,9 +104,9 @@ export default function SeatplanDialog({ houseName }) {
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <Typography>Darker = More Popular</Typography>
-          <SVG
+          {/* <SVG
             src={house_seatplans.filter((d) => d.name === houseName)[0].svg}
-          />
+          /> */}
           <Grid container alignItems="center" spacing={0}>
             {level_color_dict.map((d) => (
               <Grid

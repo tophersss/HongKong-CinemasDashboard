@@ -45,7 +45,13 @@ const ChartHousesSales = ({ hoveredTheatre, activeHouse, setActiveHouse }) => {
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 400,
+      height: 300,
+      // width: "100%",
+      events: {
+        load() {
+          setTimeout(this.reflow.bind(this), 0);
+        },
+      },
     },
     title: {
       text: `Most Profittable Houses`,

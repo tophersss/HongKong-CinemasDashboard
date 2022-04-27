@@ -41,7 +41,7 @@ const ChartTheatresSalesOverHours = ({ hoveredTheatre }) => {
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 350,
+      height: 350, 
     },
     title: {
       text: `Number of Tickets Sold In A Day`,
