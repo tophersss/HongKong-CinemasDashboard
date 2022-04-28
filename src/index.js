@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import MapTutorial from "./pages/MapTutorial";
+import MapDashboard from "./pages/MapDashboard";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/map" element={<MapTutorial />} />
+          <Route path="/map" element={<MapDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -9,13 +9,13 @@ export const DarkTheme = createTheme({
     secondary: {
       main: "#e558fb",
     },
-    background: {
-      paper: "#FAFAD2",
-    },
-    text: {
-      primary: "#000000",
-      secondary: "rgba(255,255,255,0.91)",
-    },
+    // background: {
+    //   paper: "#FAFAD2",
+    // },
+    // text: {
+    //   primary: "#000000",
+    //   secondary: "rgba(255,255,255,0.91)",
+    // },
   },
   "& .MuiGrid-item": {
     paddingTop: "100px",

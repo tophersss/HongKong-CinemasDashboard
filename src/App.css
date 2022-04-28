@@ -8,6 +8,15 @@
 .infoPanel-left .MuiPaper-root {
   top: 20px;
   left: 15px;
+  text-align: center;
+}
+
+.cinemaAutoComplete textarea, .cinemaAutoComplete input {
+  width: 380px;
+  font-family: 'Ink Free', cursive;
+  font-size: x-large !important;
+  text-align: center;
+  font-weight: bold;
 }
 
 tr {

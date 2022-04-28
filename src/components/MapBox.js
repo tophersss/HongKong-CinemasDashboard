@@ -21,9 +21,12 @@ import {
   LayersControl,
   LayerGroup,
   FeatureGroup,
+  useMap,
+  useMapEvent
 } from "react-leaflet";
 import L from "leaflet";
 import { Container } from "@mui/material";
+import { act } from "@testing-library/react";
 
 
 const fillBlueOptions = { fillColor: "blue" };
@@ -59,8 +62,32 @@ const getIcon = (org) => {
   });
 };
 
-const MapBox = ({ setActiveHouse, setActiveCinema, activeDistance, setActiveDistance }) => {
+function SetViewOnClick() {
+  const map = useMapEvent('click', (e) => {
+    map.setView(e.latlng, map.getZoom(), {
+      animate: true,
+    })
+  })
 
+  return null
+}
+
+function HandleSetView({activeCinema}) {
+  const map = useMap();
+
+  useEffect(() => {
+    if ( activeCinema !== null && activeCinema !== undefined ) {
+      var cinema_obj = CinemasGeoInfo.filter((c) => c.name == activeCinema)[0];
+      map.setView([cinema_obj.latitude, cinema_obj.longitude], map.getZoom());
+    }
+  }, [activeCinema]);
+
+  return null;
+
+}
+
+const MapBox = ({ setActiveHouse, activeCinema, setActiveCinema, activeDistance, setActiveDistance }) => {
+  
   const addLine = (name) => {
     var cinema_obj = CinemasGeoInfo.filter((c) => c.name == name)[0];
     // console.log(cinema_obj[0].closest_exits);
@@ -76,6 +103,7 @@ const MapBox = ({ setActiveHouse, setActiveCinema, activeDistance, setActiveDist
 
   return (
     <MapContainer center={[22.36797, 114.11453]} zoom={13} zoomControl={false}>
+    <HandleSetView activeCinema={activeCinema} />
     <LayersControl position="topright">
       <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
         <TileLayer
