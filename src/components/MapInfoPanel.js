@@ -5,6 +5,7 @@ import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 
 const MapInfoPanel = ({ activeCinema, ActiveCinemaChangeHandler, activeHouse, setActiveHouse }) => {
 
+    // ! - options for Autocomplete drop-down list
     var cinemaNames = CinemasGeoInfo.map((d) => d.name);
 
     return (
@@ -13,27 +14,21 @@ const MapInfoPanel = ({ activeCinema, ActiveCinemaChangeHandler, activeHouse, se
                 <Autocomplete 
                     disablePortal
                     autoSelect
-                    
                     id="cinema-value" 
                     className="cinemaAutoComplete"
                     options={cinemaNames} 
-                    // renderInput={(params) => <TextField {...params} label="Cinema" variant="standard"/>}
                     renderInput={(params) => (
                         <div ref={params.InputProps.ref}>
                             <Input type="text" multiline={false} {...params.inputProps}></Input>
                         </div>
-                        // <div ref={params.InputProps.ref}>
-                        //   <input type="text" {...params.inputProps} />
-                        // </div>
                       )}
                     sx={{ paddingTop: "10px" }}
                     value={activeCinema === null ? null : activeCinema.name}
                     onChange={(event, newValue) => {
                         ActiveCinemaChangeHandler(newValue);
                     }}
-                >
+                />
 
-                </Autocomplete>
                 {activeCinema === null ? 
                     "Search or Click On A Cinema To Show Dashboard" :
                     <ChartHousesSales
@@ -42,8 +37,7 @@ const MapInfoPanel = ({ activeCinema, ActiveCinemaChangeHandler, activeHouse, se
                         setActiveHouse={setActiveHouse}
                     /> 
                 }
-                
-     
+
             </Paper>
 
         </div>
