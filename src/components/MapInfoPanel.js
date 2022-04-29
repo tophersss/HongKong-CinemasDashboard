@@ -3,9 +3,7 @@ import ChartHousesSales from "../components/ChartHousesSales";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 
 
-
-
-const MapInfoPanel = ({ activeCinema, setActiveCinema, activeHouse, setActiveHouse }) => {
+const MapInfoPanel = ({ activeCinema, ActiveCinemaChangeHandler, activeHouse, setActiveHouse }) => {
 
     var cinemaNames = CinemasGeoInfo.map((d) => d.name);
 
@@ -29,19 +27,23 @@ const MapInfoPanel = ({ activeCinema, setActiveCinema, activeHouse, setActiveHou
                         // </div>
                       )}
                     sx={{ paddingTop: "10px" }}
-                    value={activeCinema}
+                    value={activeCinema === null ? null : activeCinema.name}
                     onChange={(event, newValue) => {
-                        console.log(`activeCinema is changed to ${newValue}`)
-                        setActiveCinema(newValue);
+                        ActiveCinemaChangeHandler(newValue);
                     }}
                 >
 
                 </Autocomplete>
-                <ChartHousesSales
-                    hoveredTheatre={activeCinema}
-                    activeHouse={activeHouse}
-                    setActiveHouse={setActiveHouse}
-                />
+                {activeCinema === null ? 
+                    "Search or Click On A Cinema To Show Dashboard" :
+                    <ChartHousesSales
+                        hoveredCinema={activeCinema?.name}
+                        activeHouse={activeHouse}
+                        setActiveHouse={setActiveHouse}
+                    /> 
+                }
+                
+     
             </Paper>
 
         </div>

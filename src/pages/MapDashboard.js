@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../App.css";
-
+import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import ChartTheatresSalesOverHours from "../components/ChartTheatresSalesOverHours";
 import MapBox from "../components/MapBox";
 import MapInfoPanel from "../components/MapInfoPanel";
@@ -9,22 +9,42 @@ import MapInfoPanel from "../components/MapInfoPanel";
 
 const MapDashboard = () => {
   const [activeCinema, setActiveCinema] = useState(null);
+  const [activeCinemaTrigger, setActiveCinemaTrigger] = useState(true);
   const [activeHouse, setActiveHouse] = useState(null);
   const [activeDistance, setActiveDistance] = useState([
     [0, 0],
     [0, 0],
   ]);
 
+  const HandleActiveCinemaChange = (CinemaName) => {
+    if ( CinemaName !== null && CinemaName !== undefined ) {
+      setActiveHouse(null);
+
+      var MatchedCinemas = CinemasGeoInfo.filter((c) => c.name === CinemaName);
+      if (MatchedCinemas.length === 0 ) { return false };
+      var CinemaObject = MatchedCinemas[0];
+
+      setActiveCinema(CinemaObject);
+
+      return true;
+    }
+    return false;
+  }
+
+  // useEffect(() => {
+  //   setActiveHouse(null);
+  // }, [activeCinema])
+
   return (
     <>
       <MapBox
         setActiveHouse={setActiveHouse}
         activeCinema={activeCinema}
-        setActiveCinema={setActiveCinema}
+        ActiveCinemaChangeHandler={HandleActiveCinemaChange}
         activeDistance={activeDistance}
         setActiveDistance={setActiveDistance}
       />
-      <MapInfoPanel activeCinema={activeCinema} setActiveCinema={setActiveCinema} activeHouse={activeHouse} setActiveHouse={setActiveHouse} />
+      <MapInfoPanel activeCinema={activeCinema} ActiveCinemaChangeHandler={HandleActiveCinemaChange} activeHouse={activeHouse} setActiveHouse={setActiveHouse} />
 
       {/* <Paper sx={{ position: "relative", overflow: "hidden", minHeight: "100px", width: "20em", display: "inline-block" }}>
         <ChartHousesSales

@@ -15,7 +15,7 @@ import TableHouseDetails from "./TableHouseDetails";
 addTreemapModule(Highcharts);
 HighchartsHeatmap(Highcharts);
 
-const ChartHousesSales = ({ hoveredTheatre, activeHouse, setActiveHouse }) => {
+const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
   const groupBy = (arr, key) => {
     const initialValue = {};
     return arr.reduce((acc, cval) => {
@@ -28,19 +28,18 @@ const ChartHousesSales = ({ hoveredTheatre, activeHouse, setActiveHouse }) => {
   const theatreGroups = groupBy(houses_sales, "theatre");
 
   function createHouseData(house_name) {
-    var houseDetails = theatreGroups[hoveredTheatre].filter(
+    var houseDetails = theatreGroups[hoveredCinema].filter(
       (d) => d.house_name === house_name
     )[0];
     return houseDetails;
   }
 
   useEffect(() => {
-    console.log(`setClickedHouse to null`);
-    if (hoveredTheatre !== null) {
+    if (hoveredCinema !== null) {
       updateSeries();
       // setClickedHouse(null);
     }
-  }, [hoveredTheatre]);
+  }, [hoveredCinema]);
 
   const [chartOptions, setChartOptions] = useState({
     chart: {
@@ -95,7 +94,7 @@ const ChartHousesSales = ({ hoveredTheatre, activeHouse, setActiveHouse }) => {
       series: {
         type: "treemap",
         layoutAlgorithm: "squarified",
-        data: theatreGroups[hoveredTheatre].map((groupData) => {
+        data: theatreGroups[hoveredCinema].map((groupData) => {
           return {
             name: groupData.house_name,
             value: groupData.profit,
@@ -109,7 +108,7 @@ const ChartHousesSales = ({ hoveredTheatre, activeHouse, setActiveHouse }) => {
   return (
     <div>
       <HighchartsReact highcharts={Highcharts} options={chartOptions} />
-      {/* <button onClick={printHoveredTheatre}> Show Hovered Theatre </button> */}
+      {/* <button onClick={printhoveredCinema}> Show Hovered Theatre </button> */}
       {/* <TableHouseDetails /> */}
       {activeHouse == null ? "" : <h4>{activeHouse}</h4>}
       {activeHouse !== null ? (

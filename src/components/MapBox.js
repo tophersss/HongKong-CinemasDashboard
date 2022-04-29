@@ -77,8 +77,7 @@ function HandleSetView({activeCinema}) {
 
   useEffect(() => {
     if ( activeCinema !== null && activeCinema !== undefined ) {
-      var cinema_obj = CinemasGeoInfo.filter((c) => c.name == activeCinema)[0];
-      map.setView([cinema_obj.latitude, cinema_obj.longitude], map.getZoom());
+      map.setView([activeCinema.latitude, activeCinema.longitude], map.getZoom());
     }
   }, [activeCinema]);
 
@@ -86,15 +85,12 @@ function HandleSetView({activeCinema}) {
 
 }
 
-const MapBox = ({ setActiveHouse, activeCinema, setActiveCinema, activeDistance, setActiveDistance }) => {
+const MapBox = ({ setActiveHouse, activeCinema, ActiveCinemaChangeHandler, activeDistance, setActiveDistance }) => {
   
   const addLine = (name) => {
-    var cinema_obj = CinemasGeoInfo.filter((c) => c.name == name)[0];
-    // console.log(cinema_obj[0].closest_exits);
-    // console.log(cinema_obj[0]);
     setActiveDistance([
-      [cinema_obj.latitude, cinema_obj.longitude],
-      cinema_obj.closest_exits[0].coordinates,
+      [activeCinema.latitude, activeCinema.longitude],
+      activeCinema.closest_exits[0].coordinates,
     ]);
   };
 
@@ -127,9 +123,8 @@ const MapBox = ({ setActiveHouse, activeCinema, setActiveCinema, activeDistance,
                 eventHandlers={{
                   // click: () => {},
                   click: (e) => {
-                    setActiveHouse(null);
-                    addLine(e.target.options.name);
-                    setActiveCinema(c.name);
+                    // addLine(e.target.options.name);
+                    ActiveCinemaChangeHandler(c.name);
                   },
                   // mouseout: () => {
                   //   // setActiveCinema(null);
