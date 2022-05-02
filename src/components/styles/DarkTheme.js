@@ -9,9 +9,9 @@ export const DarkTheme = createTheme({
     secondary: {
       main: "#e558fb",
     },
-    // background: {
-    //   paper: "#FAFAD2",
-    // },
+    background: {
+      paper: "#F9FAFC",
+    },
     // text: {
     //   primary: "#000000",
     //   secondary: "rgba(255,255,255,0.91)",

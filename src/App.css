@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+.infoPanel-left div.MuiAutocomplete-root {
+  text-align: center;
+}
+
 .cinemaAutoComplete textarea, .cinemaAutoComplete input {
   width: 380px;
   font-family: 'Ink Free', cursive;
