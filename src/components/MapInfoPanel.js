@@ -18,6 +18,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
 import DashboardCard from "./DashboardCard";
+import ChartCinemaRanking from "./ChartCinemaRanking";
 import StatCard from "./StatCard";
 import { useEffect, useState } from "react";
 
@@ -169,6 +170,7 @@ const MapInfoPanel = ({
                 {activeCinema.name}{" "}
               </Typography>
             </Box>
+            <ChartCinemaRanking TheatreID={activeCinema?.TheatreID} />
             {/* <DashboardCard variant="outlined" content="what">
               {" "}
               Parent Content{" "}
