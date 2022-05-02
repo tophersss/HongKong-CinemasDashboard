@@ -17,8 +17,8 @@
 
 .cinemaAutoComplete textarea, .cinemaAutoComplete input {
   width: 380px;
-  font-family: 'Ink Free', cursive;
   font-size: x-large !important;
+  font-family: 'Alegreya Sans', sans-serif;
   text-align: center;
   font-weight: bold;
 }

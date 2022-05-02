@@ -54,6 +54,11 @@ const ChartCinemaRanking = ({ TheatreID }) => {
     },
     xAxis: {
       categories: [],
+      labels: {
+        style: {
+          fontSize: "13px",
+        },
+      },
     },
     yAxis: [
       {
