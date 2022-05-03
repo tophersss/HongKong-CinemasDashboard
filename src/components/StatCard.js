@@ -90,7 +90,7 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
             <Typography color="textSecondary" gutterBottom variant="overline">
               {statType == null ? "loading" : statType}
             </Typography>
-            <Typography color="textPrimary" variant="h4">
+            <Typography className="Stat-primaryvalue" color="textPrimary" variant="h5">
               {displayContent == null
                 ? "loading"
                 : abbrNum(displayContent.currentValue, 1)}
@@ -100,8 +100,8 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
             <Avatar
               sx={{
                 backgroundColor: "error.main",
-                height: 56,
-                width: 56,
+                height: 45,
+                width: 45,
               }}
             >
               <Icon />

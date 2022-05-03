@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../App.css";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
-import ChartTheatresSalesOverHours from "../components/ChartTheatresSalesOverHours";
 import MapBox from "../components/MapBox";
 import MapInfoPanel from "../components/MapInfoPanel";
 

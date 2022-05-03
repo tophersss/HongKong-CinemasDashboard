@@ -19,6 +19,7 @@ import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
 import DashboardCard from "./DashboardCard";
 import ChartCinemaRanking from "./ChartCinemaRanking";
+import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours"
 import StatCard from "./StatCard";
 import { useEffect, useState } from "react";
 
@@ -155,6 +156,7 @@ const MapInfoPanel = ({
               </Grid>
             </Grid>
             <Box
+              className="Trivia-container"
               sx={{
                 pt: 2,
                 alignItems: "center",
@@ -164,7 +166,7 @@ const MapInfoPanel = ({
               }}
             >
               <LightbulbIcon />
-              <Typography color="text.primary" variant="subtitle1">
+              <Typography  className="Trivia-content" color="text.primary" variant="subtitle1">
                 {" "}
                 Do you know that Sunday 3pm is the most crowded session at{" "}
                 {activeCinema.name}{" "}
@@ -175,12 +177,15 @@ const MapInfoPanel = ({
               {" "}
               Parent Content{" "}
             </DashboardCard> */}
+            <ChartCinemasSalesOverHours hoveredTheatre={activeCinema.name}/>
+
 
             <ChartHousesSales
               hoveredCinema={activeCinema?.name}
               activeHouse={activeHouse}
               setActiveHouse={setActiveHouse}
             />
+            
           </>
         )}
       </Paper>

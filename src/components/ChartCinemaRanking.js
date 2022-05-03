@@ -46,17 +46,23 @@ const ChartCinemaRanking = ({ TheatreID }) => {
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 250,
+      height: 220,
       type: "bar",
     },
     title: {
       text: `Cinemas Popularity Ranking`,
+      style: {
+        fontSize: "1.05rem"
+      }
+    },
+    legend: {
+      enabled: false,
     },
     xAxis: {
       categories: [],
       labels: {
         style: {
-          fontSize: "13px",
+          fontSize: "0.8rem",
         },
       },
     },

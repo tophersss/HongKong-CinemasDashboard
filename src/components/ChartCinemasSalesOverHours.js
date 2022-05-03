@@ -3,7 +3,7 @@ import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 import { theatres_sales_over_hours } from "../data/TheatresSalesOverHours";
 
-const ChartTheatresSalesOverHours = ({ hoveredTheatre }) => {
+const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   console.log(`chart: hovering over ${hoveredTheatre}`);
   const groupBy = (arr, key) => {
     const initialValue = {};
@@ -41,10 +41,13 @@ const ChartTheatresSalesOverHours = ({ hoveredTheatre }) => {
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 350, 
+      height: 250, 
     },
     title: {
       text: `Number of Tickets Sold In A Day`,
+    },
+    legend: {
+      enabled: false,
     },
     xAxis: {
       categories: [
@@ -162,4 +165,4 @@ const ChartTheatresSalesOverHours = ({ hoveredTheatre }) => {
   );
 };
 
-export default ChartTheatresSalesOverHours;
+export default ChartCinemasSalesOverHours;
