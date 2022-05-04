@@ -177,14 +177,14 @@ const MapInfoPanel = ({
               {" "}
               Parent Content{" "}
             </DashboardCard> */}
-            <ChartCinemasSalesOverHours hoveredTheatre={activeCinema.name}/>
-
+            <ChartCinemasSalesOverHours  hoveredTheatre={activeCinema.name}/>
 
             <ChartHousesSales
               hoveredCinema={activeCinema?.name}
               activeHouse={activeHouse}
               setActiveHouse={setActiveHouse}
             />
+
             
           </>
         )}

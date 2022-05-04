@@ -47,13 +47,23 @@ const ChartCinemaRanking = ({ TheatreID }) => {
     chart: {
       animation: { duration: 200 },
       height: 220,
+      spacingTop: 20,
       type: "bar",
     },
     title: {
       text: `Cinemas Popularity Ranking`,
+      align: 'left',
       style: {
         fontSize: "1.05rem"
-      }
+      },
+      x: 10,
+      margin: 5,
+    },
+    subtitle: {
+      text: 'Tickets Sold (k)',
+      align: 'right',
+      y: 10,
+      margin: 0,
     },
     legend: {
       enabled: false,
@@ -62,14 +72,15 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       categories: [],
       labels: {
         style: {
-          fontSize: "0.8rem",
+          fontSize: "0.75rem",
         },
       },
     },
     yAxis: [
       {
         title: {
-          text: "Number of Tickets Sold (in thousands)",
+          // text: "Number of Tickets Sold (in thousands)",
+          enabled: false,
         },
         labels: {
           formatter: function () {
@@ -122,9 +133,9 @@ const ChartCinemaRanking = ({ TheatreID }) => {
   };
 
   return (
-    <div>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
-    </div>
+    <>
+      <HighchartsReact highcharts={Highcharts} options={chartOptions} containerProps = {{ className: 'InfoPanel-chart' }} />
+    </>
   );
 };
 

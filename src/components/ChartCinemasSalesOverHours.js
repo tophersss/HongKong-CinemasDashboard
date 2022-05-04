@@ -41,10 +41,29 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 250, 
+      height: 210,
+      spacingTop: 20,
+      // spacingBottom: 10,
+      // styledMode: true, 
+      // backgroundColor: 'gold',
     },
     title: {
-      text: `Number of Tickets Sold In A Day`,
+      text: `Hourly Attendance`,
+      align: 'left',
+      style: {
+        fontSize: '1.05rem',
+      },
+      x: 10,
+      margin: 0,
+    },
+    subtitle: {
+      text: 'Tickets Sold per Hour',
+      align: 'right',
+      y: 10,
+      margin: 0,
+    },
+    credits: {
+      verticalAlign: 'top',
     },
     legend: {
       enabled: false,
@@ -70,20 +89,27 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         "24:00",
         "01:00",
       ],
+      labels: {
+        style: {
+          fontSize: '0.65rem',
+        },
+      }
     },
     yAxis: [
       {
         title: {
-          text: "Number of Tickets Sold",
+          enabled: false,
         },
         labels: {
           format: "{value}",
-
           style: {
             color: Highcharts.getOptions().colors[1],
+            fontSize: '0.65rem',
           },
         },
+        
         tickAmount: 5,
+        gridLineColor: '#ff0000',
       },
     ],
     series: Object.keys(theatreGroups).map((groupName) => {
@@ -111,11 +137,43 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         },
       },
     },
+    defs: {
+      gradient0: {
+          tagName: 'linearGradient',
+          id: 'gradient-0',
+          x1: 0,
+          y1: 0,
+          x2: 0,
+          y2: 1,
+          children: [{
+              tagName: 'stop',
+              offset: 0
+          }, {
+              tagName: 'stop',
+              offset: 1
+          }]
+      },
+      gradient1: {
+          tagName: 'linearGradient',
+          id: 'gradient-1',
+          x1: 0,
+          y1: 0,
+          x2: 0,
+          y2: 1,
+          children: [{
+              tagName: 'stop',
+              offset: 0
+          }, {
+              tagName: 'stop',
+              offset: 1
+          }]
+      }
+  },
   });
 
   const updateSeries = () => {
-    console.log(`useEffect triggered updateSeries()`);
-    console.log(theatreGroups);
+    // console.log(`useEffect triggered updateSeries()`);
+    // console.log(theatreGroups);
     // const filteredTheatreObj = theatreGroups.filter((g) => g == hoveredTheatre);
     const hoveredTheatreObj = Object.keys(theatreGroups).map((groupName) => {
       if (groupName == hoveredTheatre) {
@@ -128,14 +186,14 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         };
       }
     });
-    console.log(`filteredGroup:`);
-    console.log(theatreGroups[hoveredTheatre]);
+    // console.log(`filteredGroup:`);
+    // console.log(theatreGroups[hoveredTheatre]);
 
     setChartOptions((prevState) => ({
       ...prevState,
-      title: {
-        text: `Popularity By Hours`,
-      },
+      // title: {
+      //   text: `Popularity By Hours`,
+      // },
       // series: [...matchingSteps.map((step_obj) => step_obj.series_obj)],
       series: {
         type: "line",
@@ -159,9 +217,9 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   };
 
   return (
-    <div>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
-    </div>
+    <>
+      <HighchartsReact highcharts={Highcharts} options={chartOptions} containerProps = {{ className: 'InfoPanel-chart' }}/>
+    </>
   );
 };
 
