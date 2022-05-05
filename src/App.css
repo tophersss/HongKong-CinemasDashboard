@@ -17,8 +17,26 @@
   border: 1px solid rgba(150, 150, 150, 0.25);
 }
 
+.infoPanel-left div.MuiBox-root header.MuiPaper-root {
+  width: auto;
+}
+
+
+.infoPanel-left .MuiToolbar-root {
+  justify-content: space-around;
+}
+
 .infoPanel-left div.MuiAutocomplete-root {
   text-align: center;
+}
+
+.infoPanel-left div.MuiAutocomplete-root input#cinema-value {
+  color: rgb(246, 246, 252);
+}
+
+.infoPanel-left .MuiAutocomplete-popper {
+  position: fixed !important;
+  transform: translate3d(50px, 128px, 0px) !important;
 }
 
 .infoPanel-left .Trivia-container.MuiBox-root {
@@ -57,6 +75,45 @@
   border-radius: 6px;
 }
 
+/* Define the stop colors */
+#gradient-0 stop {
+  stop-color: #7863cc;
+}
+
+#gradient-0 stop[offset="0"] {
+  stop-opacity: 0.35;
+}
+
+#gradient-0 stop[offset="1"] {
+  stop-opacity: 0;
+}
+
+#gradient-1 stop {
+  stop-color: #ccc;
+}
+
+#gradient-1 stop[offset="0"] {
+  stop-opacity: 0;
+}
+
+#gradient-1 stop[offset="1"] {
+  stop-opacity: 0.15;
+}
+
+/* Apply the gradients */
+.highcharts-plot-background {
+  fill: url(#gradient-1);
+}
+
+.highcharts-color-0 .highcharts-area {
+  fill-opacity: 1;
+  fill: url(#gradient-0);
+}
+
+.highcharts-color-0 {
+  stroke: #7863cc;
+  fill: #7863cc;
+}
 
 
 tr {

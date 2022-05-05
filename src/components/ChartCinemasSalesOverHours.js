@@ -44,7 +44,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       height: 210,
       spacingTop: 20,
       // spacingBottom: 10,
-      // styledMode: true, 
+      styledMode: true, 
       // backgroundColor: 'gold',
     },
     title: {
@@ -95,8 +95,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         },
       }
     },
-    yAxis: [
-      {
+    yAxis: {
         title: {
           enabled: false,
         },
@@ -107,19 +106,19 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
             fontSize: '0.65rem',
           },
         },
-        
         tickAmount: 5,
-        gridLineColor: '#ff0000',
-      },
-    ],
+    },
     series: Object.keys(theatreGroups).map((groupName) => {
       if (groupName == hoveredTheatre) {
         return {
-          type: "line",
+          type: "area",
           name: groupName,
           data: theatreGroups[groupName].map((groupData) => {
             return [groupData.label, groupData.ticket_sold];
           }),
+          marker: {
+            fillColor: "gold",
+          }
         };
       }
       {
@@ -131,6 +130,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         animation: { duration: 3000 },
         connectNulls: true,
         color: "gold",
+        colorIndex: 1,
         marker: {
           enabled: false,
           // fillColor: "{series.color}",
@@ -168,7 +168,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
               offset: 1
           }]
       }
-  },
+    },
   });
 
   const updateSeries = () => {
@@ -178,7 +178,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
     const hoveredTheatreObj = Object.keys(theatreGroups).map((groupName) => {
       if (groupName == hoveredTheatre) {
         return {
-          type: "line",
+          type: "area",
           name: groupName,
           data: theatreGroups[groupName].map((groupData) => {
             return [groupData.label, groupData.ticket_sold];
@@ -196,11 +196,14 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       // },
       // series: [...matchingSteps.map((step_obj) => step_obj.series_obj)],
       series: {
-        type: "line",
+        type: "area",
         name: hoveredTheatre,
         data: theatreGroups[hoveredTheatre].map((groupData) => {
           return [groupData.label, groupData.ticket_sold];
         }),
+        marker: {
+          fillColor: "gold",
+        }
       },
       // series: Object.keys(theatreGroups).map((groupName) => {
       //   if (groupName == hoveredTheatre) {

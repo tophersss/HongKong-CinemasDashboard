@@ -11,10 +11,14 @@ import {
   Typography,
   Box,
 } from "@mui/material";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import ChartHousesSales from "../components/ChartHousesSales";
 import MoneyIcon from "@mui/icons-material/Money";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import ChartHousesSales from "../components/ChartHousesSales";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import MyLocationRoundedIcon from '@mui/icons-material/MyLocationRounded';
+import DirectionsSubwayTwoToneIcon from '@mui/icons-material/DirectionsSubwayTwoTone';
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
 import DashboardCard from "./DashboardCard";
@@ -104,6 +108,9 @@ const MapInfoPanel = ({
           display: "inline-block",
         }}
       >
+        <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
         <Autocomplete
           disablePortal
           autoSelect
@@ -126,6 +133,12 @@ const MapInfoPanel = ({
             ActiveCinemaChangeHandler(newValue);
           }}
         />
+            {/* <MyLocationRoundedIcon />
+            <DirectionsSubwayTwoToneIcon /> */}
+
+          </Toolbar>
+        </AppBar>
+        </Box>
 
         {activeCinema === null ? (
           "Search or Click On A Cinema To Show Dashboard"
