@@ -52,16 +52,16 @@ const ChartCinemaRanking = ({ TheatreID }) => {
     },
     title: {
       text: `Cinemas Popularity Ranking`,
-      align: 'left',
+      align: "left",
       style: {
-        fontSize: "1.05rem"
+        fontSize: "1.05rem",
       },
       x: 10,
       margin: 5,
     },
     subtitle: {
-      text: 'Tickets Sold (k)',
-      align: 'right',
+      text: "Tickets Sold (k)",
+      align: "right",
       y: 10,
       margin: 0,
     },
@@ -127,14 +127,24 @@ const ChartCinemaRanking = ({ TheatreID }) => {
         categories: CinemasList.map((d) => d.theatreTC),
       },
       series: {
-        data: CinemasList.map((d) => d.OverallTicketsSold),
+        data: CinemasList.map((d) => {
+          return {
+            name: d.theatreTC,
+            color: TheatreID === d.TheatreID ? "#7863cc" : "#bfceff",
+            y: d.OverallTicketsSold,
+          };
+        }),
       },
     }));
   };
 
   return (
     <>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} containerProps = {{ className: 'InfoPanel-chart' }} />
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={chartOptions}
+        containerProps={{ className: "InfoPanel-chart" }}
+      />
     </>
   );
 };

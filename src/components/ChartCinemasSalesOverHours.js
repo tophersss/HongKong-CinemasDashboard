@@ -1,7 +1,7 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
-import { theatres_sales_over_hours } from "../data/TheatresSalesOverHours";
+import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
 
 const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   console.log(`chart: hovering over ${hoveredTheatre}`);
@@ -16,7 +16,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   // const groupBy = (x, f) => {
   //   return x.reduce((a, b) => ((a[f(b)] ||= []).push(b), a), {});
   // };
-  const theatreGroups = groupBy(theatres_sales_over_hours, "theatre");
+  const theatreGroups = groupBy(cinemas_sales_over_hours, "theatre");
   const isMounted = useRef(false);
   useEffect(() => {
     // if (isMounted.current) {
@@ -27,7 +27,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
     //   const groupBy = (x, f) => {
     //     return x.reduce((a, b) => ((a[f(b)] ||= []).push(b), a), {});
     //   };
-    //   const theatreGroups = groupBy(theatres_sales_over_hours, (v) => v.name);
+    //   const theatreGroups = groupBy(cinemas_sales_over_hours, (v) => v.name);
     // }
   }, []);
 
@@ -44,26 +44,26 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       height: 210,
       spacingTop: 20,
       // spacingBottom: 10,
-      styledMode: true, 
+      styledMode: true,
       // backgroundColor: 'gold',
     },
     title: {
       text: `Hourly Attendance`,
-      align: 'left',
+      align: "left",
       style: {
-        fontSize: '1.05rem',
+        fontSize: "1.05rem",
       },
       x: 10,
       margin: 0,
     },
     subtitle: {
-      text: 'Tickets Sold per Hour',
-      align: 'right',
+      text: "Tickets Sold per Hour",
+      align: "right",
       y: 10,
       margin: 0,
     },
     credits: {
-      verticalAlign: 'top',
+      verticalAlign: "top",
     },
     legend: {
       enabled: false,
@@ -91,22 +91,22 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       ],
       labels: {
         style: {
-          fontSize: '0.65rem',
+          fontSize: "0.65rem",
         },
-      }
+      },
     },
     yAxis: {
-        title: {
-          enabled: false,
+      title: {
+        enabled: false,
+      },
+      labels: {
+        format: "{value}",
+        style: {
+          color: Highcharts.getOptions().colors[1],
+          fontSize: "0.65rem",
         },
-        labels: {
-          format: "{value}",
-          style: {
-            color: Highcharts.getOptions().colors[1],
-            fontSize: '0.65rem',
-          },
-        },
-        tickAmount: 5,
+      },
+      tickAmount: 5,
     },
     series: Object.keys(theatreGroups).map((groupName) => {
       if (groupName == hoveredTheatre) {
@@ -118,7 +118,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
           }),
           marker: {
             fillColor: "gold",
-          }
+          },
         };
       }
       {
@@ -139,35 +139,41 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
     },
     defs: {
       gradient0: {
-          tagName: 'linearGradient',
-          id: 'gradient-0',
-          x1: 0,
-          y1: 0,
-          x2: 0,
-          y2: 1,
-          children: [{
-              tagName: 'stop',
-              offset: 0
-          }, {
-              tagName: 'stop',
-              offset: 1
-          }]
+        tagName: "linearGradient",
+        id: "gradient-0",
+        x1: 0,
+        y1: 0,
+        x2: 0,
+        y2: 1,
+        children: [
+          {
+            tagName: "stop",
+            offset: 0,
+          },
+          {
+            tagName: "stop",
+            offset: 1,
+          },
+        ],
       },
       gradient1: {
-          tagName: 'linearGradient',
-          id: 'gradient-1',
-          x1: 0,
-          y1: 0,
-          x2: 0,
-          y2: 1,
-          children: [{
-              tagName: 'stop',
-              offset: 0
-          }, {
-              tagName: 'stop',
-              offset: 1
-          }]
-      }
+        tagName: "linearGradient",
+        id: "gradient-1",
+        x1: 0,
+        y1: 0,
+        x2: 0,
+        y2: 1,
+        children: [
+          {
+            tagName: "stop",
+            offset: 0,
+          },
+          {
+            tagName: "stop",
+            offset: 1,
+          },
+        ],
+      },
     },
   });
 
@@ -203,7 +209,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         }),
         marker: {
           fillColor: "gold",
-        }
+        },
       },
       // series: Object.keys(theatreGroups).map((groupName) => {
       //   if (groupName == hoveredTheatre) {
@@ -221,7 +227,11 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
 
   return (
     <>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} containerProps = {{ className: 'InfoPanel-chart' }}/>
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={chartOptions}
+        containerProps={{ className: "InfoPanel-chart" }}
+      />
     </>
   );
 };
