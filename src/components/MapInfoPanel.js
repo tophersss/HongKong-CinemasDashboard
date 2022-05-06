@@ -25,6 +25,7 @@ import DashboardCard from "./DashboardCard";
 import ChartCinemaRanking from "./ChartCinemaRanking";
 import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours"
 import StatCard from "./StatCard";
+import { PickChainColor } from "../utils/ColorUtils";
 import { useEffect, useState } from "react";
 
 const GetCinemaStats = (id, type) => {
@@ -97,7 +98,7 @@ const MapInfoPanel = ({
   // }, [activeCinema]);
 
   return (
-    <div className="infoPanel-left">
+    <div className="info-panel">
       <Paper
         sx={{
           position: "relative",
@@ -109,35 +110,35 @@ const MapInfoPanel = ({
         }}
       >
         <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
-        <Autocomplete
-          disablePortal
-          autoSelect
-          id="cinema-value"
-          className="cinemaAutoComplete"
-          options={cinemaNames}
-          renderInput={(params) => (
-            <div ref={params.InputProps.ref}>
-              <Input
-                type="text"
-                multiline={false}
-                placeholder="🔎 cinema"
-                {...params.inputProps}
-              ></Input>
-            </div>
-          )}
-          sx={{ paddingTop: "10px" }}
-          value={activeCinema === null ? null : activeCinema.name}
-          onChange={(event, newValue) => {
-            ActiveCinemaChangeHandler(newValue);
-          }}
-        />
-            {/* <MyLocationRoundedIcon />
+          <AppBar position="static" className={`palette-header--${PickChainColor(activeCinema?.chain)}`}>
+            <Toolbar>
+              <Autocomplete
+                disablePortal
+                autoSelect
+                id="cinema-value"
+                className="cinema-auto-complete"
+                options={cinemaNames}
+                renderInput={(params) => (
+                  <div ref={params.InputProps.ref}>
+                    <Input
+                      type="text"
+                      multiline={false}
+                      placeholder="🔎 cinema"
+                      {...params.inputProps}
+                    ></Input>
+                  </div>
+                )}
+                sx={{ paddingTop: "10px" }}
+                value={activeCinema === null ? null : activeCinema.name}
+                onChange={(event, newValue) => {
+                  ActiveCinemaChangeHandler(newValue);
+                }}
+              />
+              {/* <MyLocationRoundedIcon />
             <DirectionsSubwayTwoToneIcon /> */}
 
-          </Toolbar>
-        </AppBar>
+            </Toolbar>
+          </AppBar>
         </Box>
 
         {activeCinema === null ? (
@@ -146,7 +147,7 @@ const MapInfoPanel = ({
           <>
             <Grid
               container
-              className="StatCard-container"
+              className="stat-card__container"
               justifyContent="space-evenly"
             >
               <Grid item xs>
@@ -169,7 +170,7 @@ const MapInfoPanel = ({
               </Grid>
             </Grid>
             <Box
-              className="Trivia-container"
+              className="trivia__container"
               sx={{
                 pt: 2,
                 alignItems: "center",
@@ -179,26 +180,27 @@ const MapInfoPanel = ({
               }}
             >
               <LightbulbIcon />
-              <Typography  className="Trivia-content" color="text.primary" variant="subtitle1">
+              <Typography className="trivia__content" color="text.primary" variant="subtitle1">
                 {" "}
                 Do you know that Sunday 3pm is the most crowded session at{" "}
                 {activeCinema.name}{" "}
               </Typography>
             </Box>
-            <ChartCinemaRanking TheatreID={activeCinema?.TheatreID} />
+            <ChartCinemaRanking TheatreID={activeCinema?.TheatreID} associatedChain={activeCinema?.chain} />
             {/* <DashboardCard variant="outlined" content="what">
               {" "}
               Parent Content{" "}
             </DashboardCard> */}
-            <ChartCinemasSalesOverHours  hoveredTheatre={activeCinema.name}/>
+            <ChartCinemasSalesOverHours hoveredTheatre={activeCinema.name} associatedChain={activeCinema.chain} />
 
             <ChartHousesSales
               hoveredCinema={activeCinema?.name}
+              associatedChain={activeCinema?.chain}
               activeHouse={activeHouse}
               setActiveHouse={setActiveHouse}
             />
 
-            
+
           </>
         )}
       </Paper>

@@ -90,7 +90,7 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
             <Typography color="textSecondary" gutterBottom variant="overline">
               {statType == null ? "loading" : statType}
             </Typography>
-            <Typography className="Stat-primaryvalue" color="textPrimary" variant="h5">
+            <Typography className="stat-card__primaryvalue" color="textPrimary" variant="h5">
               {displayContent == null
                 ? "loading"
                 : abbrNum(displayContent.currentValue, 1)}

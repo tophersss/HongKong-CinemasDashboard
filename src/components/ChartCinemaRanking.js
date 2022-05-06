@@ -3,8 +3,9 @@ import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
 import { abbrNum } from "../utils/NumberUtils";
+import { PickChainColor } from "../utils/ColorUtils";
 
-const ChartCinemaRanking = ({ TheatreID }) => {
+const ChartCinemaRanking = ({ TheatreID, associatedChain }) => {
   const GetTopCinemas = (TheatreID, topN) => {
     /**
      * when activeCinema already in topN, do nothing
@@ -99,7 +100,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       series: {
         animation: { duration: 3000 },
 
-        color: "gold",
+        // color: "gold",
         marker: {
           enabled: false,
           // fillColor: "{series.color}",
@@ -130,7 +131,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
         data: CinemasList.map((d) => {
           return {
             name: d.theatreTC,
-            color: TheatreID === d.TheatreID ? "#7863cc" : "#bfceff",
+            className: TheatreID === d.TheatreID ? `palette-primary--${PickChainColor(associatedChain)}` : `palette-secondary--${PickChainColor(associatedChain)}`,
             y: d.OverallTicketsSold,
           };
         }),
@@ -143,7 +144,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       <HighchartsReact
         highcharts={Highcharts}
         options={chartOptions}
-        containerProps={{ className: "InfoPanel-chart" }}
+        containerProps={{ className: "info-panel__chart" }}
       />
     </>
   );

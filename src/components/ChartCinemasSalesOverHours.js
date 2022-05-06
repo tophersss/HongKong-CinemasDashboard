@@ -1,9 +1,10 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
+import { PickChainColor } from "../utils/ColorUtils";
 import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
 
-const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
+const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
   console.log(`chart: hovering over ${hoveredTheatre}`);
   const groupBy = (arr, key) => {
     const initialValue = {};
@@ -116,9 +117,9 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
           data: theatreGroups[groupName].map((groupData) => {
             return [groupData.label, groupData.ticket_sold];
           }),
-          marker: {
-            fillColor: "gold",
-          },
+          // marker: {
+          //   fillColor: "gold",
+          // },
         };
       }
       {
@@ -129,18 +130,21 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       series: {
         animation: { duration: 3000 },
         connectNulls: true,
-        color: "gold",
-        colorIndex: 1,
+        // color: "gold",
+        className: `palette-primary--${PickChainColor(associatedChain)}`,
+        
         marker: {
           enabled: false,
           // fillColor: "{series.color}",
         },
       },
     },
+    // https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/plotoptions/area-fillcolor-gradient/
     defs: {
       gradient0: {
         tagName: "linearGradient",
         id: "gradient-0",
+        class: `palette-primary--${PickChainColor(associatedChain)}`,
         x1: 0,
         y1: 0,
         x2: 0,
@@ -158,7 +162,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       },
       gradient1: {
         tagName: "linearGradient",
-        id: "gradient-1",
+        id: "gradient-end",
         x1: 0,
         y1: 0,
         x2: 0,
@@ -207,21 +211,55 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
         data: theatreGroups[hoveredTheatre].map((groupData) => {
           return [groupData.label, groupData.ticket_sold];
         }),
-        marker: {
-          fillColor: "gold",
+        // marker: {
+        //   fillColor: "gold",
+        // },
+      },
+      plotOptions: {
+        series: {
+          ...prevState.plotOptions.series,
+          className: `palette-primary--${PickChainColor(associatedChain)}`,
         },
       },
-      // series: Object.keys(theatreGroups).map((groupName) => {
-      //   if (groupName == hoveredTheatre) {
-      //     return {
-      //       type: "line",
-      //       name: groupName,
-      //       data:theatreGroups[hoveredTheatre].map((groupData) => {
-      //         return [groupData.label, groupData.ticket_sold];
-      //       }),
-      //     };
-      //   }
-      // }),
+      // defs: {
+      //   gradient0: {
+      //     tagName: "linearGradient",
+      //     id: "gradient-0",
+      //     class: `palette-primary--${PickChainColor(associatedChain)}`,
+      //     x1: 0,
+      //     y1: 0,
+      //     x2: 0,
+      //     y2: 1,
+      //     children: [
+      //       {
+      //         tagName: "stop",
+      //         offset: 0,
+      //       },
+      //       {
+      //         tagName: "stop",
+      //         offset: 1,
+      //       },
+      //     ],
+      //   },
+      //   gradient1: {
+      //     tagName: "linearGradient",
+      //     id: "gradient-end",
+      //     x1: 0,
+      //     y1: 0,
+      //     x2: 0,
+      //     y2: 1,
+      //     children: [
+      //       {
+      //         tagName: "stop",
+      //         offset: 0,
+      //       },
+      //       {
+      //         tagName: "stop",
+      //         offset: 1,
+      //       },
+      //     ],
+      //   },
+      // },
     }));
   };
 
@@ -230,7 +268,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       <HighchartsReact
         highcharts={Highcharts}
         options={chartOptions}
-        containerProps={{ className: "InfoPanel-chart" }}
+        containerProps={{ className: "info-panel__chart" }}
       />
     </>
   );

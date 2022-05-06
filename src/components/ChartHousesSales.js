@@ -107,7 +107,7 @@ const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
 
   return (
     <div>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+      <HighchartsReact highcharts={Highcharts} options={chartOptions} containerProps={{ className: "info-panel__chart" }} />
       {/* <button onClick={printhoveredCinema}> Show Hovered Theatre </button> */}
       {/* <TableHouseDetails /> */}
       {activeHouse == null ? "" : <h4>{activeHouse}</h4>}

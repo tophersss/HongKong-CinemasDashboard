@@ -1,5 +1,7 @@
 @import "https://code.highcharts.com/css/highcharts.css";
 
+/* ************************************************** */
+/* Map */
 .leaflet-container {
   width: 100%;
   height: 100vh;
@@ -7,61 +9,38 @@
   /* z-index: -99; */
 }
 
-.infoPanel-left .MuiPaper-root {
+/* ************************************************** */
+/* Dashboard Panel */
+.info-panel .MuiPaper-root {
   top: 20px;
   left: 15px;
   margin: 10px 15px 8px 15px;
   text-align: center;
-  background-color: rgba(241, 241, 241, 0.15);  
-  backdrop-filter: blur(5px);
+  /* background-color: rgba(241, 241, 241, 0.15);  
+  backdrop-filter: blur(5px); */
   border: 1px solid rgba(150, 150, 150, 0.25);
 }
 
-.infoPanel-left div.MuiBox-root header.MuiPaper-root {
+/* Header */
+.info-panel div.MuiBox-root header.MuiPaper-root {
   width: auto;
 }
 
 
-.infoPanel-left .MuiToolbar-root {
+.info-panel .MuiToolbar-root {
   justify-content: space-around;
 }
 
-.infoPanel-left div.MuiAutocomplete-root {
+/* Cinema Name Box */
+.info-panel div.MuiAutocomplete-root {
   text-align: center;
 }
 
-.infoPanel-left div.MuiAutocomplete-root input#cinema-value {
+.info-panel div.MuiAutocomplete-root input#cinema-value {
   color: rgb(246, 246, 252);
 }
 
-.infoPanel-left .MuiAutocomplete-popper {
-  position: fixed !important;
-  transform: translate3d(50px, 128px, 0px) !important;
-}
-
-.infoPanel-left .Trivia-container.MuiBox-root {
-  padding-top: 5px;
-  padding-bottom: 12px;
-}
-
-.infoPanel-left .Trivia-container.MuiBox-root .Trivia-content {
-  font-size: 0.85rem;
-}
-
-
-.infoPanel-left .StatCard-container .MuiCardContent-root {
-  padding: 12px 16px 16px 16px;
-}
-
-.infoPanel-left .StatCard-container .MuiGrid-item {
-  text-align: left;
-}
-
-.infoPanel-left .StatCard-container .Stat-primaryvalue {
-  font-size: 1.8rem;
-}
-
-.cinemaAutoComplete textarea, .cinemaAutoComplete input {
+.cinema-auto-complete textarea, .cinema-auto-complete input {
   width: 380px;
   font-size: x-large !important;
   font-family: 'Alegreya Sans', sans-serif;
@@ -69,16 +48,210 @@
   font-weight: bold;
 }
 
-.InfoPanel-chart {
+/* Cinema Name Autocomplete Dropdown Box */
+.info-panel .MuiAutocomplete-popper {
+  position: fixed !important;
+  transform: translate3d(50px, 128px, 0px) !important;
+}
+
+/* Trivia */
+.info-panel .trivia__container.MuiBox-root {
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+.info-panel .trivia__container.MuiBox-root .trivia__content {
+  font-size: 0.85rem;
+}
+
+/* Stat Card Container */
+.info-panel .stat-card__container .MuiCardContent-root {
+  padding: 12px 16px 16px 16px;
+}
+
+.info-panel .stat-card__container .MuiGrid-item {
+  text-align: left;
+}
+
+/* Stat Card */
+.info-panel .stat-card__container .stat-card__primaryvalue {
+  font-size: 1.8rem;
+}
+
+/* Chart */
+.info-panel__chart {
   margin: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 6px;
 }
 
-/* Define the stop colors */
-#gradient-0 stop {
-  stop-color: #7863cc;
+/* ************************************************** */
+/* Chart Colors */
+
+/* blue */
+.palette-header--blue {
+  stroke: #313e87 !important;
+  fill: #313e87 !important;
+  background-color: #313e87 !important;
 }
+
+.palette-primary--blue {
+  stroke: #7863cc !important;
+  fill: #7863cc !important;
+  background-color: #7863cc !important;
+}
+
+.palette-primary--blue stop {
+  stop-color: #7863cc !important;
+}
+
+.palette-secondary--blue {
+  stroke: #bfceff !important;
+  fill: #bfceff !important;
+  background-color: #bfceff !important;
+}
+
+/* Yellow */
+.palette-header--yellow {
+  stroke: #C29440!important;
+  fill: #C29440!important;
+  background-color: #C29440!important;
+}
+
+.palette-primary--yellow {
+  stroke: #F7BE54 !important;
+  fill: #F7BE54 !important;
+  background-color: #F7BE54 !important;
+}
+
+.palette-primary--yellow stop {
+  stop-color: #F7BE54 !important;
+}
+
+.palette-secondary--yellow {
+  stroke: #ffe7ba !important;
+  fill: #ffe7ba !important;
+  background-color: #ffe7ba !important;
+}
+
+/* Turquoise */
+.palette-header--turquoise {
+  stroke: #219685 !important;
+  fill: #219685 !important;
+  background-color: #219685 !important;
+}
+
+.palette-primary--turquoise {
+  stroke: #3EB8A5 !important;
+  fill: #3EB8A5 !important;
+  background-color: #3EB8A5 !important;
+}
+
+.palette-primary--turquoise stop {
+  stop-color: #3EB8A5 !important;
+}
+
+.palette-secondary--turquoise {
+  stroke: #89d9cc !important;
+  fill: #89d9cc !important;
+  background-color: #89d9cc !important;
+}
+
+/* Orange */
+.palette-header--orange {
+  stroke: #F76E11 !important;
+  fill: #F76E11 !important;
+  background-color: #F76E11 !important;
+}
+
+.palette-primary--orange {
+  stroke: #FF9F45 !important;
+  fill: #FF9F45 !important;
+  background-color: #FF9F45 !important;
+}
+
+.palette-primary--orange stop {
+  stop-color: #FF9F45 !important;
+}
+
+.palette-secondary--orange {
+  stroke: #FFBC80!important;
+  fill: #FFBC80!important;
+  background-color: #FFBC80!important;
+}
+
+/* Burgundy */
+.palette-header--burgundy {
+  stroke: #750550 !important;
+  fill: #750550 !important;
+  background-color: #750550 !important;
+}
+
+.palette-primary--burgundy {
+  stroke: #980F5A !important;
+  fill: #980F5A !important;
+  background-color: #980F5A !important;
+}
+
+.palette-primary--burgundy stop {
+  stop-color: #980F5A !important;
+}
+
+.palette-secondary--burgundy {
+  stroke: #ba6192 !important;
+  fill: #ba6192 !important;
+  background-color: #ba6192 !important;
+}
+
+/* Violet */
+.palette-header--violet {
+  stroke: #8A39E1 !important;
+  fill: #8A39E1 !important;
+  background-color: #8A39E1 !important;
+}
+
+.palette-primary--violet {
+  stroke: #9C51E0 !important;
+  fill: #9C51E0 !important;
+  background-color: #9C51E0 !important;
+}
+
+.palette-primary--violet stop {
+  stop-color: #9C51E0 !important;
+}
+
+.palette-secondary--violet {
+  stroke: #c993fa !important;
+  fill: #c993fa !important;
+  background-color: #c993fa !important;
+}
+
+/* Ukraine */
+.palette-header--ukraine {
+  stroke: #005bbc !important;
+  fill: #005bbc !important;
+  background-color: #005bbc !important;
+
+}
+
+.palette-primary--ukraine {
+  stroke: #ffd600 !important;
+  fill: #ffd600 !important;
+  background-color: #ffd600 !important;
+}
+
+.palette-primary--ukraine stop {
+  stop-color: #ffd600 !important;
+}
+
+.palette-secondary--ukraine {
+  stroke: #f2e185 !important;
+  fill: #f2e185 !important;
+  background-color: #f2e185 !important;
+}
+
+
+/* Chart Gradient */  
 
 #gradient-0 stop[offset="0"] {
   stop-opacity: 0.35;
@@ -88,15 +261,15 @@
   stop-opacity: 0;
 }
 
-#gradient-1 stop {
+#gradient-end stop {
   stop-color: #ccc;
 }
 
-#gradient-1 stop[offset="0"] {
+#gradient-end stop[offset="0"] {
   stop-opacity: 0;
 }
 
-#gradient-1 stop[offset="1"] {
+#gradient-end stop[offset="1"] {
   stop-opacity: 0.15;
 }
 
@@ -110,12 +283,13 @@
   fill: url(#gradient-0);
 }
 
-.highcharts-color-0 {
+.highcharts-color-0.currentCinema {
   stroke: #7863cc;
   fill: #7863cc;
 }
 
 
+/* House Details Table */
 tr {
   height: 10px;
 }
@@ -124,7 +298,8 @@ tr td {
    height: auto !important;
 }
 
-
+/* ************************************************** */
+/* Seatplan */
 /* second to last <g> to skip the first <g> screen element */
 svg > g:nth-child(n+2) > a {
   cursor: pointer;
