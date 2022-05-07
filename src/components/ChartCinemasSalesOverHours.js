@@ -5,7 +5,6 @@ import { PickChainColor } from "../utils/ColorUtils";
 import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
 
 const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
-  console.log(`chart: hovering over ${hoveredTheatre}`);
   const groupBy = (arr, key) => {
     const initialValue = {};
     return arr.reduce((acc, cval) => {
@@ -35,7 +34,6 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
   useEffect(() => {
     if (hoveredTheatre !== null) {
       updateSeries();
-      console.log(`updateSeries() finished.`);
     }
   }, [hoveredTheatre]);
 
@@ -131,8 +129,8 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
         animation: { duration: 3000 },
         connectNulls: true,
         // color: "gold",
-        className: `palette-primary--${PickChainColor(associatedChain)}`,
-        
+        className: `palette-primary`,
+
         marker: {
           enabled: false,
           // fillColor: "{series.color}",
@@ -144,7 +142,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
       gradient0: {
         tagName: "linearGradient",
         id: "gradient-0",
-        class: `palette-primary--${PickChainColor(associatedChain)}`,
+        class: `palette-primary`,
         x1: 0,
         y1: 0,
         x2: 0,
@@ -200,7 +198,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
     // console.log(theatreGroups[hoveredTheatre]);
 
     setChartOptions((prevState) => ({
-      ...prevState,
+      // ...prevState,
       // title: {
       //   text: `Popularity By Hours`,
       // },
@@ -218,48 +216,10 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
       plotOptions: {
         series: {
           ...prevState.plotOptions.series,
-          className: `palette-primary--${PickChainColor(associatedChain)}`,
+          className: `palette-primary`,
         },
       },
-      // defs: {
-      //   gradient0: {
-      //     tagName: "linearGradient",
-      //     id: "gradient-0",
-      //     class: `palette-primary--${PickChainColor(associatedChain)}`,
-      //     x1: 0,
-      //     y1: 0,
-      //     x2: 0,
-      //     y2: 1,
-      //     children: [
-      //       {
-      //         tagName: "stop",
-      //         offset: 0,
-      //       },
-      //       {
-      //         tagName: "stop",
-      //         offset: 1,
-      //       },
-      //     ],
-      //   },
-      //   gradient1: {
-      //     tagName: "linearGradient",
-      //     id: "gradient-end",
-      //     x1: 0,
-      //     y1: 0,
-      //     x2: 0,
-      //     y2: 1,
-      //     children: [
-      //       {
-      //         tagName: "stop",
-      //         offset: 0,
-      //       },
-      //       {
-      //         tagName: "stop",
-      //         offset: 1,
-      //       },
-      //     ],
-      //   },
-      // },
+      defs: {},
     }));
   };
 

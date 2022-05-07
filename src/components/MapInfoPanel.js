@@ -11,24 +11,27 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
 import ChartHousesSales from "../components/ChartHousesSales";
 import MoneyIcon from "@mui/icons-material/Money";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
-import MyLocationRoundedIcon from '@mui/icons-material/MyLocationRounded';
-import DirectionsSubwayTwoToneIcon from '@mui/icons-material/DirectionsSubwayTwoTone';
+import MyLocationRoundedIcon from "@mui/icons-material/MyLocationRounded";
+import DirectionsSubwayTwoToneIcon from "@mui/icons-material/DirectionsSubwayTwoTone";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
-import DashboardCard from "./DashboardCard";
 import ChartCinemaRanking from "./ChartCinemaRanking";
-import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours"
+import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours";
 import StatCard from "./StatCard";
 import { PickChainColor } from "../utils/ColorUtils";
 import { useEffect, useState } from "react";
 
+// ! - helper function
 const GetCinemaStats = (id, type) => {
+  /**
+   * generate an Object template that will be passed to Stat card as prop
+   */
   const cinemaStatsObj = cinemas_performance_overview.filter(
     (d) => d.TheatreID === id
   )[0];
@@ -59,6 +62,7 @@ const GetCinemaStats = (id, type) => {
   }
 };
 
+// ! - Component function
 const MapInfoPanel = ({
   activeCinema,
   ActiveCinemaChangeHandler,
@@ -77,28 +81,16 @@ const MapInfoPanel = ({
       setCardContentTicketsSold(
         GetCinemaStats(activeCinema.TheatreID, "tickets_sold")
       );
-      console.log(`updated cardContent...${activeCinema.TheatreID}`);
     }
-    console.log(`done useEffect`);
   }, [activeCinema]);
 
-  // useEffect(() => {
-  //   if (activeCinema !== null && activeCinema !== undefined) {
-  //     var CinemasStat = cinemas_performance_overview.map((d) => {
-  //       if (d.theatre === activeCinema.name) {
-  //         return {
-  //           header: "STATISTICS",
-  //           valueAtCurrentDate: "0",
-  //           valueAtPrevDate: "0",
-  //           dateUnit: "All Time",
-  //         };
-  //       }
-  //     });
-  //   }
-  // }, [activeCinema]);
+  // ! - Identify active cinema's chain to define a Class for theming
+  const mapInfoPanelClasses = `info-panel info-panel-test info-panel--${PickChainColor(
+    activeCinema?.chain
+  )}`;
 
   return (
-    <div className="info-panel">
+    <div className={mapInfoPanelClasses}>
       <Paper
         sx={{
           position: "relative",
@@ -110,7 +102,7 @@ const MapInfoPanel = ({
         }}
       >
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" className={`palette-header--${PickChainColor(activeCinema?.chain)}`}>
+          <AppBar position="static" className="palette-header">
             <Toolbar>
               <Autocomplete
                 disablePortal
@@ -136,7 +128,6 @@ const MapInfoPanel = ({
               />
               {/* <MyLocationRoundedIcon />
             <DirectionsSubwayTwoToneIcon /> */}
-
             </Toolbar>
           </AppBar>
         </Box>
@@ -180,18 +171,28 @@ const MapInfoPanel = ({
               }}
             >
               <LightbulbIcon />
-              <Typography className="trivia__content" color="text.primary" variant="subtitle1">
+              <Typography
+                className="trivia__content"
+                color="text.primary"
+                variant="subtitle1"
+              >
                 {" "}
                 Do you know that Sunday 3pm is the most crowded session at{" "}
                 {activeCinema.name}{" "}
               </Typography>
             </Box>
-            <ChartCinemaRanking TheatreID={activeCinema?.TheatreID} associatedChain={activeCinema?.chain} />
+            <ChartCinemaRanking
+              TheatreID={activeCinema?.TheatreID}
+              associatedChain={activeCinema?.chain}
+            />
             {/* <DashboardCard variant="outlined" content="what">
               {" "}
               Parent Content{" "}
             </DashboardCard> */}
-            <ChartCinemasSalesOverHours hoveredTheatre={activeCinema.name} associatedChain={activeCinema.chain} />
+            <ChartCinemasSalesOverHours
+              hoveredTheatre={activeCinema.name}
+              associatedChain={activeCinema.chain}
+            />
 
             <ChartHousesSales
               hoveredCinema={activeCinema?.name}
@@ -199,8 +200,6 @@ const MapInfoPanel = ({
               activeHouse={activeHouse}
               setActiveHouse={setActiveHouse}
             />
-
-
           </>
         )}
       </Paper>

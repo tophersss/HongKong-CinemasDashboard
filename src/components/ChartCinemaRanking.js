@@ -34,11 +34,6 @@ const ChartCinemaRanking = ({ TheatreID, associatedChain }) => {
       topCinemas.push(activeCinemaStatsObj);
     }
 
-    console.log(`==================================`);
-    console.log(`printing top 5 cinemas: `);
-    console.log(topCinemas);
-    console.log(`==================================`);
-
     return topCinemas;
   };
 
@@ -117,8 +112,6 @@ const ChartCinemaRanking = ({ TheatreID, associatedChain }) => {
   }, [TheatreID]);
 
   const updateSeries = (CinemasList) => {
-    console.log(`useEffect triggered updateSeries()`);
-
     setChartOptions((prevState) => ({
       ...prevState,
       title: {
@@ -131,7 +124,10 @@ const ChartCinemaRanking = ({ TheatreID, associatedChain }) => {
         data: CinemasList.map((d) => {
           return {
             name: d.theatreTC,
-            className: TheatreID === d.TheatreID ? `palette-primary--${PickChainColor(associatedChain)}` : `palette-secondary--${PickChainColor(associatedChain)}`,
+            className:
+              TheatreID === d.TheatreID
+                ? `palette-primary`
+                : `palette-secondary`,
             y: d.OverallTicketsSold,
           };
         }),

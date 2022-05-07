@@ -79,180 +79,150 @@
 }
 
 /* Chart */
-.info-panel__chart {
+[class*="info-panel__chart"] {
   margin: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 6px;
 }
 
 /* ************************************************** */
-/* Chart Colors */
+/* info-panel Theme Colors */
 
 /* blue */
-.palette-header--blue {
-  stroke: #313e87 !important;
-  fill: #313e87 !important;
+.info-panel--blue .palette-header {
   background-color: #313e87 !important;
 }
 
-.palette-primary--blue {
+.info-panel--blue .palette-primary {
   stroke: #7863cc !important;
   fill: #7863cc !important;
-  background-color: #7863cc !important;
 }
 
-.palette-primary--blue stop {
+.info-panel--blue .palette-primary stop {
   stop-color: #7863cc !important;
 }
 
-.palette-secondary--blue {
+.info-panel--blue .palette-secondary {
   stroke: #bfceff !important;
   fill: #bfceff !important;
-  background-color: #bfceff !important;
 }
 
 /* Yellow */
-.palette-header--yellow {
-  stroke: #C29440!important;
-  fill: #C29440!important;
+.info-panel--yellow .palette-header {
   background-color: #C29440!important;
 }
 
-.palette-primary--yellow {
+.info-panel--yellow .palette-primary {
   stroke: #F7BE54 !important;
   fill: #F7BE54 !important;
-  background-color: #F7BE54 !important;
 }
 
-.palette-primary--yellow stop {
+.info-panel--yellow .palette-primary stop {
   stop-color: #F7BE54 !important;
 }
 
-.palette-secondary--yellow {
+.info-panel--yellow .palette-secondary {
   stroke: #ffe7ba !important;
   fill: #ffe7ba !important;
-  background-color: #ffe7ba !important;
 }
 
 /* Turquoise */
-.palette-header--turquoise {
-  stroke: #219685 !important;
-  fill: #219685 !important;
+.info-panel--turquoise .palette-header {
   background-color: #219685 !important;
 }
 
-.palette-primary--turquoise {
+.info-panel--turquoise .palette-primary {
   stroke: #3EB8A5 !important;
   fill: #3EB8A5 !important;
-  background-color: #3EB8A5 !important;
 }
 
-.palette-primary--turquoise stop {
+.info-panel--turquoise .palette-primary stop {
   stop-color: #3EB8A5 !important;
 }
 
-.palette-secondary--turquoise {
-  stroke: #89d9cc !important;
-  fill: #89d9cc !important;
-  background-color: #89d9cc !important;
+.info-panel--turquoise .palette-secondary {
+  stroke: #b4e5dd !important;
+  fill: #b4e5dd !important;
 }
 
 /* Orange */
-.palette-header--orange {
-  stroke: #F76E11 !important;
-  fill: #F76E11 !important;
+.info-panel--orange .palette-header {
   background-color: #F76E11 !important;
 }
 
-.palette-primary--orange {
+.info-panel--orange .palette-primary {
   stroke: #FF9F45 !important;
   fill: #FF9F45 !important;
-  background-color: #FF9F45 !important;
 }
 
-.palette-primary--orange stop {
+.info-panel--orange .palette-primary stop {
   stop-color: #FF9F45 !important;
 }
 
-.palette-secondary--orange {
-  stroke: #FFBC80!important;
-  fill: #FFBC80!important;
-  background-color: #FFBC80!important;
+.info-panel--orange .palette-secondary {
+  stroke: #ffe1c5 !important;
+  fill: #ffe1c5 !important;
 }
 
 /* Burgundy */
-.palette-header--burgundy {
-  stroke: #750550 !important;
-  fill: #750550 !important;
+.info-panel--burgundy .palette-header {
   background-color: #750550 !important;
 }
 
-.palette-primary--burgundy {
+.info-panel--burgundy .palette-primary {
   stroke: #980F5A !important;
   fill: #980F5A !important;
-  background-color: #980F5A !important;
 }
 
-.palette-primary--burgundy stop {
+.info-panel--burgundy .palette-primary stop {
   stop-color: #980F5A !important;
 }
 
-.palette-secondary--burgundy {
-  stroke: #ba6192 !important;
-  fill: #ba6192 !important;
-  background-color: #ba6192 !important;
+.info-panel--burgundy .palette-secondary {
+  stroke: #efbad7 !important;
+  fill: #efbad7 !important;
 }
 
 /* Violet */
-.palette-header--violet {
-  stroke: #8A39E1 !important;
-  fill: #8A39E1 !important;
+.info-panel--violet .palette-header {
   background-color: #8A39E1 !important;
 }
 
-.palette-primary--violet {
+.info-panel--violet .palette-primary {
   stroke: #9C51E0 !important;
   fill: #9C51E0 !important;
-  background-color: #9C51E0 !important;
 }
 
-.palette-primary--violet stop {
-  stop-color: #9C51E0 !important;
+.info-panel--violet .palette-primary stop {
+  stop-color: #9078f0 !important;
 }
 
-.palette-secondary--violet {
-  stroke: #c993fa !important;
-  fill: #c993fa !important;
-  background-color: #c993fa !important;
+.info-panel--violet .palette-secondary {
+  stroke: #e19bc1 !important;
+  fill: #e19bc1 !important;
 }
 
 /* Ukraine */
-.palette-header--ukraine {
-  stroke: #005bbc !important;
-  fill: #005bbc !important;
+.info-panel--ukraine .palette-header {
   background-color: #005bbc !important;
-
 }
 
-.palette-primary--ukraine {
+.info-panel--ukraine .palette-primary {
   stroke: #ffd600 !important;
   fill: #ffd600 !important;
-  background-color: #ffd600 !important;
 }
 
-.palette-primary--ukraine stop {
+.info-panel--ukraine .palette-primary stop {
   stop-color: #ffd600 !important;
 }
 
-.palette-secondary--ukraine {
-  stroke: #f2e185 !important;
-  fill: #f2e185 !important;
-  background-color: #f2e185 !important;
+.info-panel--ukraine .palette-secondary {
+  stroke: #f9edad !important;
+  fill: #f9edad !important;
 }
 
 
 /* Chart Gradient */  
-
 #gradient-0 stop[offset="0"] {
   stop-opacity: 0.35;
 }
@@ -278,7 +248,7 @@
   fill: url(#gradient-1);
 }
 
-.highcharts-color-0 .highcharts-area {
+.highcharts-area {
   fill-opacity: 1;
   fill: url(#gradient-0);
 }
