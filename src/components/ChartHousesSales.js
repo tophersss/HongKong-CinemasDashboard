@@ -51,6 +51,7 @@ const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
           setTimeout(this.reflow.bind(this), 0);
         },
       },
+      // styledMode: true,
     },
     title: {
       text: `Most Profittable Houses`,
@@ -60,7 +61,7 @@ const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
     },
     colorAxis: {
       minColor: "#FFFFFF",
-      maxColor: "#DAA520",
+      maxColor: "#da2089",
       labels: {
         rotation: 30,
         // step: 1,
@@ -101,13 +102,18 @@ const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
             colorValue: groupData.profit,
           };
         }),
+        className: "palette-primary",
       },
     }));
   };
 
   return (
     <div>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} containerProps={{ className: "info-panel__chart" }} />
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={chartOptions}
+        containerProps={{ className: "info-panel__chart" }}
+      />
       {/* <button onClick={printhoveredCinema}> Show Hovered Theatre </button> */}
       {/* <TableHouseDetails /> */}
       {activeHouse == null ? "" : <h4>{activeHouse}</h4>}

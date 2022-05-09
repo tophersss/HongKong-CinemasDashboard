@@ -219,7 +219,6 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
           className: `palette-primary`,
         },
       },
-      defs: {},
     }));
   };
 
