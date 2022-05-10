@@ -3,8 +3,9 @@ import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 import { PickChainColor } from "../utils/ColorUtils";
 import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
+import '../highcharts_custom.css'
 
-const ChartCinemasSalesOverHours = ({ hoveredTheatre, associatedChain }) => {
+const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   const groupBy = (arr, key) => {
     const initialValue = {};
     return arr.reduce((acc, cval) => {

@@ -85,9 +85,9 @@ const MapInfoPanel = ({
   }, [activeCinema]);
 
   // ! - Identify active cinema's chain to define a Class for theming
-  const mapInfoPanelClasses = `info-panel info-panel-test info-panel--${PickChainColor(
+  const mapInfoPanelClasses = `info-panel info-panel--${PickChainColor(
     activeCinema?.chain
-  )}`;
+  ).color}`;
 
   return (
     <div className={mapInfoPanelClasses}>
@@ -183,7 +183,6 @@ const MapInfoPanel = ({
             </Box>
             <ChartCinemaRanking
               TheatreID={activeCinema?.TheatreID}
-              associatedChain={activeCinema?.chain}
             />
             {/* <DashboardCard variant="outlined" content="what">
               {" "}
@@ -191,7 +190,6 @@ const MapInfoPanel = ({
             </DashboardCard> */}
             <ChartCinemasSalesOverHours
               hoveredTheatre={activeCinema.name}
-              associatedChain={activeCinema.chain}
             />
 
             <ChartHousesSales

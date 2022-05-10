@@ -5,7 +5,7 @@ import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview
 import { abbrNum } from "../utils/NumberUtils";
 import { PickChainColor } from "../utils/ColorUtils";
 
-const ChartCinemaRanking = ({ TheatreID, associatedChain }) => {
+const ChartCinemaRanking = ({ TheatreID }) => {
   const GetTopCinemas = (TheatreID, topN) => {
     /**
      * when activeCinema already in topN, do nothing

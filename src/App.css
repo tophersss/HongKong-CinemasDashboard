@@ -1,4 +1,4 @@
-@import "https://code.highcharts.com/css/highcharts.css";
+/* @import "https://code.highcharts.com/css/highcharts.css"; */
 
 /* ************************************************** */
 /* Map */
@@ -51,7 +51,7 @@
 /* Cinema Name Autocomplete Dropdown Box */
 .info-panel .MuiAutocomplete-popper {
   position: fixed !important;
-  transform: translate3d(50px, 128px, 0px) !important;
+  transform: translate3d(120px, 145px, 0px) !important;
 }
 
 /* Trivia */
@@ -220,6 +220,10 @@
   stroke: #f9edad !important;
   fill: #f9edad !important;
 }
+
+/* .info-panel__chart g.highcharts-level-group-1 rect {
+  fill: #ffd600 !important;
+} */
 
 
 /* Chart Gradient */  

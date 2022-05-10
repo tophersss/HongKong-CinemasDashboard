@@ -11,11 +11,12 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { PickChainColor } from "../utils/ColorUtils";
 import TableHouseDetails from "./TableHouseDetails";
 addTreemapModule(Highcharts);
 HighchartsHeatmap(Highcharts);
 
-const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
+const ChartHousesSales = ({ hoveredCinema, associatedChain, activeHouse, setActiveHouse }) => {
   const groupBy = (arr, key) => {
     const initialValue = {};
     return arr.reduce((acc, cval) => {
@@ -102,7 +103,16 @@ const ChartHousesSales = ({ hoveredCinema, activeHouse, setActiveHouse }) => {
             colorValue: groupData.profit,
           };
         }),
-        className: "palette-primary",
+        // className: "palette-primary",
+      },
+      colorAxis: {
+        minColor: "#FFFFFF",
+        maxColor: PickChainColor(associatedChain).code,
+        labels: {
+          rotation: 30,
+          // step: 1,
+          // format: "{value:.1f}",
+        },
       },
     }));
   };
