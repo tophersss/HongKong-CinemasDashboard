@@ -103,6 +103,12 @@ const ChartHousesSales = ({ hoveredCinema, associatedChain, activeHouse, setActi
             colorValue: groupData.profit,
           };
         }),
+        dataLabels: {
+          enabled: true,
+          style: {
+            textOverflow: 'clip'
+          }
+        }
         // className: "palette-primary",
       },
       colorAxis: {

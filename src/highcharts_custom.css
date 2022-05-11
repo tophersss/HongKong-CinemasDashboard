@@ -401,13 +401,13 @@
   }
   
   .highcharts-treemap-series .highcharts-point {
-    stroke-width: 1px;
+    stroke-width: 1.2px;
     stroke: #e6e6e6;
     transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
   }
   
   .highcharts-treemap-series .highcharts-point-hover {
-    stroke: #999999;
+    stroke: #cfcfcf;
     transition: stroke 25ms, fill 25ms, fill-opacity 25ms;
   }
   

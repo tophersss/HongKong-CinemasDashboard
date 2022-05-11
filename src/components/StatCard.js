@@ -17,14 +17,14 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
   useEffect(() => {
     var content = {};
 
-    console.log(
-      "================================================================================================="
-    );
-    console.log(`printing cardContent:`);
-    console.log(cardContent);
-    console.log(
-      "=================================================================================================="
-    );
+    // console.log(
+    //   "================================================================================================="
+    // );
+    // console.log(`printing cardContent:`);
+    // console.log(cardContent);
+    // console.log(
+    //   "=================================================================================================="
+    // );
 
     if (!cardContent) {
       return;
@@ -72,14 +72,14 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
     }
 
     setDisplayContent(content);
-    console.log(
-      "================================================================================================="
-    );
-    console.log(`printing content for StatCard:`);
-    console.log(content);
-    console.log(
-      "=================================================================================================="
-    );
+    // console.log(
+    //   "================================================================================================="
+    // );
+    // console.log(`printing content for StatCard:`);
+    // console.log(content);
+    // console.log(
+    //   "=================================================================================================="
+    // );
   }, [cardContent]);
 
   return (
