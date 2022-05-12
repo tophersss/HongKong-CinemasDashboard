@@ -8,14 +8,28 @@ import {
   Typography,
 } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import { abbrNum } from "../utils/NumberUtils";
 import { CopyAll } from "@mui/icons-material";
 
-const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
+const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
   const [displayContent, setDisplayContent] = useState(null);
+  const [unitType, setUnitType] = useState("overall");
+
+  const allUnitTypes = {
+    0: "overall",
+    1: "month",
+    2: "week",
+  }
+
+  const toggleUnitType = () => {
+    setU
+  }
 
   useEffect(() => {
     var content = {};
+    var textColor = "";
 
     // console.log(
     //   "================================================================================================="
@@ -71,6 +85,17 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
         break;
     }
 
+    if ( content.percentageChange > 0 ) {
+      textColor = "#69f0ae"
+    } else if ( content.percentageChange < 0 ) {
+      textColor = "#f44336"
+    } else {
+      textColor = "#090845";
+      textColor = "#d19d49";
+    }
+
+    content.textColor = textColor;
+
     setDisplayContent(content);
     // console.log(
     //   "================================================================================================="
@@ -80,10 +105,10 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
     // console.log(
     //   "=================================================================================================="
     // );
-  }, [cardContent]);
+  }, [cardContent, unitType]);
 
   return (
-    <Card sx={{ backgroundColor: "white", margin: "15px 10px" }} {...cardProps}>
+    <Card sx={{ backgroundColor: "white", margin: "15px 10px" }} {...cardProps} onClick={() => {console.log(`card clicked`)}}>
       <CardContent>
         <Grid container spacing={3} sx={{ justifyContent: "space-between" }}>
           <Grid item>
@@ -115,11 +140,36 @@ const StatCard = ({ cardProps, cardContent, Icon, unitType, statType }) => {
             alignItems: "center",
           }}
         >
-          <ArrowDownwardIcon color="error" />
+          {
+            (() => {
+              if (unitType === "overall") {
+                console.log(`statCard icon render based on unitType: ${unitType}`)
+                return <AllInclusiveIcon htmlColor={displayContent?.textColor} /> 
+              } 
+              else {
+                if (displayContent.percentageChange > 0) {
+                  return <ArrowUpwardIcon htmlColor={displayContent?.textColor} />
+                }
+                else if (displayContent.percentageChange < 0) {
+                  return <ArrowUpwardIcon htmlColor={displayContent?.textColor} />
+                }
+                else {
+                  return <AllInclusiveIcon htmlColor={displayContent?.textColor} />
+                }
+              }
+              
+            }) ()
+            // unitType === "overall" ? 
+            //   <ArrowDownwardIcon color="error" /> :
+            //   <ArrowUpwardIcon color="error" />
+            
+          } 
+          <Typography>&nbsp;</Typography>
           <Typography
-            color="error"
+            // htmlColor={displayContent.textColor}
             sx={{
               mr: 1,
+              color: `${displayContent?.textColor}`,
             }}
             variant="body2"
           >

@@ -146,7 +146,6 @@ const MapInfoPanel = ({
                   cardProps={{ variant: "outlined", raised: true }}
                   cardContent={cardContentSales}
                   Icon={AttachMoneyIcon}
-                  unitType="overall"
                   statType="SALES"
                 ></StatCard>
               </Grid>
@@ -155,7 +154,6 @@ const MapInfoPanel = ({
                   cardProps={{ variant: "outlined", raised: true }}
                   cardContent={cardContentTicketsSold}
                   Icon={MoneyIcon}
-                  unitType="overall"
                   statType="TICKETS SOLD"
                 ></StatCard>
               </Grid>
