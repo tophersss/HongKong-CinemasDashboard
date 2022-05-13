@@ -10,12 +10,12 @@ import {
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
-import { abbrNum } from "../utils/NumberUtils";
+import { abbrNum, percIncrease } from "../utils/NumberUtils";
 import { CopyAll } from "@mui/icons-material";
 
 const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
   const [displayContent, setDisplayContent] = useState(null);
-  const [unitType, setUnitType] = useState("overall");
+  const [unitTypeID, setUnitTypeID] = useState(0);
 
   const allUnitTypes = {
     0: "overall",
@@ -24,8 +24,12 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
   }
 
   const toggleUnitType = () => {
-    setU
-  }
+    setUnitTypeID((prevState) => 
+      prevState + 1 > Object.keys(allUnitTypes).length - 1 ?  0 : prevState + 1
+  );
+      console.log(`unitType: ${unitTypeID} - ${allUnitTypes[unitTypeID]}`)
+
+  };
 
   useEffect(() => {
     var content = {};
@@ -44,12 +48,12 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
       return;
     }
 
-    switch (unitType) {
+    switch (allUnitTypes[unitTypeID]) {
       case "overall":
         content = {
           currentValue: cardContent.valueOverall,
           prevValue: -1,
-          percentageChange: 0.0,
+          percentageChange: 0,
           unitDisplay: "All time",
         };
         break;
@@ -57,21 +61,19 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
         content = {
           currentValue: cardContent.valueAtCurrentMonth,
           prevValue: cardContent.valueAtPrevMonth,
-          percentageChange:
-            ((cardContent.valueAtCurrentMonth - cardContent.valueAtPrevMonth) /
-              cardContent.valueAtPrevMonth) *
-            100.0,
+          percentageChange: percIncrease(cardContent.valueAtPrevMonth, cardContent.valueAtCurrentMonth),
           unitDisplay: "Since last month",
         };
         break;
       case "week":
+        console.log(`valueAtCurrentWeek - valueAtPrevWeek: ${cardContent.valueAtCurrentWeek} - ${cardContent.valueAtPrevWeek}`)
+        console.log(`final result: ${((cardContent.valueAtCurrentWeek - cardContent.valueAtPrevWeek) /
+        cardContent.valueAtPrevWeek) *
+      100.0}`);
         content = {
           currentValue: cardContent.valueAtCurrentWeek,
           prevValue: cardContent.valueAtPrevWeek,
-          percentageChange:
-            ((cardContent.valueAtCurrentWeek - cardContent.valueAtPrevWeek) /
-              cardContent.valueAtPrevWeek) *
-            100.0,
+          percentageChange:percIncrease(cardContent.valueAtPrevWeek, cardContent.valueAtCurrentWeek),
           unitDisplay: "Since last week",
         };
         break;
@@ -79,7 +81,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
         content = {
           currentValue: cardContent.valueOverall,
           prevValue: -1,
-          percentageChange: 0.0,
+          percentageChange: 0,
           unitDisplay: "All time",
         };
         break;
@@ -105,10 +107,10 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
     // console.log(
     //   "=================================================================================================="
     // );
-  }, [cardContent, unitType]);
+  }, [cardContent, unitTypeID]);
 
   return (
-    <Card sx={{ backgroundColor: "white", margin: "15px 10px" }} {...cardProps} onClick={() => {console.log(`card clicked`)}}>
+    <Card sx={{ backgroundColor: "white", margin: "15px 10px" }} {...cardProps} onClick={toggleUnitType}>
       <CardContent>
         <Grid container spacing={3} sx={{ justifyContent: "space-between" }}>
           <Grid item>
@@ -142,15 +144,15 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
         >
           {
             (() => {
-              if (unitType === "overall") {
-                console.log(`statCard icon render based on unitType: ${unitType}`)
+              if (allUnitTypes[unitTypeID] === "overall") {
+                console.log(`statCard icon render based on unitType: ${allUnitTypes[unitTypeID]}`)
                 return <AllInclusiveIcon htmlColor={displayContent?.textColor} /> 
               } 
               else {
-                if (displayContent.percentageChange > 0) {
+                if (displayContent?.percentageChange > 0) {
                   return <ArrowUpwardIcon htmlColor={displayContent?.textColor} />
                 }
-                else if (displayContent.percentageChange < 0) {
+                else if (displayContent?.percentageChange < 0) {
                   return <ArrowUpwardIcon htmlColor={displayContent?.textColor} />
                 }
                 else {
