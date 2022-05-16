@@ -85,9 +85,9 @@ const MapInfoPanel = ({
   }, [activeCinema]);
 
   // ! - Identify active cinema's chain to define a Class for theming
-  const mapInfoPanelClasses = `info-panel info-panel--${PickChainColor(
-    activeCinema?.chain
-  ).color}`;
+  const mapInfoPanelClasses = `info-panel info-panel--${
+    PickChainColor(activeCinema?.chain).color
+  }`;
 
   return (
     <div className={mapInfoPanelClasses}>
@@ -174,8 +174,7 @@ const MapInfoPanel = ({
                 color="text.primary"
                 variant="subtitle1"
               >
-                // todo: https://www.google.com/search?q=infinite+scrolling+horizontal+text+codepen&sxsrf=ALiCzsYhY7ffnc-oXQ_rhCLF1boExoI2_Q%3A1652685130677&ei=SvmBYvH6KIqa0ASvhZX4Ag&oq=text+infinite+scro&gs_lcp=Cgdnd3Mtd2l6EAMYATIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgcIABBHELADOgYIIxAnEBM6BAgjECc6CwgAEIAEELEDEIMBOgQIABBDOhEILhCABBCxAxCDARDHARDRAzoUCC4QgAQQsQMQgwEQxwEQ0QMQ1AI6EQguEIAEELEDEIMBEMcBEKMCOgUIABCABDoICAAQgAQQsQM6CggAELEDEIMBEEM6CAguEIAEELEDOgUIABDLAToECAAQHjoGCAAQChAeOgoIABAPEAUQChAeOgYIABAFEB46CAgAEAgQChAeSgQIQRgASgQIRhgAUO8MWJ8vYOA-aAFwAXgAgAFRiAGaCJIBAjE4mAEAoAEByAEKwAEB&sclient=gws-wiz
-                {" "}
+                {/* todo: https://www.google.com/search?q=infinite+scrolling+horizontal+text+codepen&sxsrf=ALiCzsYhY7ffnc-oXQ_rhCLF1boExoI2_Q%3A1652685130677&ei=SvmBYvH6KIqa0ASvhZX4Ag&oq=text+infinite+scro&gs_lcp=Cgdnd3Mtd2l6EAMYATIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgcIABBHELADOgYIIxAnEBM6BAgjECc6CwgAEIAEELEDEIMBOgQIABBDOhEILhCABBCxAxCDARDHARDRAzoUCC4QgAQQsQMQgwEQxwEQ0QMQ1AI6EQguEIAEELEDEIMBEMcBEKMCOgUIABCABDoICAAQgAQQsQM6CggAELEDEIMBEEM6CAguEIAEELEDOgUIABDLAToECAAQHjoGCAAQChAeOgoIABAPEAUQChAeOgYIABAFEB46CAgAEAgQChAeSgQIQRgASgQIRhgAUO8MWJ8vYOA-aAFwAXgAgAFRiAGaCJIBAjE4mAEAoAEByAEKwAEB&sclient=gws-wiz */}{" "}
                 Do you know that Sunday 3pm is the most crowded session at{" "}
                 {activeCinema.name}{" "}
               </Typography>
@@ -183,9 +182,7 @@ const MapInfoPanel = ({
             {/* <ChartCinemaRanking
               TheatreID={activeCinema?.TheatreID}
             /> */}
-            <ChartCinemasSalesOverHours
-              hoveredTheatre={activeCinema.name}
-            />
+            <ChartCinemasSalesOverHours hoveredTheatre={activeCinema.name} />
 
             <ChartHousesSales
               hoveredCinema={activeCinema?.name}
