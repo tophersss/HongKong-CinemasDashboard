@@ -57,7 +57,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       margin: 0,
     },
     subtitle: {
-      text: "Tickets Sold per Hour",
+      text: "Tickets sold per hour",
       align: "right",
       y: 10,
       margin: 0,

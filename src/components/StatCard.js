@@ -55,6 +55,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
           prevValue: -1,
           percentageChange: 0,
           unitDisplay: "All time",
+          tooltipDisplayHeader: `Displaying ${statType.toLowerCase()} of all time.`,
         };
         break;
       case "month":
@@ -66,6 +67,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
             cardContent.valueAtCurrentMonth
           ),
           unitDisplay: "Since last month",
+          tooltipDisplayHeader: `Displaying ${statType.toLowerCase()} in this month.`,
         };
         break;
       case "week":
@@ -87,6 +89,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
             cardContent.valueAtCurrentWeek
           ),
           unitDisplay: "Since last week",
+          tooltipDisplayHeader: `Displaying ${statType.toLowerCase()} in this week.`,
         };
         break;
       default:
@@ -95,12 +98,13 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
           prevValue: -1,
           percentageChange: 0,
           unitDisplay: "All time",
+          tooltipDisplayHeader: `Displaying ${statType.toLowerCase()} of all time.`,
         };
         break;
     }
 
     if (content.percentageChange > 0) {
-      textColor = "#69f0ae";
+      textColor = "#30b362";
     } else if (content.percentageChange < 0) {
       textColor = "#f44336";
     } else {
@@ -126,8 +130,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
       title={
         <>
           <Typography variant="subtitle2">
-            Showing {unitTypeID === 0 ? "" : "current"}{" "}
-            {allUnitTypes[unitTypeID]} data
+            {displayContent?.tooltipDisplayHeader}
           </Typography>
           Click to toggle.
         </>

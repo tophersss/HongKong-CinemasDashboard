@@ -12,6 +12,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { PickChainColor } from "../utils/ColorUtils";
+import { commaSeparator } from "../utils/NumberUtils";
 import TableHouseDetails from "./TableHouseDetails";
 addTreemapModule(Highcharts);
 HighchartsHeatmap(Highcharts);
@@ -45,8 +46,9 @@ const ChartHousesSales = ({ hoveredCinema, associatedChain, activeHouse, setActi
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 300,
+      height: 285,
       // width: "100%",
+      spacingTop: 20,
       events: {
         load() {
           setTimeout(this.reflow.bind(this), 0);
@@ -55,10 +57,19 @@ const ChartHousesSales = ({ hoveredCinema, associatedChain, activeHouse, setActi
       // styledMode: true,
     },
     title: {
-      text: `Most Profittable Houses`,
+      text: `Houses`,
+      align: "left",
+      style: {
+        fontSize: "1.15rem",
+      },
+      x: 10,
+      margin: 0,
     },
     subtitle: {
-      text: "Click Rectangle To Show House Details",
+      text: "Ordered by sales",
+      align: "right",
+      y: 10,
+      margin: 0,
     },
     colorAxis: {
       minColor: "#FFFFFF",
@@ -77,6 +88,27 @@ const ChartHousesSales = ({ hoveredCinema, associatedChain, activeHouse, setActi
         },
       },
     },
+    // tooltip: {
+    //   backgroundColor: {
+    //     linearGradient: [0, 0, 0, 60],
+    //     stops: [
+    //         [0, '#FFFFFF'],
+    //         [1, '#E0E0E0']
+    //     ]
+    //   },
+    //   borderRadius: 4,
+    //   style: {
+    //     color: "#fff",
+    //   },
+    //   formatter: function () {
+    //     console.log(this.series)
+    //     console.log(this.point)
+    //     const houseData = createHouseData(this.point.name);
+    //     return 'The value for <b>' + this.point.name +
+    //         '</b> is <b>' + this.point.value + '</b>' +
+    //         '<br/> Average Ticket Price is $' + houseData.avg_price;
+    //   }
+    // },
   });
 
   const updateSeries = () => {
@@ -119,6 +151,33 @@ const ChartHousesSales = ({ hoveredCinema, associatedChain, activeHouse, setActi
           // step: 1,
           // format: "{value:.1f}",
         },
+      },
+      tooltip: {
+        backgroundColor: {
+          linearGradient: [0, 0, 0, 60],
+          stops: [
+              [0, '#FFFFFF'],
+              [1, '#E0E0E0']
+          ]
+        },
+        borderRadius: 4,
+        style: {
+          color: "#fff",
+        },
+        useHTML: true,
+        headerFormat: "<table>",
+        formatter: function () {
+          console.log(this.series)
+          console.log(this.point)
+          const houseData = createHouseData(this.point.name);
+          return (
+            `<table><tr><th colspan="2"><h3>${this.point.name}</h3></th></tr>` +
+            `<tr><th>Sales:</th><td> HK$${commaSeparator(this.point.value)}</td></tr>` +
+            `<tr><th>Number of Tickets Sold:</th><td> ${houseData.ticket_sold === "undefined" || houseData.ticket_sold === 0 ? "Unknown" : `${commaSeparator(houseData.ticket_sold)}`}</td></tr>` +
+            `<tr><th>Average Ticket Price:</th><td> ${houseData.avg_price === "undefined" || houseData.avg_price === 0 ? "Unknown" : `HK$${Math.round(houseData.avg_price)}`}</td></tr>` +
+            `<tr><th>Capacity:</th><td> ${houseData.capacity === "undefined" || houseData.capacity === 0 ? "Unknown" : `${houseData.capacity}`}</td></tr>`
+          )
+        }
       },
     }));
   };
