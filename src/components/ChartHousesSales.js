@@ -21,6 +21,8 @@ const ChartHousesSales = ({
   associatedChain,
   activeHouse,
   setActiveHouse,
+  open,
+  handleOpen
 }) => {
   const groupBy = (arr, key) => {
     const initialValue = {};
@@ -31,13 +33,26 @@ const ChartHousesSales = ({
     }, initialValue);
   };
 
-  const [chart, setChart] = useState(null);
-  const afterChartCreated = (chartElement) => {
+  // useEffect(() => {
+    // const 
+  // })
+  const [chartElement, setChartElement] = useState(null);
+  const [chartRendered, setChartRendered] = useState(false);
+
+  const afterChartCreated = (chartCallback) => {
     console.log(`afterChartCreated started`);
-    setChart(chartElement);
+    setChartElement(chartCallback);
+    setChartRendered(true);
     console.log(`printing chart`);
-    console.log(chartElement);
+    console.log(chartCallback);
   };
+
+  var meaninglessMessage = () => {
+    alert(`boring`);
+    console.log(`boring console log`);
+  }
+
+  meaninglessMessage = meaninglessMessage.bind(this)
 
   const theatreGroups = groupBy(houses_sales, "theatre");
 
@@ -70,15 +85,17 @@ const ChartHousesSales = ({
     },
     title: {
       text: `Houses`,
+      // text: '',
       align: "left",
       style: {
         fontSize: "1.15rem",
       },
       x: 10,
       margin: 0,
+      useHTML: true,
     },
     subtitle: {
-      text: "Ordered by sales",
+      text: "",
       align: "right",
       y: 10,
       margin: 0,
@@ -221,11 +238,15 @@ const ChartHousesSales = ({
         highcharts={Highcharts}
         containerProps={{ className: "info-panel__chart" }}
         options={chartOptions}
-        callback={afterChartCreated}
+        callback={afterChartCreated.bind(this)}
       />
-      {chart !== null ?? <SubtitleComponent subtitle={chart.title} />}
+      {chartElement ? <SubtitleComponent open={open} handleOpen={handleOpen} subtitle={chartElement.subtitle} /> : ""}
+      {chartRendered.toString()}
       {/* <button onClick={printhoveredCinema}> Show Hovered Theatre </button> */}
       {/* <TableHouseDetails /> */}
+      {<button onClick={()=>{console.log(chartElement)}}>Print Chart</button>}
+      {<button onClick={()=>{console.log(chartElement.hasRendered)}}>Print Chart hasRendered {chartRendered.toString()}</button>}
+      {chartRendered ?? <h5> IsChartRendered: {chartElement.hasRendered} </h5>}
       {activeHouse == null ? "" : <h4>{activeHouse}</h4>}
       {activeHouse !== null ? (
         <TableHouseDetails houseDetailsObj={createHouseData(activeHouse)} />

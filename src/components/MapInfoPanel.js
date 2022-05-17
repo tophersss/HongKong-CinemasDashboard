@@ -17,6 +17,7 @@ import ChartHousesSales from "../components/ChartHousesSales";
 import MoneyIcon from "@mui/icons-material/Money";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import SeatplanDialog from "./DialogBox";
 import MyLocationRoundedIcon from "@mui/icons-material/MyLocationRounded";
 import DirectionsSubwayTwoToneIcon from "@mui/icons-material/DirectionsSubwayTwoTone";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
@@ -88,6 +89,9 @@ const MapInfoPanel = ({
   const mapInfoPanelClasses = `info-panel info-panel--${
     PickChainColor(activeCinema?.chain).color
   }`;
+
+  // ! - Control Seatplan dialog open state 
+  const [isSeatplanOpen, setIsSeatplanOpen] = useState(false);
 
   return (
     <div className={mapInfoPanelClasses}>
@@ -189,7 +193,10 @@ const MapInfoPanel = ({
               associatedChain={activeCinema?.chain}
               activeHouse={activeHouse}
               setActiveHouse={setActiveHouse}
+              open={isSeatplanOpen}
+              handleOpen={setIsSeatplanOpen}
             />
+            <SeatplanDialog open={isSeatplanOpen} handleOpen={setIsSeatplanOpen} />
           </>
         )}
       </Paper>

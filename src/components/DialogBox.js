@@ -74,21 +74,21 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function SeatplanDialog({ houseName }) {
-  const [open, setOpen] = React.useState(false);
+export default function SeatplanDialog({ open, handleOpen, houseName }) {
+  // const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-    setOpen(true);
+    handleOpen(true);
   };
   const handleClose = () => {
-    setOpen(false);
+    handleOpen(false);
   };
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      {/* <Button variant="outlined" onClick={handleClickOpen}>
         Open Seatplan
-      </Button>
+      </Button> */}
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -100,7 +100,8 @@ export default function SeatplanDialog({ houseName }) {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Seatplan - {houseName}
+          Seatplan
+          {/* Seatplan - {houseName} */}
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <Typography>Darker = More Popular</Typography>

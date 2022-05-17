@@ -7,16 +7,20 @@ import { useState } from "react";
 // todo: Highcharts portal example https://codesandbox.io/s/highcharts-react-demo-v22pd?file=/TitleComponent.jsx
 // todo: React portal https://www.youtube.com/watch?v=LyLa7dU5tp8
 
-const SubtitleComponent = ({ subtitle }) => {
+const SubtitleComponent = ({ open, handleOpen, subtitle }) => {
   const [cnt, setCnt] = useState(0);
   console.log(`printing subtitle in SubtitleComponent.js`);
   console.log(subtitle);
 
+  const handleClick = () => {
+    setCnt(prevState => {return prevState + 1});
+    handleOpen(true);
+  }
+
   return createPortal(
-    <div>
-      <h5>SubtitleComponent</h5>
-      Hit Count: {cnt}
-    </div>,
+    <span onClick={handleClick}>
+      View Seatplans
+    </span>,
     subtitle.element
   );
 };
