@@ -2,41 +2,18 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 import { PickChainColor } from "../utils/ColorUtils";
+import { groupBy } from "../utils/ArrayUtils";
 import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
 import '../highcharts_custom.css'
 
-const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
-  const groupBy = (arr, key) => {
-    const initialValue = {};
-    return arr.reduce((acc, cval) => {
-      const myAttribute = cval[key];
-      acc[myAttribute] = [...(acc[myAttribute] || []), cval];
-      return acc;
-    }, initialValue);
-  };
-  // const groupBy = (x, f) => {
-  //   return x.reduce((a, b) => ((a[f(b)] ||= []).push(b), a), {});
-  // };
-  const theatreGroups = groupBy(cinemas_sales_over_hours, "theatre");
-  const isMounted = useRef(false);
-  useEffect(() => {
-    // if (isMounted.current) {
-    //   // updateSeries();
-    //   console.log(`usedEffect step`);
-    // } else {
-    //   isMounted.current = true;
-    //   const groupBy = (x, f) => {
-    //     return x.reduce((a, b) => ((a[f(b)] ||= []).push(b), a), {});
-    //   };
-    //   const theatreGroups = groupBy(cinemas_sales_over_hours, (v) => v.name);
-    // }
-  }, []);
+const ChartCinemasSalesOverHours = ({ activeCinemaID }) => {
+  const theatreGroups = groupBy(cinemas_sales_over_hours, "theatreID");
 
   useEffect(() => {
-    if (hoveredTheatre !== null) {
+    if (activeCinemaID !== null) {
       updateSeries();
     }
-  }, [hoveredTheatre]);
+  }, [activeCinemaID]);
 
   const [chartOptions, setChartOptions] = useState({
     chart: {
@@ -109,7 +86,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       tickAmount: 5,
     },
     series: Object.keys(theatreGroups).map((groupName) => {
-      if (groupName == hoveredTheatre) {
+      if (groupName == activeCinemaID) {
         return {
           type: "area",
           name: groupName,
@@ -183,9 +160,9 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
   const updateSeries = () => {
     // console.log(`useEffect triggered updateSeries()`);
     // console.log(theatreGroups);
-    // const filteredTheatreObj = theatreGroups.filter((g) => g == hoveredTheatre);
-    const hoveredTheatreObj = Object.keys(theatreGroups).map((groupName) => {
-      if (groupName == hoveredTheatre) {
+    // const filteredTheatreObj = theatreGroups.filter((g) => g == activeCinemaID);
+    const activeCinemaObj = Object.keys(theatreGroups).map((groupName) => {
+      if (groupName == activeCinemaID) {
         return {
           type: "area",
           name: groupName,
@@ -196,7 +173,7 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       }
     });
     // console.log(`filteredGroup:`);
-    // console.log(theatreGroups[hoveredTheatre]);
+    // console.log(theatreGroups[activeCinemaID]);
 
     setChartOptions((prevState) => ({
       // ...prevState,
@@ -206,8 +183,9 @@ const ChartCinemasSalesOverHours = ({ hoveredTheatre }) => {
       // series: [...matchingSteps.map((step_obj) => step_obj.series_obj)],
       series: {
         type: "area",
-        name: hoveredTheatre,
-        data: theatreGroups[hoveredTheatre].map((groupData) => {
+        name: theatreGroups[activeCinemaID].theatre,
+        // name: "hahaha",
+        data: theatreGroups[activeCinemaID].map((groupData) => {
           return [groupData.label, groupData.ticket_sold];
         }),
         // marker: {

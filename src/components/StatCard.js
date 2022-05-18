@@ -71,16 +71,16 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
         };
         break;
       case "week":
-        console.log(
-          `valueAtCurrentWeek - valueAtPrevWeek: ${cardContent.valueAtCurrentWeek} - ${cardContent.valueAtPrevWeek}`
-        );
-        console.log(
-          `final result: ${
-            ((cardContent.valueAtCurrentWeek - cardContent.valueAtPrevWeek) /
-              cardContent.valueAtPrevWeek) *
-            100.0
-          }`
-        );
+        // console.log(
+        //   `valueAtCurrentWeek - valueAtPrevWeek: ${cardContent.valueAtCurrentWeek} - ${cardContent.valueAtPrevWeek}`
+        // );
+        // console.log(
+        //   `final result: ${
+        //     ((cardContent.valueAtCurrentWeek - cardContent.valueAtPrevWeek) /
+        //       cardContent.valueAtPrevWeek) *
+        //     100.0
+        //   }`
+        // );
         content = {
           currentValue: cardContent.valueAtCurrentWeek,
           prevValue: cardContent.valueAtPrevWeek,

@@ -1,0 +1,606 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" data-v-09ae1cf2="" data-v-708d7ff0="" viewBox="-15 -15 270 281.84999999999997" class="seatplan seatplan"><g data-v-09ae1cf2=""><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="-15" y="-15" rx="2" ry="2" width="270" height="10" style="fill: rgb(43, 43, 43);"/> <text data-v-09ae1cf2="" x="112.5" y="-10" dominant-baseline="central" text-anchor="middle" style="font-size: 7px; fill: rgb(255, 255, 255);">
+        SCREEN
+      </text></a></g> <g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="244.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      Q
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="244.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      Q
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="247.04999999999998" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 252.04999999999998)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="155" y="251.54999999999998" transform="rotate(-10 155 252.04999999999998)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          9
+
+        </text><title>Num of times taken: 58.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="249.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 254.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="140" y="253.95" transform="rotate(-10 140 254.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 206.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="251.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 256.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="125" y="256.35" transform="rotate(-10 125 256.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 222.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="251.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 256.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="95" y="256.35" transform="rotate(10 95 256.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 238.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="249.45" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 254.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="80" y="253.95" transform="rotate(10 80 254.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 219.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="247.04999999999998" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 252.04999999999998)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="251.54999999999998" transform="rotate(10 65 252.04999999999998)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 147.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="244.64999999999998" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 249.64999999999998)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="50" y="249.14999999999998" transform="rotate(10 50 249.64999999999998)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 106.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="242.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 247.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="246.9" transform="rotate(10 35 247.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 114.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="240" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 245)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="244.5" transform="rotate(10 20 245)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 93.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="229.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      P
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="229.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      P
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="232.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 237.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="155" y="236.55" transform="rotate(-10 155 237.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 84.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="234.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 239.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="140" y="238.95000000000002" transform="rotate(-10 140 239.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 192.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="236.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 241.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="125" y="241.35" transform="rotate(-10 125 241.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 216.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="236.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 241.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="95" y="241.35" transform="rotate(10 95 241.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 228.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="234.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 239.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="80" y="238.95000000000002" transform="rotate(10 80 239.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 214.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="232.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 237.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="236.55" transform="rotate(10 65 237.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 140.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="229.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 234.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="50" y="234.15" transform="rotate(10 50 234.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 101.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="227.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 232.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="231.9" transform="rotate(10 35 232.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 113.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="225" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 230)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="229.5" transform="rotate(10 20 230)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 99.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="214.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      O
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="214.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      O
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="217.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 222.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="155" y="221.55" transform="rotate(-10 155 222.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 92.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="219.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 224.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="140" y="223.95000000000002" transform="rotate(-10 140 224.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 233.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="221.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 226.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="125" y="226.35" transform="rotate(-10 125 226.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 250.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="221.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 226.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="95" y="226.35" transform="rotate(10 95 226.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 274.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="219.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 224.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="80" y="223.95000000000002" transform="rotate(10 80 224.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 256.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="217.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 222.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="221.55" transform="rotate(10 65 222.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 146.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="214.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 219.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="50" y="219.15" transform="rotate(10 50 219.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 112.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="212.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 217.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="216.9" transform="rotate(10 35 217.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 131.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="210" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 215)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="214.5" transform="rotate(10 20 215)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 101.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="199.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      N
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="199.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      N
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="199.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 204.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="170" y="204.15" transform="rotate(-10 170 204.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 122.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="202.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 207.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="155" y="206.55" transform="rotate(-10 155 207.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 138.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="204.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 209.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="140" y="208.95000000000002" transform="rotate(-10 140 209.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 218.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="206.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 211.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="125" y="211.35" transform="rotate(-10 125 211.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 242.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="206.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 211.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv7"/> <!----> <text data-v-09ae1cf2="" x="95" y="211.35" transform="rotate(10 95 211.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 266.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="204.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 209.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="80" y="208.95000000000002" transform="rotate(10 80 209.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 251.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="202.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 207.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="206.55" transform="rotate(10 65 207.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 172.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="199.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 204.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="50" y="204.15" transform="rotate(10 50 204.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 131.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="197.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 202.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="201.9" transform="rotate(10 35 202.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 126.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="195" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 200)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="199.5" transform="rotate(10 20 200)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 92.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="184.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      M
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="184.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      M
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="184.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 189.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="170" y="189.15" transform="rotate(-10 170 189.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 121.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="187.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 192.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="155" y="191.55" transform="rotate(-10 155 192.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 149.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="189.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 194.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="140" y="193.95000000000002" transform="rotate(-10 140 194.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 247.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="191.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 196.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv7"/> <!----> <text data-v-09ae1cf2="" x="125" y="196.35" transform="rotate(-10 125 196.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 270.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="191.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 196.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="95" y="196.35" transform="rotate(10 95 196.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 292.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="189.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 194.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="80" y="193.95000000000002" transform="rotate(10 80 194.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 288.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="187.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 192.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="191.55" transform="rotate(10 65 192.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 194.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="184.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 189.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="50" y="189.15" transform="rotate(10 50 189.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 142.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="182.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 187.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="186.9" transform="rotate(10 35 187.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 138.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="180" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 185)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="20" y="184.5" transform="rotate(10 20 185)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 111.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="169.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      L
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="169.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      L
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="169.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 174.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="170" y="174.15" transform="rotate(-10 170 174.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 112.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="172.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 177.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="155" y="176.55" transform="rotate(-10 155 177.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 144.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="174.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 179.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="140" y="178.95000000000002" transform="rotate(-10 140 179.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 233.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="176.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 181.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="125" y="181.35" transform="rotate(-10 125 181.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 256.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="176.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 181.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="95" y="181.35" transform="rotate(10 95 181.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 281.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="174.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 179.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv7"/> <!----> <text data-v-09ae1cf2="" x="80" y="178.95000000000002" transform="rotate(10 80 179.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 268.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="172.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 177.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="176.55" transform="rotate(10 65 177.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 176.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="169.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 174.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="50" y="174.15" transform="rotate(10 50 174.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 139.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="167.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 172.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="171.9" transform="rotate(10 35 172.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 130.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="165" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 170)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="169.5" transform="rotate(10 20 170)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 101.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="154.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      K
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="154.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      K
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="154.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 159.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="170" y="159.15" transform="rotate(-10 170 159.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 118.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="157.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 162.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="155" y="161.55" transform="rotate(-10 155 162.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 157.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="159.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 164.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv7"/> <!----> <text data-v-09ae1cf2="" x="140" y="163.95000000000002" transform="rotate(-10 140 164.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 265.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="161.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 166.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="125" y="166.35" transform="rotate(-10 125 166.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 280.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="161.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 166.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="95" y="166.35" transform="rotate(10 95 166.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 321.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="159.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 164.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="80" y="163.95000000000002" transform="rotate(10 80 164.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 307.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="157.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 162.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="161.55" transform="rotate(10 65 162.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 194.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="154.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 159.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="50" y="159.15" transform="rotate(10 50 159.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 140.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="152.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 157.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="156.9" transform="rotate(10 35 157.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 130.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="150" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 155)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="154.5" transform="rotate(10 20 155)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 103.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="139.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      J
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="139.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      J
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="139.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 144.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="170" y="144.15" transform="rotate(-10 170 144.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 103.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="142.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 147.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="155" y="146.55" transform="rotate(-10 155 147.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 133.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="144.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 149.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="140" y="148.95000000000002" transform="rotate(-10 140 149.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 232.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="146.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 151.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv7"/> <!----> <text data-v-09ae1cf2="" x="125" y="151.35" transform="rotate(-10 125 151.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 258.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="146.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 151.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv8"/> <!----> <text data-v-09ae1cf2="" x="95" y="151.35" transform="rotate(10 95 151.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 277.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="144.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 149.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv7"/> <!----> <text data-v-09ae1cf2="" x="80" y="148.95000000000002" transform="rotate(10 80 149.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 259.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="142.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 147.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="65" y="146.55" transform="rotate(10 65 147.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 168.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="139.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 144.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="50" y="144.15" transform="rotate(10 50 144.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 109.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="137.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 142.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="35" y="141.9" transform="rotate(10 35 142.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 112.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="135" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 140)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="20" y="139.5" transform="rotate(10 20 140)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 83.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="124.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      I
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="124.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      I
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="124.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 129.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="170" y="129.15" transform="rotate(-10 170 129.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 99.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="127.05000000000001" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 132.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="155" y="131.55" transform="rotate(-10 155 132.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 131.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="129.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 134.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="140" y="133.95000000000002" transform="rotate(-10 140 134.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 223.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="131.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 136.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="125" y="136.35" transform="rotate(-10 125 136.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 233.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="131.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 136.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv6"/> <!----> <text data-v-09ae1cf2="" x="95" y="136.35" transform="rotate(10 95 136.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 252.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="129.45000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 134.45000000000002)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv5"/> <!----> <text data-v-09ae1cf2="" x="80" y="133.95000000000002" transform="rotate(10 80 134.45000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 234.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="127.05000000000001" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 132.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="65" y="131.55" transform="rotate(10 65 132.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 109.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="124.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 129.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="50" y="129.15" transform="rotate(10 50 129.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 92.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="122.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 127.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="35" y="126.9" transform="rotate(10 35 127.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 73.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="120" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 125)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="124.5" transform="rotate(10 20 125)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 44.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="109.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      H
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="109.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      H
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="109.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 114.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="170" y="114.14999999999999" transform="rotate(-10 170 114.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 79.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="112.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 117.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="155" y="116.55" transform="rotate(-10 155 117.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 108.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="114.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 119.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="140" y="118.95" transform="rotate(-10 140 119.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 161.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="116.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 121.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="125" y="121.35" transform="rotate(-10 125 121.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 179.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="116.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 121.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv4"/> <!----> <text data-v-09ae1cf2="" x="95" y="121.35" transform="rotate(10 95 121.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 196.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="114.45" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 119.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="80" y="118.95" transform="rotate(10 80 119.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 172.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="112.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 117.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="65" y="116.55" transform="rotate(10 65 117.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 86.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="109.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 114.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="50" y="114.14999999999999" transform="rotate(10 50 114.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 76.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="107.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 112.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="35" y="111.9" transform="rotate(10 35 112.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 56.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="105" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 110)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="109.5" transform="rotate(10 20 110)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 39.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="94.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      G
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="94.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      G
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="94.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 99.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="170" y="99.14999999999999" transform="rotate(-10 170 99.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 63.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="97.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 102.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="155" y="101.55" transform="rotate(-10 155 102.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 82.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="99.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 104.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="140" y="103.95" transform="rotate(-10 140 104.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 139.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="101.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 106.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="125" y="106.35" transform="rotate(-10 125 106.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 161.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="101.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 106.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv3"/> <!----> <text data-v-09ae1cf2="" x="95" y="106.35" transform="rotate(10 95 106.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 146.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="99.45" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 104.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv2"/> <!----> <text data-v-09ae1cf2="" x="80" y="103.95" transform="rotate(10 80 104.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 124.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="97.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 102.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="65" y="101.55" transform="rotate(10 65 102.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 70.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="94.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 99.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="50" y="99.14999999999999" transform="rotate(10 50 99.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 58.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="92.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 97.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="35" y="96.9" transform="rotate(10 35 97.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 50.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="90" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 95)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="94.5" transform="rotate(10 20 95)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 34.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="79.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      F
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="79.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      F
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="195" y="75" rx="2" ry="2" width="10" height="10" transform="rotate(-10 200 80)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="200" y="79.5" transform="rotate(-10 200 80)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          12
+
+        </text><title>Num of times taken: 16.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="180" y="77.4" rx="2" ry="2" width="10" height="10" transform="rotate(-10 185 82.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="185" y="81.9" transform="rotate(-10 185 82.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          11
+
+        </text><title>Num of times taken: 25.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="79.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 84.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="170" y="84.14999999999999" transform="rotate(-10 170 84.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 30.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="82.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 87.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="155" y="86.55" transform="rotate(-10 155 87.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 42.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="84.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 89.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="140" y="88.95" transform="rotate(-10 140 89.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 61.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="86.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 91.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv1"/> <!----> <text data-v-09ae1cf2="" x="125" y="91.35" transform="rotate(-10 125 91.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 73.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="64.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      E
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="64.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      E
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="195" y="60" rx="2" ry="2" width="10" height="10" transform="rotate(-10 200 65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="200" y="64.5" transform="rotate(-10 200 65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          12
+
+        </text><title>Num of times taken: 6.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="180" y="62.400000000000006" rx="2" ry="2" width="10" height="10" transform="rotate(-10 185 67.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="185" y="66.9" transform="rotate(-10 185 67.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          11
+
+        </text><title>Num of times taken: 11.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="64.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 69.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="170" y="69.14999999999999" transform="rotate(-10 170 69.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 15.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="67.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 72.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="155" y="71.55" transform="rotate(-10 155 72.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 18.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="69.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 74.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="140" y="73.95" transform="rotate(-10 140 74.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 30.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="71.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 76.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="125" y="76.35" transform="rotate(-10 125 76.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 33.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="71.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 76.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="95" y="76.35" transform="rotate(10 95 76.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 50.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="69.45" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 74.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="80" y="73.95" transform="rotate(10 80 74.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 43.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="67.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 72.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="65" y="71.55" transform="rotate(10 65 72.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 23.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="64.64999999999999" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 69.64999999999999)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="50" y="69.14999999999999" transform="rotate(10 50 69.64999999999999)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 17.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="62.400000000000006" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 67.4)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="35" y="66.9" transform="rotate(10 35 67.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 14.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="60" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="64.5" transform="rotate(10 20 65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 11.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="49.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      D
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="49.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      D
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="195" y="45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 200 50)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="200" y="49.5" transform="rotate(-10 200 50)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          12
+
+        </text><title>Num of times taken: 4.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="180" y="47.400000000000006" rx="2" ry="2" width="10" height="10" transform="rotate(-10 185 52.400000000000006)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="185" y="51.900000000000006" transform="rotate(-10 185 52.400000000000006)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          11
+
+        </text><title>Num of times taken: 3.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="49.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 54.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="170" y="54.15" transform="rotate(-10 170 54.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          10
+
+        </text><title>Num of times taken: 4.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="52.050000000000004" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 57.050000000000004)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="155" y="56.550000000000004" transform="rotate(-10 155 57.050000000000004)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 5.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="54.449999999999996" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 59.449999999999996)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="140" y="58.949999999999996" transform="rotate(-10 140 59.449999999999996)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 11.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="56.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 61.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="125" y="61.35" transform="rotate(-10 125 61.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 13.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="56.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 61.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="95" y="61.35" transform="rotate(10 95 61.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 14.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="54.449999999999996" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 59.449999999999996)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="80" y="58.949999999999996" transform="rotate(10 80 59.449999999999996)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 11.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="52.050000000000004" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 57.050000000000004)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="65" y="56.550000000000004" transform="rotate(10 65 57.050000000000004)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 2.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="49.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 54.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="50" y="54.15" transform="rotate(10 50 54.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          3
+
+        </text><title>Num of times taken: 4.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="47.400000000000006" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 52.400000000000006)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="35" y="51.900000000000006" transform="rotate(10 35 52.400000000000006)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          2
+
+        </text><title>Num of times taken: 3.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="45" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 50)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="49.5" transform="rotate(10 20 50)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          1
+
+        </text><title>Num of times taken: 2.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="34.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      C
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="34.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      C
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="195" y="30" rx="2" ry="2" width="10" height="10" transform="rotate(-10 200 35)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="200" y="34.5" transform="rotate(-10 200 35)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          12
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="180" y="32.400000000000006" rx="2" ry="2" width="10" height="10" transform="rotate(-10 185 37.400000000000006)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="185" y="36.900000000000006" transform="rotate(-10 185 37.400000000000006)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          11
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="34.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 39.65)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="170" y="39.15" transform="rotate(-10 170 39.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          10
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="37.050000000000004" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 42.050000000000004)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="155" y="41.550000000000004" transform="rotate(-10 155 42.050000000000004)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          9
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="39.449999999999996" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 44.449999999999996)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="140" y="43.949999999999996" transform="rotate(-10 140 44.449999999999996)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          8
+
+        </text><title>Num of times taken: 2.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="41.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 46.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="125" y="46.35" transform="rotate(-10 125 46.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          7
+
+        </text><title>Num of times taken: 4.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="41.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 46.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="95" y="46.35" transform="rotate(10 95 46.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          6
+
+        </text><title>Num of times taken: 8.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="39.449999999999996" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 44.449999999999996)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="80" y="43.949999999999996" transform="rotate(10 80 44.449999999999996)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          5
+
+        </text><title>Num of times taken: 7.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="37.050000000000004" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 42.050000000000004)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="65" y="41.550000000000004" transform="rotate(10 65 42.050000000000004)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(0, 0, 0);">
+          4
+
+        </text><title>Num of times taken: 5.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="34.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 39.65)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="50" y="39.15" transform="rotate(10 50 39.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          3
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="32.400000000000006" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 37.400000000000006)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="35" y="36.900000000000006" transform="rotate(10 35 37.400000000000006)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          2
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="30" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 35)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="34.5" transform="rotate(10 20 35)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          1
+
+        </text><title>Num of times taken: 0.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="19.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      B
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="19.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      B
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="195" y="15" rx="2" ry="2" width="10" height="10" transform="rotate(-10 200 20)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="200" y="19.5" transform="rotate(-10 200 20)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          12
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="180" y="17.4" rx="2" ry="2" width="10" height="10" transform="rotate(-10 185 22.4)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="185" y="21.9" transform="rotate(-10 185 22.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          11
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="19.650000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 24.650000000000002)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="170" y="24.150000000000002" transform="rotate(-10 170 24.650000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          10
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="22.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 27.05)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="155" y="26.55" transform="rotate(-10 155 27.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          9
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="24.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 29.45)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="140" y="28.95" transform="rotate(-10 140 29.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          8
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="26.85" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 31.85)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="125" y="31.35" transform="rotate(-10 125 31.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          7
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="26.85" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 31.85)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="95" y="31.35" transform="rotate(10 95 31.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          6
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="24.45" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 29.45)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="80" y="28.95" transform="rotate(10 80 29.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          5
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="22.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 27.05)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="65" y="26.55" transform="rotate(10 65 27.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          4
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="19.650000000000002" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 24.650000000000002)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="50" y="24.150000000000002" transform="rotate(10 50 24.650000000000002)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          3
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="17.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 22.4)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="35" y="21.9" transform="rotate(10 35 22.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          2
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="15" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 20)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="19.5" transform="rotate(10 20 20)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          1
+
+        </text><title>Num of times taken: 0.</title></a> <!----></g><g data-v-09ae1cf2=""><text data-v-09ae1cf2="" x="-7.5" y="4.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      A
+
+    </text> <text data-v-09ae1cf2="" x="217.5" y="4.5" width="15" height="15" text-anchor="middle" dominant-baseline="central" style="font-size: 5px; fill: rgb(255, 255, 255);">
+      A
+
+    </text> <a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="165" y="4.65" rx="2" ry="2" width="10" height="10" transform="rotate(-10 170 9.65)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <image data-v-09ae1cf2="" x="165" y="4.65" width="10" height="10" transform="rotate(-10 170 9.65)" xlink:href="https://storage.movie6.com/m6-cinema/icon_wheelchair.png" dominant-baseline="central"/> <!----><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="150" y="7.05" rx="2" ry="2" width="10" height="10" transform="rotate(-10 155 12.05)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <image data-v-09ae1cf2="" x="150" y="7.05" width="10" height="10" transform="rotate(-10 155 12.05)" xlink:href="https://storage.movie6.com/m6-cinema/icon_wheelchair.png" dominant-baseline="central"/> <!----><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="135" y="9.45" rx="2" ry="2" width="10" height="10" transform="rotate(-10 140 14.45)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <image data-v-09ae1cf2="" x="135" y="9.45" width="10" height="10" transform="rotate(-10 140 14.45)" xlink:href="https://storage.movie6.com/m6-cinema/icon_wheelchair.png" dominant-baseline="central"/> <!----><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="120" y="11.850000000000001" rx="2" ry="2" width="10" height="10" transform="rotate(-10 125 16.85)" style="fill: rgb(0, 255, 0); stroke-width: 1px; stroke: rgb(0, 255, 0);" class="freq-lv0"/> <image data-v-09ae1cf2="" x="120" y="11.850000000000001" width="10" height="10" transform="rotate(-10 125 16.85)" xlink:href="https://storage.movie6.com/m6-cinema/icon_wheelchair.png" dominant-baseline="central"/> <!----><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="90" y="11.850000000000001" rx="2" ry="2" width="10" height="10" transform="rotate(10 95 16.85)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="95" y="16.35" transform="rotate(10 95 16.85)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          6
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="75" y="9.45" rx="2" ry="2" width="10" height="10" transform="rotate(10 80 14.45)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="80" y="13.95" transform="rotate(10 80 14.45)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          5
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="60" y="7.05" rx="2" ry="2" width="10" height="10" transform="rotate(10 65 12.05)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="65" y="11.55" transform="rotate(10 65 12.05)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          4
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="45" y="4.65" rx="2" ry="2" width="10" height="10" transform="rotate(10 50 9.65)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="50" y="9.15" transform="rotate(10 50 9.65)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          3
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="30" y="2.4" rx="2" ry="2" width="10" height="10" transform="rotate(10 35 7.4)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="35" y="6.9" transform="rotate(10 35 7.4)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          2
+
+        </text><title>Num of times taken: 0.</title></a> <!----><a data-v-09ae1cf2=""><rect data-v-09ae1cf2="" x="15" y="0" rx="2" ry="2" width="10" height="10" transform="rotate(10 20 5)" style="fill: rgb(128, 128, 128); stroke-width: 1px; stroke: rgb(128, 128, 128);" class="freq-lv0"/> <!----> <text data-v-09ae1cf2="" x="20" y="4.5" transform="rotate(10 20 5)" dominant-baseline="central" text-anchor="middle" style="font-size: 5px; fill: rgb(128, 128, 128);">
+          1
+
+        </text><title>Num of times taken: 0.</title></a> <!----></g></svg>

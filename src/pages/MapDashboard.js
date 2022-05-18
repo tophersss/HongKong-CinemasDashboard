@@ -9,15 +9,16 @@ import MapInfoPanel from "../components/MapInfoPanel";
 const MapDashboard = () => {
   const [activeCinema, setActiveCinema] = useState(null);
   const [activeCinemaTrigger, setActiveCinemaTrigger] = useState(true);
-  const [activeHouse, setActiveHouse] = useState(null);
+  const [activeHouseID, setActiveHouseID] = useState(null);
   const [activeDistance, setActiveDistance] = useState([
     [0, 0],
     [0, 0],
   ]);
 
   const HandleActiveCinemaChange = (CinemaName) => {
-    if ( CinemaName !== null && CinemaName !== undefined ) {
-      setActiveHouse(null);
+    // note: if CinemaName is supplied and is different from activeCinema, then take actions
+    if ( CinemaName !== null && CinemaName !== undefined && CinemaName !== activeCinema?.name ) {
+      setActiveHouseID(null);
 
       var MatchedCinemas = CinemasGeoInfo.filter((c) => c.name === CinemaName);
       if (MatchedCinemas.length === 0 ) { return false };
@@ -37,13 +38,12 @@ const MapDashboard = () => {
   return (
     <>
       <MapBox
-        setActiveHouse={setActiveHouse}
         activeCinema={activeCinema}
         ActiveCinemaChangeHandler={HandleActiveCinemaChange}
         activeDistance={activeDistance}
         setActiveDistance={setActiveDistance}
       />
-      <MapInfoPanel activeCinema={activeCinema} ActiveCinemaChangeHandler={HandleActiveCinemaChange} activeHouse={activeHouse} setActiveHouse={setActiveHouse} />
+      <MapInfoPanel activeCinema={activeCinema} ActiveCinemaChangeHandler={HandleActiveCinemaChange} activeHouseID={activeHouseID} handleSetActiveHouseID={setActiveHouseID} />
 
       {/* <Paper sx={{ position: "relative", overflow: "hidden", minHeight: "100px", width: "20em", display: "inline-block" }}>
         <ChartHousesSales

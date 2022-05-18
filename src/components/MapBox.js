@@ -91,7 +91,6 @@ function HandleSetView({ activeCinema }) {
 }
 
 const MapBox = ({
-  setActiveHouse,
   activeCinema,
   ActiveCinemaChangeHandler,
   activeDistance,

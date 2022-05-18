@@ -39,7 +39,7 @@ const GetCinemaStats = (id, type) => {
 
   switch (type.toLowerCase()) {
     case "sales":
-      console.log(`found sales...`);
+      // console.log(`found sales...`);
       return {
         header: type.toUpperCase(),
         valueOverall: cinemaStatsObj.OverallSales,
@@ -49,7 +49,7 @@ const GetCinemaStats = (id, type) => {
         valueAtPrevWeek: cinemaStatsObj.PrevWeekSales,
       };
     case "tickets_sold":
-      console.log(`found tickets sold...`);
+      // console.log(`found tickets sold...`);
       return {
         header: type.toUpperCase(),
         valueOverall: cinemaStatsObj.OverallTicketsSold,
@@ -67,8 +67,8 @@ const GetCinemaStats = (id, type) => {
 const MapInfoPanel = ({
   activeCinema,
   ActiveCinemaChangeHandler,
-  activeHouse,
-  setActiveHouse,
+  activeHouseID,
+  handleSetActiveHouseID,
 }) => {
   // ! - options for Autocomplete drop-down list
   var cinemaNames = CinemasGeoInfo.map((d) => d.name);
@@ -106,6 +106,7 @@ const MapInfoPanel = ({
         }}
       >
         <Box sx={{ flexGrow: 1 }}>
+          <button onClick={() => {console.log(`activeHouseID: ${activeHouseID}`)}}> show activeHouse </button>
           <AppBar position="static" className="palette-header">
             <Toolbar>
               <Autocomplete
@@ -186,17 +187,17 @@ const MapInfoPanel = ({
             {/* <ChartCinemaRanking
               TheatreID={activeCinema?.TheatreID}
             /> */}
-            <ChartCinemasSalesOverHours hoveredTheatre={activeCinema.name} />
+            <ChartCinemasSalesOverHours activeCinemaID={activeCinema.TheatreID} />
 
             <ChartHousesSales
-              hoveredCinema={activeCinema?.name}
+              activeCinemaName={activeCinema?.name}
               associatedChain={activeCinema?.chain}
-              activeHouse={activeHouse}
-              setActiveHouse={setActiveHouse}
+              activeHouseID={activeHouseID}
+              handleSetActiveHouseID={handleSetActiveHouseID}
               open={isSeatplanOpen}
               handleOpen={setIsSeatplanOpen}
             />
-            <SeatplanDialog open={isSeatplanOpen} handleOpen={setIsSeatplanOpen} />
+            <SeatplanDialog open={isSeatplanOpen} handleOpen={setIsSeatplanOpen} activeHouseID={activeHouseID} />
           </>
         )}
       </Paper>

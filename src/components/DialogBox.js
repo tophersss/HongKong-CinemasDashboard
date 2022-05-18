@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useCallback } from "react";
 import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
@@ -11,9 +11,14 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
+import SeatplanLoader from "./SeatplanLoader";
 // import { house_seatplans } from "../data/HouseSeatplans";
 
-// ! - use to create Legends for seatplan frequency chart
+// todo: add cinemaID as prop, then create a list of houseNames for dropdown selection
+// todo: add dynamic svg import https://stackoverflow.com/questions/61339259/how-to-dynamically-import-svg-and-render-it-inline
+
+
+// note: use to create Legends for seatplan frequency chart
 const level_color_dict = [
   { "freq-range": "0~24%", color: "rgb(228, 247, 212)" },
   { "freq-range": "25~44%", color: "rgb(239, 225, 186)" },
@@ -74,8 +79,16 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function SeatplanDialog({ open, handleOpen, houseName }) {
+export default function SeatplanDialog({ open, handleOpen, activeHouseID }) {
   // const [open, setOpen] = React.useState(false);
+
+
+  const handleOnCompleted = useCallback(
+    (iconName) => console.log(`${iconName} successfully loaded`),
+    []
+  );
+
+  const handleIconError = useCallback((err) => console.error(err.message), []);
 
   const handleClickOpen = () => {
     handleOpen(true);
@@ -105,9 +118,9 @@ export default function SeatplanDialog({ open, handleOpen, houseName }) {
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <Typography>Darker = More Popular</Typography>
-          {/* <SVG
-            src={house_seatplans.filter((d) => d.name === houseName)[0].svg}
-          /> */}
+          { activeHouseID === null ? "" :
+            <SVG src={require(`../assets/seatplans/${activeHouseID}.svg`).default} />
+           }
           <Grid container alignItems="center" spacing={0}>
             {level_color_dict.map((d) => (
               <Grid

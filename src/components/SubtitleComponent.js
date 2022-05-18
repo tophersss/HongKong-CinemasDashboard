@@ -9,8 +9,8 @@ import { useState } from "react";
 
 const SubtitleComponent = ({ open, handleOpen, subtitle }) => {
   const [cnt, setCnt] = useState(0);
-  console.log(`printing subtitle in SubtitleComponent.js`);
-  console.log(subtitle);
+  // console.log(`printing subtitle in SubtitleComponent.js`);
+  // console.log(subtitle);
 
   const handleClick = () => {
     setCnt(prevState => {return prevState + 1});
