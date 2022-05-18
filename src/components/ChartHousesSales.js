@@ -17,35 +17,43 @@ import { set } from "lodash";
 addTreemapModule(Highcharts);
 HighchartsHeatmap(Highcharts);
 
-
 const ChartHousesSales = ({
   activeCinemaName,
   associatedChain,
   activeHouseID,
   handleSetActiveHouseID,
   open,
-  handleOpen
+  handleOpen,
 }) => {
-
   const [chartElement, setChartElement] = useState(null);
+
+  var theatreGroups = {};
+  const isMounted = useRef(false);
+  if (isMounted.current) {
+  }
+  {
+    console.log(`isMounted.current: ${isMounted.current}`);
+    theatreGroups = groupBy(houses_sales, "theatre");
+    isMounted.current = true;
+    console.log(`isMounted.current: ${isMounted.current}`);
+  }
 
   const afterChartCreated = (chartCallback) => {
     setChartElement(chartCallback);
     // console.log(chartCallback);
-  }
-
-  const theatreGroups = groupBy(houses_sales, "theatre");
+  };
 
   const [activeHouseName, setActiveHouseName] = useState(null);
-
 
   function createHouseData(id) {
     var houseDetails = theatreGroups[activeCinemaName].filter(
       (d) => d.HouseID === id
     )[0];
 
-    console.log(`Object.key(houseDetails).length: ${Object.keys(houseDetails).length}`)
-    console.log(houseDetails)
+    console.log(
+      `Object.key(houseDetails).length: ${Object.keys(houseDetails).length}`
+    );
+    console.log(houseDetails);
     return houseDetails;
   }
 
@@ -54,11 +62,11 @@ const ChartHousesSales = ({
       updateSeries();
 
       // note: assign the first house of a cinema to be activeHouse
-      console.log(`assigning houseID in ChartHouseSales`)
-      if (Object.keys(theatreGroups[activeCinemaName]).length > 0) { 
+      console.log(`assigning houseID in ChartHouseSales`);
+      if (Object.keys(theatreGroups[activeCinemaName]).length > 0) {
         const activeCinemaObj = theatreGroups[activeCinemaName][0];
-        handleSetActiveHouseID(activeCinemaObj.HouseID) ;
-        setActiveHouseName(activeCinemaObj.house_name) ;
+        handleSetActiveHouseID(activeCinemaObj.HouseID);
+        setActiveHouseName(activeCinemaObj.house_name);
       }
 
       // setClickedHouse(null);
@@ -66,13 +74,15 @@ const ChartHousesSales = ({
   }, [activeCinemaName]);
 
   useEffect(() => {
-    if ( activeHouseID !== null ) {
-      console.log(`activeHouseID: ${activeHouseID}`)
-      console.log(`activeCinemaName: ${activeCinemaName}`)
-      const name = theatreGroups[activeCinemaName].filter((d) => d.HouseID === activeHouseID)[0].house_name
+    if (activeHouseID !== null) {
+      console.log(`activeHouseID: ${activeHouseID}`);
+      console.log(`activeCinemaName: ${activeCinemaName}`);
+      const name = theatreGroups[activeCinemaName].filter(
+        (d) => d.HouseID === activeHouseID
+      )[0].house_name;
       setActiveHouseName(name);
     }
-  }, [activeHouseID])
+  }, [activeHouseID]);
 
   const [chartOptions, setChartOptions] = useState({
     chart: {
@@ -125,7 +135,7 @@ const ChartHousesSales = ({
     plotOptions: {
       treemap: {
         events: {
-          click: (e) => { },
+          click: (e) => {},
         },
       },
     },
@@ -140,7 +150,7 @@ const ChartHousesSales = ({
             click: (e) => {
               // const targetName = e.point.name;
               console.log(e);
-              console.log(`clicked houseID = ${e.point.options.id}`)
+              console.log(`clicked houseID = ${e.point.options.id}`);
               handleSetActiveHouseID(e.point.options.id);
             },
           },
@@ -190,27 +200,32 @@ const ChartHousesSales = ({
         useHTML: true,
         headerFormat: "<table>",
         formatter: function () {
-          console.log(`printing this.point`)
-          console.log(this.point)
+          console.log(`printing this.point`);
+          console.log(this.point);
           const houseData = createHouseData(this.point.id);
           return (
             `<table><tr><th colspan="2"><h3>${this.point.name}</h3></th></tr>` +
             `<tr><th>Sales:</th><td> ${
-            // note: refer to the note in "updateSeries() setChartOption => series.data" section
-            this.point.value === 1 ? "Unknown" : `HK$${commaSeparator(this.point.value)}`
+              // note: refer to the note in "updateSeries() setChartOption => series.data" section
+              this.point.value === 1
+                ? "Unknown"
+                : `HK$${commaSeparator(this.point.value)}`
             }</td></tr>` +
-            `<tr><th>Number of Tickets Sold:</th><td> ${houseData.ticket_sold === "undefined" ||
+            `<tr><th>Number of Tickets Sold:</th><td> ${
+              houseData.ticket_sold === "undefined" ||
               houseData.ticket_sold === 0
-              ? "Unknown"
-              : `${commaSeparator(houseData.ticket_sold)}`
+                ? "Unknown"
+                : `${commaSeparator(houseData.ticket_sold)}`
             }</td></tr>` +
-            `<tr><th>Average Ticket Price:</th><td> ${houseData.avg_price === "undefined" || houseData.avg_price === 0
-              ? "Unknown"
-              : `HK$${Math.round(houseData.avg_price)}`
+            `<tr><th>Average Ticket Price:</th><td> ${
+              houseData.avg_price === "undefined" || houseData.avg_price === 0
+                ? "Unknown"
+                : `HK$${Math.round(houseData.avg_price)}`
             }</td></tr>` +
-            `<tr><th>Capacity:</th><td> ${houseData.capacity === "undefined" || houseData.capacity === 0
-              ? "Unknown"
-              : `${houseData.capacity}`
+            `<tr><th>Capacity:</th><td> ${
+              houseData.capacity === "undefined" || houseData.capacity === 0
+                ? "Unknown"
+                : `${houseData.capacity}`
             }</td></tr>`
           );
         },
@@ -226,7 +241,15 @@ const ChartHousesSales = ({
         options={chartOptions}
         callback={afterChartCreated.bind(this)}
       />
-      {chartElement ? <SubtitleComponent open={open} handleOpen={handleOpen} subtitle={chartElement.subtitle} /> : ""}
+      {chartElement ? (
+        <SubtitleComponent
+          open={open}
+          handleOpen={handleOpen}
+          subtitle={chartElement.subtitle}
+        />
+      ) : (
+        ""
+      )}
       {/* <TableHouseDetails /> */}
       {activeHouseName == null ? "" : <h4>{activeHouseName}</h4>}
       {/* {activeHouseName !== null ? (

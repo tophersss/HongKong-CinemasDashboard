@@ -90,7 +90,7 @@ const MapInfoPanel = ({
     PickChainColor(activeCinema?.chain).color
   }`;
 
-  // ! - Control Seatplan dialog open state 
+  // ! - Control Seatplan dialog open state
   const [isSeatplanOpen, setIsSeatplanOpen] = useState(false);
 
   return (
@@ -106,7 +106,14 @@ const MapInfoPanel = ({
         }}
       >
         <Box sx={{ flexGrow: 1 }}>
-          <button onClick={() => {console.log(`activeHouseID: ${activeHouseID}`)}}> show activeHouse </button>
+          <button
+            onClick={() => {
+              console.log(`activeHouseID: ${activeHouseID}`);
+            }}
+          >
+            {" "}
+            show activeHouse{" "}
+          </button>
           <AppBar position="static" className="palette-header">
             <Toolbar>
               <Autocomplete
@@ -187,7 +194,9 @@ const MapInfoPanel = ({
             {/* <ChartCinemaRanking
               TheatreID={activeCinema?.TheatreID}
             /> */}
-            <ChartCinemasSalesOverHours activeCinemaID={activeCinema.TheatreID} />
+            <ChartCinemasSalesOverHours
+              activeCinemaID={activeCinema.TheatreID}
+            />
 
             <ChartHousesSales
               activeCinemaName={activeCinema?.name}
@@ -197,7 +206,13 @@ const MapInfoPanel = ({
               open={isSeatplanOpen}
               handleOpen={setIsSeatplanOpen}
             />
-            <SeatplanDialog open={isSeatplanOpen} handleOpen={setIsSeatplanOpen} activeHouseID={activeHouseID} />
+            <SeatplanDialog
+              open={isSeatplanOpen}
+              handleOpen={setIsSeatplanOpen}
+              activeCinemaID={activeCinema.TheatreID}
+              activeHouseID={activeHouseID}
+              handleSetActiveHouseID={handleSetActiveHouseID}
+            />
           </>
         )}
       </Paper>
