@@ -371,3 +371,20 @@ tr td {
   stroke: rgb(244, 14, 9) !important;
 }
 
+
+pre {
+  font-size: 7em;
+}
+.tick line {
+  stroke: #C0C0BB;
+}
+.tick text {
+  fill: #635F5D;
+}
+.mark {
+  fill: #137B80;
+}
+.axis-label {
+  font-size: 2.5em;
+  fill: #635F5D;
+}

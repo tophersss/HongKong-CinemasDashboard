@@ -1,5 +1,5 @@
 // import Highcharts from "highcharts";
-import Highcharts from 'highcharts'
+import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
@@ -47,7 +47,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       spacingTop: 20,
       type: "bar",
       scrollablePlotArea: {
-        minHeight: 8000
+        minHeight: 8000,
       },
     },
     title: {
@@ -110,13 +110,12 @@ const ChartCinemaRanking = ({ TheatreID }) => {
           enabled: true,
           // fillColor: "{series.color}",
         },
-        // pointWidth: 20,
-        // borderWidth: 0
       },
       bar: {
-        
-        // groupPadding: 20,
-        // pointPadding: 20,
+        // groupPadding: 0.1,
+        pointPadding: 0,
+        borderWidth: 0,
+        grouping: false,
       },
     },
   });
@@ -137,8 +136,9 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       xAxis: {
         categories: CinemasList.map((d) => d.theatreTC),
         scrollbar: {
-          enabled: true
+          enabled: true,
         },
+        tickPixelInterval: 20,
       },
       series: {
         data: CinemasList.map((d) => {
@@ -163,7 +163,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
         containerProps={{ className: "info-panel__chart" }}
       />
     </>
-  );  
+  );
 };
 
 export default ChartCinemaRanking;
