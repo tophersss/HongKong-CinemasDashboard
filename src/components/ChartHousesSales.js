@@ -115,18 +115,14 @@ const ChartHousesSales = ({
       margin: 0,
       useHTML: true,
       style: {
-        backgroundColor: "darkslategray",
-        color: "whitesmoke",
-        borderRadius: "5px",
-        padding: "4px",
-        cursor: "pointer",
+        // note: refer to App.css
       },
     },
     colorAxis: {
       minColor: "#FFFFFF",
       maxColor: "#da2089",
       labels: {
-        rotation: 30,
+        rotation: -45,
         // step: 1,
         // format: "{value:.1f}",
       },
@@ -180,7 +176,7 @@ const ChartHousesSales = ({
         minColor: "#FFFFFF",
         maxColor: PickChainColor(associatedChain).code,
         labels: {
-          rotation: 30,
+          rotation: -30,
           // step: 1,
           // format: "{value:.1f}",
         },

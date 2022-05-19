@@ -16,7 +16,7 @@ const SubtitleComponent = ({ open, handleOpen, subtitle }) => {
   };
 
   return createPortal(
-    <span onClick={handleClick}>View Seatplans</span>,
+    <span id="chart-seat-plan-button" onClick={handleClick}>View Seatplans</span>,
     subtitle.element
   );
 };

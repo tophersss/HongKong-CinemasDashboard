@@ -262,7 +262,6 @@
   fill: #7863cc;
 }
 
-
 /* House Details Table */
 tr {
   height: 10px;
@@ -272,14 +271,57 @@ tr td {
    height: auto !important;
 }
 
-/* ************************************************** */
-/* Seatplan */
-/* second to last <g> to skip the first <g> screen element */
-svg > g:nth-child(n+2) > a {
+
+.info-panel__chart #chart-seat-plan-button {
+  background-color: darkslategray;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 4px;
   cursor: pointer;
 }
 
-svg > g:nth-child(n+2) > a > text {
+.info-panel__chart #chart-seat-plan-button:hover {
+  background-color: rgb(64, 107, 107);
+  color: whitesmoke;
+}
+
+
+/* ************************************************** */
+/* Seatplan Dialog */
+.seatplan-dialog .MuiDialogContent-dividers {
+  text-align: center;
+}
+
+.seatplan-dialog #house-selection-label {
+  color: rgb(243 238 173);
+}
+
+.seatplan-dialog #house-selection-label.Mui-focused {
+  color: rgb(248, 242, 152);
+}
+
+.seatplan-dialog .MuiCircularProgress-colorPrimary {
+  color: rgb(248, 243, 176);
+}
+
+.seatplan-dialog #seat-plan-loader {
+  min-height: 300px;
+  color: whitesmoke;
+}
+
+
+/* Seatplan */
+/* second to last <g> to skip the first <g> screen element */
+.seatplan-dialog svg.seatplan {
+  height: 100%;
+  max-height: 65vh;
+}
+
+.seatplan-dialog svg.seatplan > g:nth-child(n+2) > a {
+  cursor: pointer;
+}
+
+.seatplan-dialog svg.seatplan > g:nth-child(n+2) > a > text {
   fill:rgb(0, 0, 0) !important;
 }
 

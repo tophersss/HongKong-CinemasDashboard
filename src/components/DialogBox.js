@@ -13,6 +13,8 @@ import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import Select from "@mui/material/Select";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
 import SeatplanLoader from "./SeatplanLoader";
@@ -38,7 +40,7 @@ const level_color_dict = [
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogTitle-root": {
     backgroundColor: "#333434",
-    color: "#e1e1cf",
+    color: "whitesmoke",
   },
   "& .MuiDialogContent-root": {
     backgroundColor: "#6c7070",
@@ -91,6 +93,8 @@ export default function SeatplanDialog({
   handleSetActiveHouseID,
 }) {
   // const [open, setOpen] = React.useState(false);
+
+  // note: create houseList for dropdown selection
   const [houseList, setHouseList] = useState([]);
 
   useEffect(() => {
@@ -101,12 +105,6 @@ export default function SeatplanDialog({
     }
   }, [activeHouseID]);
 
-  const handleOnCompleted = useCallback(
-    (iconName) => console.log(`${iconName} successfully loaded`),
-    []
-  );
-
-  const handleIconError = useCallback((err) => console.error(err.message), []);
 
   const handleClickOpen = () => {
     handleOpen(true);
@@ -129,31 +127,32 @@ export default function SeatplanDialog({
       </Button> */}
       <BootstrapDialog
         onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
+        aria-labelledby="Seatplan"
+        className="seatplan-dialog"
         open={open}
         fullWidth={true}
         maxWidth="lg"
       >
         <BootstrapDialogTitle
-          id="customized-dialog-title"
           onClose={handleClose}
         >
           Seatplan
           {/* Seatplan - {houseName} */}
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Houses</InputLabel>
+          <FormControl variant="filled" sx={{ m: 1, minWidth: 350 }}>
+            <InputLabel color="info" id="house-selection-label">House</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={activeHouseID}
               label="House"
               onChange={handleDropboxChange}
+              sx={{ color: "whitesmoke" }}
             >
               {houseList.length > 0 ? (
                 houseList.map((d) => (
-                  <MenuItem value={d.HouseID} name={d.house_name}>
+                  <MenuItem sx={{}} value={d.HouseID} name={d.house_name}>
                     {" "}
                     {d.house_name}{" "}
                   </MenuItem>
@@ -163,15 +162,22 @@ export default function SeatplanDialog({
               )}
             </Select>
           </FormControl>
-          <Typography>Darker = More Popular</Typography>
           {activeHouseID === null ? (
             ""
           ) : (
             <SVG
               src={require(`../assets/seatplans/${activeHouseID}.svg`).default}
-            />
+              height={"100%"}
+              maxWidth={"100%"}
+              loader={
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+                  <CircularProgress size={80} />
+                </Box>
+              }
+              onError={(error) => console.log(error.message)}
+              />
           )}
-          <Grid container alignItems="center" spacing={0}>
+          <Grid container alignItems="center" justifyContent="center" spacing={0}>
             {level_color_dict.map((d) => (
               <Grid
                 item
