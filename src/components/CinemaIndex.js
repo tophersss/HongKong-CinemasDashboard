@@ -1,0 +1,39 @@
+import { useState } from 'react'
+import ChartCinemaRanking from "./ChartCinemaRanking";
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+
+const CinemaIndex = ({ activeCinemaID }) => {
+    const [opened, setOpened] = useState(false);
+
+    const toggleDrawer = (state) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setOpened(state);
+    };
+
+    return (
+        <div>
+            <Button onClick={toggleDrawer(true)}>Cinema Index</Button>
+            <Drawer
+                anchor="right"
+                open={opened}
+                onClose={toggleDrawer(false)}
+            >
+                <ChartCinemaRanking
+                    TheatreID={activeCinemaID}
+                />
+            </Drawer>
+        </div>
+    )
+}
+
+export default CinemaIndex

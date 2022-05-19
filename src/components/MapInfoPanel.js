@@ -11,6 +11,7 @@ import {
   Typography,
   Box,
 } from "@mui/material";
+import CinemaIndex from "./CinemaIndex";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import ChartHousesSales from "../components/ChartHousesSales";
@@ -22,7 +23,6 @@ import MyLocationRoundedIcon from "@mui/icons-material/MyLocationRounded";
 import DirectionsSubwayTwoToneIcon from "@mui/icons-material/DirectionsSubwayTwoTone";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
-import ChartCinemaRanking from "./ChartCinemaRanking";
 import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours";
 import StatCard from "./StatCard";
 import { PickChainColor } from "../utils/ColorUtils";
@@ -116,6 +116,7 @@ const MapInfoPanel = ({
           </button>
           <AppBar position="static" className="palette-header">
             <Toolbar>
+              <CinemaIndex activeCinemaID={activeCinema?.TheatreID} />
               <Autocomplete
                 disablePortal
                 autoSelect
@@ -191,9 +192,7 @@ const MapInfoPanel = ({
                 {activeCinema.name}{" "}
               </Typography>
             </Box>
-            {/* <ChartCinemaRanking
-              TheatreID={activeCinema?.TheatreID}
-            /> */}
+
             <ChartCinemasSalesOverHours
               activeCinemaID={activeCinema.TheatreID}
             />

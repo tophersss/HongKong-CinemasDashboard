@@ -1,4 +1,5 @@
-import Highcharts from "highcharts";
+// import Highcharts from "highcharts";
+import Highcharts from 'highcharts'
 import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
@@ -42,9 +43,12 @@ const ChartCinemaRanking = ({ TheatreID }) => {
   const [chartOptions, setChartOptions] = useState({
     chart: {
       animation: { duration: 200 },
-      height: 220,
+      height: 1500,
       spacingTop: 20,
       type: "bar",
+      scrollablePlotArea: {
+        minHeight: 8000
+      },
     },
     title: {
       text: `Cinemas Popularity Ranking`,
@@ -71,6 +75,9 @@ const ChartCinemaRanking = ({ TheatreID }) => {
           fontSize: "0.75rem",
         },
       },
+      // scrollbar: {
+      //   enabled: true
+      // },
     },
     yAxis: [
       {
@@ -91,22 +98,32 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       },
     ],
     series: [],
+    tooltip: {
+      outside: false,
+    },
     plotOptions: {
       series: {
         animation: { duration: 3000 },
 
         // color: "gold",
         marker: {
-          enabled: false,
+          enabled: true,
           // fillColor: "{series.color}",
         },
+        // pointWidth: 20,
+        // borderWidth: 0
+      },
+      bar: {
+        
+        // groupPadding: 20,
+        // pointPadding: 20,
       },
     },
   });
 
   useEffect(() => {
     if (TheatreID !== null) {
-      const topCinemas = GetTopCinemas(TheatreID, 5);
+      const topCinemas = GetTopCinemas(TheatreID, 50);
       updateSeries(topCinemas);
     }
   }, [TheatreID]);
@@ -119,6 +136,9 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       },
       xAxis: {
         categories: CinemasList.map((d) => d.theatreTC),
+        scrollbar: {
+          enabled: true
+        },
       },
       series: {
         data: CinemasList.map((d) => {
@@ -143,7 +163,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
         containerProps={{ className: "info-panel__chart" }}
       />
     </>
-  );
+  );  
 };
 
 export default ChartCinemaRanking;
