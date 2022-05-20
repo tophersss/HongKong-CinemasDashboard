@@ -42,13 +42,12 @@ const ChartCinemaRanking = ({ TheatreID }) => {
 
   const [chartOptions, setChartOptions] = useState({
     chart: {
-      animation: { duration: 200 },
       height: 1500,
       spacingTop: 20,
       type: "bar",
-      scrollablePlotArea: {
-        minHeight: 8000,
-      },
+      // scrollablePlotArea: {
+      //   minHeight: 8000,
+      // },
     },
     title: {
       text: `Cinemas Popularity Ranking`,
@@ -103,7 +102,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
     },
     plotOptions: {
       series: {
-        animation: { duration: 3000 },
+        animation: { duration: 1200 },
 
         // color: "gold",
         marker: {

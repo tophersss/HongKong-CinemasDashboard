@@ -116,7 +116,7 @@ const MapInfoPanel = ({
           </button>
           <AppBar position="static" className="palette-header">
             <Toolbar>
-              <CinemaIndex activeCinemaID={activeCinema?.TheatreID} />
+              <CinemaIndex divClassName={mapInfoPanelClasses} activeCinemaID={activeCinema?.TheatreID} />
               <Autocomplete
                 disablePortal
                 autoSelect

@@ -5,8 +5,8 @@ import { AxisLeft } from "./AxisLeft";
 import { Marks } from "./Marks";
 
 const width = 600;
-const height = 1200;
-const margin = { top: 20, right: 30, bottom: 65, left: 220 };
+const height = 2200;
+const margin = { top: 50, right: 30, bottom: 65, left: 250 };
 const xAxisLabelOffset = 50;
 
 const BarChart = () => {
@@ -19,8 +19,8 @@ const BarChart = () => {
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
 
-  const yValue = (d) => d.Country;
-  const xValue = (d) => d.Population;
+  const yValue = (d) => d.theatreTC;
+  const xValue = (d) => d.OverallSales;
 
   const siFormat = format(".2s");
   const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace("G", "B");
@@ -28,7 +28,7 @@ const BarChart = () => {
   const yScale = scaleBand()
     .domain(data.map(yValue))
     .range([0, innerHeight])
-    .paddingInner(0.15);
+    .paddingInner(0.38);
 
   const xScale = scaleLinear()
     .domain([0, max(data, xValue)])

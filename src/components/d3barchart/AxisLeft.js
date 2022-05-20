@@ -9,6 +9,7 @@ export const AxisLeft = ({ yScale }) =>
         y={yScale(tickValue) + yScale.bandwidth() / 2}
       >
         {tickValue}
+        <title> {tickValue} </title>
       </text>
     </g>
   ));
