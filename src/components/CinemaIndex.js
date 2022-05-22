@@ -10,7 +10,11 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import BarChart from "./d3barchart/BarChart";
 
-const CinemaIndex = ({ divClassName, activeCinemaID }) => {
+const CinemaIndex = ({
+  divClassName,
+  activeCinemaID,
+  handleActiveCinemaChange,
+}) => {
   const [opened, setOpened] = useState(false);
 
   const toggleDrawer = (state) => (event) => {
@@ -37,7 +41,10 @@ const CinemaIndex = ({ divClassName, activeCinemaID }) => {
       >
         <div>
           {/* <BarChart /> */}
-          <ChartCinemaRanking TheatreID={activeCinemaID} />
+          <ChartCinemaRanking
+            TheatreID={activeCinemaID}
+            handleActiveCinemaChange={handleActiveCinemaChange}
+          />
         </div>
       </Drawer>
     </div>

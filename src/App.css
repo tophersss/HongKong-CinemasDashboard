@@ -107,6 +107,14 @@
   fill: #bfceff !important;
 }
 
+.info-panel--blue .xaxis-labels span:hover {
+  background-color: rgba(191, 206, 255, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
+
+
 /* Yellow */
 .info-panel--yellow .palette-header {
   background-color: #C29440!important;
@@ -125,6 +133,14 @@
   stroke: #ffe7ba !important;
   fill: #ffe7ba !important;
 }
+
+.info-panel--yellow .xaxis-labels span:hover {
+  background-color: rgba(255, 231, 186, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
+
 
 /* Turquoise */
 .info-panel--turquoise .palette-header {
@@ -145,6 +161,14 @@
   fill: #b4e5dd !important;
 }
 
+.info-panel--turquoise .xaxis-labels span:hover {
+  background-color: rgba(180, 229, 221, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
+
+
 /* Orange */
 .info-panel--orange .palette-header {
   background-color: #F76E11 !important;
@@ -163,6 +187,14 @@
   stroke: #ffe1c5 !important;
   fill: #ffe1c5 !important;
 }
+
+.info-panel--orange .xaxis-labels span:hover {
+  background-color: rgba(255, 225, 197, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
+
 
 /* Burgundy */
 .info-panel--burgundy .palette-header {
@@ -183,6 +215,14 @@
   fill: #efbad7 !important;
 }
 
+.info-panel--burgundy .xaxis-labels span:hover {
+  background-color: rgba(239, 186, 215, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
+
+
 /* Violet */
 .info-panel--violet .palette-header {
   background-color: #8A39E1 !important;
@@ -201,6 +241,14 @@
   stroke: #e19bc1 !important;
   fill: #e19bc1 !important;
 }
+
+.info-panel--violet .xaxis-labels span:hover {
+  background-color: rgba(225, 155, 193, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
+
 
 /* Ukraine */
 .info-panel--ukraine .palette-header {
@@ -221,9 +269,12 @@
   fill: #f9edad !important;
 }
 
-/* .info-panel__chart g.highcharts-level-group-1 rect {
-  fill: #ffd600 !important;
-} */
+.info-panel--ukraine .xaxis-labels span:hover {
+  background-color: rgba(249, 237, 173, .65) !important;
+  padding: 2px 3px;
+  cursor: pointer !important;
+  border-radius: 5px;
+}
 
 
 /* Chart Gradient */  

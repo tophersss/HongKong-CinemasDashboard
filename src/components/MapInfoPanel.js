@@ -119,6 +119,7 @@ const MapInfoPanel = ({
               <CinemaIndex
                 divClassName={mapInfoPanelColorClass}
                 activeCinemaID={activeCinema?.TheatreID}
+                handleActiveCinemaChange={ActiveCinemaChangeHandler}
               />
               <Autocomplete
                 disablePortal

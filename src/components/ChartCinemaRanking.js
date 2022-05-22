@@ -1,12 +1,15 @@
 // import Highcharts from "highcharts";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import CustomEvents from "highcharts-custom-events";
 import { useState, useEffect, useRef } from "react";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
-import { abbrNum } from "../utils/NumberUtils";
+import { abbrNum, commaSeparator } from "../utils/NumberUtils";
 import { PickChainColor } from "../utils/ColorUtils";
 
-const ChartCinemaRanking = ({ TheatreID }) => {
+CustomEvents(Highcharts);
+
+const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
   const GetTopCinemas = (TheatreID, topN) => {
     /**
      * when activeCinema already in topN, do nothing
@@ -50,7 +53,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
       // },
     },
     title: {
-      text: `Cinemas Popularity Ranking`,
+      text: `CINEMA INDEX`,
       align: "left",
       style: {
         fontSize: "1.05rem",
@@ -69,11 +72,22 @@ const ChartCinemaRanking = ({ TheatreID }) => {
     },
     xAxis: {
       categories: [],
+      className: "palette-secondary xaxis-labels",
       labels: {
         style: {
           fontSize: "0.75rem",
         },
+        useHTML: true,
+        events: {
+          click: (e) => {
+            console.log(`xaxis label clicked`);
+            // console.log(e);
+            console.log(e.srcElement.innerHTML);
+            handleActiveCinemaChange(e.srcElement.innerHTML);
+          },
+        },
       },
+      gridLineWidth: 0,
       // scrollbar: {
       //   enabled: true
       // },
@@ -93,12 +107,16 @@ const ChartCinemaRanking = ({ TheatreID }) => {
             color: Highcharts.getOptions().colors[1],
           },
         },
+        gridLineWidth: 1,
+        lineWidth: 0,
+        tickAmount: 2,
         // tickAmount: 5,
       },
     ],
     series: [],
     tooltip: {
       outside: false,
+      useHTML: true,
     },
     plotOptions: {
       series: {
@@ -114,7 +132,15 @@ const ChartCinemaRanking = ({ TheatreID }) => {
         // groupPadding: 0.1,
         pointPadding: 0,
         borderWidth: 0,
+        borderRadius: 5,
         grouping: false,
+        events: {
+          click: (e) => {
+            console.log(`bar clicked`);
+            console.log(e);
+            handleActiveCinemaChange(e.point.name);
+          },
+        },
       },
     },
   });
@@ -129,27 +155,83 @@ const ChartCinemaRanking = ({ TheatreID }) => {
   const updateSeries = (CinemasList) => {
     setChartOptions((prevState) => ({
       ...prevState,
-      title: {
-        text: `Cinemas Popularity Ranking`,
-      },
+      // title: {
+      //   text: `Cinemas Popularity Ranking`,
+      // },
       xAxis: {
         categories: CinemasList.map((d) => d.theatreTC),
         scrollbar: {
           enabled: true,
         },
         tickPixelInterval: 20,
+        // labels: {
+        //   events: {
+        //     click: (e) => {
+        //       console.log(`x-axis label clicked`);
+        //       // console.log(e);
+        //       console.log(e.srcElement.innerHTML);
+        //       handleActiveCinemaChange(e.srcElement.innerHTML);
+        //     },
+        //   },
+        // },
       },
       series: {
         data: CinemasList.map((d) => {
           return {
+            id: d.TheatreID,
             name: d.theatreTC,
             className:
               TheatreID === d.TheatreID
                 ? `palette-primary`
                 : `palette-secondary`,
             y: d.OverallTicketsSold,
+            events: {
+              click: (e) => {
+                console.log(`bar clicked`);
+                // console.log(e);
+                // handleActiveCinemaChange(e.point.name);
+              },
+            },
           };
         }),
+      },
+      tooltip: {
+        outside: false,
+        useHTML: true,
+        backgroundColor: {
+          linearGradient: [0, 0, 0, 60],
+          stops: [
+            [0, "#FFFFFF"],
+            [1, "#E0E0E0"],
+          ],
+        },
+        borderRadius: 4,
+        style: {
+          color: "#fff",
+        },
+        headerFormat: "<table>",
+        formatter: function () {
+          // console.log(`tooltip hover: printing this.point`);
+          // console.log(this.point);
+          const activeCinemaStatsObj = CinemasList.filter(
+            (d) => d.TheatreID === this.point.id
+          )[0];
+
+          return (
+            `<table><tr><th colspan="2"><h3>${this.point.name}</h3></th></tr>` +
+            `<tr><th>Tickets Sold:</th><td> ${
+              // note: refer to the note in "updateSeries() setChartOption => series.data" section
+              this.point.y === 0 ? "Unknown" : `${commaSeparator(this.point.y)}`
+            }</td></tr>` +
+            `<tr><th>Sales:</th><td> ${
+              // note: refer to the note in "updateSeries() setChartOption => series.data" section
+              activeCinemaStatsObj.OverallSales === 0
+                ? "Unknown"
+                : `HK$${commaSeparator(activeCinemaStatsObj.OverallSales)}`
+            }</td></tr>` +
+            `</table>`
+          );
+        },
       },
     }));
   };

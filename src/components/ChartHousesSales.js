@@ -131,7 +131,9 @@ const ChartHousesSales = ({
     plotOptions: {
       treemap: {
         events: {
-          click: (e) => {},
+          click: (e) => {
+            handleSetActiveHouseID(e.point.options.id);
+          },
         },
       },
     },
@@ -140,18 +142,7 @@ const ChartHousesSales = ({
   const updateSeries = () => {
     setChartOptions((prevState) => ({
       ...prevState,
-      plotOptions: {
-        treemap: {
-          events: {
-            click: (e) => {
-              // const targetName = e.point.name;
-              console.log(e);
-              console.log(`clicked houseID = ${e.point.options.id}`);
-              handleSetActiveHouseID(e.point.options.id);
-            },
-          },
-        },
-      },
+
       series: {
         type: "treemap",
         layoutAlgorithm: "squarified",
@@ -222,7 +213,7 @@ const ChartHousesSales = ({
               houseData.capacity === "undefined" || houseData.capacity === 0
                 ? "Unknown"
                 : `${houseData.capacity}`
-            }</td></tr>`
+            }</td></tr></table>`
           );
         },
       },
