@@ -27,6 +27,7 @@ import {
 import L from "leaflet";
 import { Container } from "@mui/material";
 import { act } from "@testing-library/react";
+import MarkerPulseEffect from "./MapComponents/MarkerPulseEffect";
 
 const fillBlueOptions = { fillColor: "blue" };
 const purpleOptions = { color: "purple" };
@@ -45,7 +46,7 @@ const multiPolygon = [
 ];
 
 const getIcon = (org) => {
-  const iconFilesRef = {
+  const iconDirectory = {
     Broadway: ico_broadway,
     MCL: ico_mcl,
     "Cinema City": ico_cinemacity,
@@ -56,8 +57,9 @@ const getIcon = (org) => {
   };
 
   return L.icon({
-    iconUrl: iconFilesRef[org],
-    iconSize: 50,
+    iconUrl: iconDirectory[org],
+    iconSize: [45, 45],
+    iconAnchor: [22, 42],
   });
 };
 
@@ -127,6 +129,7 @@ const MapBox = ({
               {groupedByChain[chain].map((c) => (
                 <Marker
                   name={c.name}
+                  title={c.TheatreID}
                   position={[c.latitude, c.longitude]}
                   icon={getIcon(c.chain)}
                   eventHandlers={{
@@ -161,7 +164,7 @@ const MapBox = ({
             ))}
           </LayerGroup>
         </LayersControl.Overlay>
-        {activeDistance == null ? (
+        {activeDistance === null ? (
           <></>
         ) : (
           <Polyline
@@ -170,6 +173,13 @@ const MapBox = ({
           ></Polyline>
         )}
         <Polygon pathOptions={purpleOptions} positions={multiPolygon} />
+        {activeCinema === null ? (
+          <></>
+        ) : (
+          <MarkerPulseEffect
+            coordinates={[activeCinema.latitude, activeCinema.longitude]}
+          />
+        )}
       </LayersControl>
     </MapContainer>
   );

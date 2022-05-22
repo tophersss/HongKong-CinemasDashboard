@@ -86,7 +86,7 @@ const MapInfoPanel = ({
   }, [activeCinema]);
 
   // ! - Identify active cinema's chain to define a Class for theming
-  const mapInfoPanelClasses = `info-panel info-panel--${
+  const mapInfoPanelColorClass = `info-panel--${
     PickChainColor(activeCinema?.chain).color
   }`;
 
@@ -94,7 +94,7 @@ const MapInfoPanel = ({
   const [isSeatplanOpen, setIsSeatplanOpen] = useState(false);
 
   return (
-    <div className={mapInfoPanelClasses}>
+    <div className={`info-panel ${mapInfoPanelColorClass}`}>
       <Paper
         sx={{
           position: "relative",
@@ -116,7 +116,10 @@ const MapInfoPanel = ({
           </button>
           <AppBar position="static" className="palette-header">
             <Toolbar>
-              <CinemaIndex divClassName={mapInfoPanelClasses} activeCinemaID={activeCinema?.TheatreID} />
+              <CinemaIndex
+                divClassName={mapInfoPanelColorClass}
+                activeCinemaID={activeCinema?.TheatreID}
+              />
               <Autocomplete
                 disablePortal
                 autoSelect

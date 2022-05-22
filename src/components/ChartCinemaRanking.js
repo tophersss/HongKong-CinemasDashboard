@@ -121,7 +121,7 @@ const ChartCinemaRanking = ({ TheatreID }) => {
 
   useEffect(() => {
     if (TheatreID !== null) {
-      const topCinemas = GetTopCinemas(TheatreID, 50);
+      const topCinemas = GetTopCinemas(TheatreID, 500);
       updateSeries(topCinemas);
     }
   }, [TheatreID]);

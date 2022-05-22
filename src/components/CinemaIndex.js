@@ -24,17 +24,20 @@ const CinemaIndex = ({ divClassName, activeCinemaID }) => {
     setOpened(state);
   };
 
-  console.log(`divClassName = ${divClassName}`)
+  console.log(`divClassName = ${divClassName}`);
 
   return (
     <div>
       <Button onClick={toggleDrawer(true)}>Cinema Index</Button>
-      <Drawer className={divClassName} anchor="right" open={opened} onClose={toggleDrawer(false)}>
+      <Drawer
+        className={divClassName}
+        anchor="right"
+        open={opened}
+        onClose={toggleDrawer(false)}
+      >
         <div>
           {/* <BarChart /> */}
-          <ChartCinemaRanking
-            TheatreID={activeCinemaID}
-          />
+          <ChartCinemaRanking TheatreID={activeCinemaID} />
         </div>
       </Drawer>
     </div>
