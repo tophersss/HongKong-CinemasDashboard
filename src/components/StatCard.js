@@ -28,7 +28,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
     setUnitTypeID((prevState) =>
       prevState + 1 > Object.keys(allUnitTypes).length - 1 ? 0 : prevState + 1
     );
-    console.log(`unitType: ${unitTypeID} - ${allUnitTypes[unitTypeID]}`);
+    // console.log(`unitType: ${unitTypeID} - ${allUnitTypes[unitTypeID]}`);
   };
 
   useEffect(() => {
@@ -188,9 +188,9 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
             {
               (() => {
                 if (allUnitTypes[unitTypeID] === "overall") {
-                  console.log(
-                    `statCard icon render based on unitType: ${allUnitTypes[unitTypeID]}`
-                  );
+                  // console.log(
+                  //   `statCard icon render based on unitType: ${allUnitTypes[unitTypeID]}`
+                  // );
                   return (
                     <AllInclusiveIcon htmlColor={displayContent?.textColor} />
                   );

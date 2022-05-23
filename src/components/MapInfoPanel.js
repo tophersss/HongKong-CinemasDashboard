@@ -70,6 +70,7 @@ const MapInfoPanel = ({
   ActiveCinemaChangeHandler,
   activeHouseID,
   handleSetActiveHouseID,
+  requestLocateToMap,
 }) => {
   // ! - options for Autocomplete drop-down list
   var cinemaNames = CinemasGeoInfo.map((d) => d.name);
@@ -186,11 +187,13 @@ const MapInfoPanel = ({
                 display: "inline-flex",
               }}
             >
-              <SVG 
+              <SVG
                 src={require(`../assets/locate-on-map.svg`).default}
                 width={24}
                 height={24}
-                onClick={()=>{console.log('Locate On Map Please')}}
+                onClick={() => {
+                  requestLocateToMap((prevState) => !prevState);
+                }}
               />
               <LightbulbIcon />
               <Typography

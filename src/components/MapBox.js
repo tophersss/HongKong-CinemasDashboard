@@ -63,31 +63,35 @@ const getIcon = (org) => {
   });
 };
 
-function SetViewOnClick() {
-  const map = useMapEvent("click", (e) => {
-    map.setView(e.latlng, map.getZoom(), {
-      animate: true,
-    });
-  });
+function HandleSetView(map, activeCinema) {
+  if (activeCinema !== null && activeCinema !== undefined) {
+    map.setView(
+      [activeCinema.latitude, activeCinema.longitude],
+      map.getZoom(),
+      {
+        animate: true,
+        pan: { duration: 1.2 },
+      }
+    );
+  }
 
   return null;
 }
 
-function HandleSetView({ activeCinema }) {
+function HandleMapManipulation({ activeCinema, handleLocateToMapTrigger }) {
+  /** this is a functional component to create a reference for Leaflet map object
+   * any function calls that need to manipulate the map object is centralized here
+   */
   const map = useMap();
 
   useEffect(() => {
-    if (activeCinema !== null && activeCinema !== undefined) {
-      map.setView(
-        [activeCinema.latitude, activeCinema.longitude],
-        map.getZoom(),
-        {
-          animate: true,
-          pan: { duration: 1.2 },
-        }
-      );
-    }
+    HandleSetView(map, activeCinema);
   }, [activeCinema]);
+
+  // note: center map to activeCinema when "Locate To Map" icon is clicked
+  useEffect(() => {
+    HandleSetView(map, activeCinema);
+  }, [handleLocateToMapTrigger]);
 
   return null;
 }
@@ -97,6 +101,7 @@ const MapBox = ({
   ActiveCinemaChangeHandler,
   activeDistance,
   setActiveDistance,
+  handleLocateToMapTrigger,
 }) => {
   const addLine = (name) => {
     setActiveDistance([
@@ -110,7 +115,10 @@ const MapBox = ({
 
   return (
     <MapContainer center={[22.36797, 114.11453]} zoom={13} zoomControl={false}>
-      <HandleSetView activeCinema={activeCinema} />
+      <HandleMapManipulation
+        activeCinema={activeCinema}
+        handleLocateToMapTrigger={handleLocateToMapTrigger}
+      />
       <LayersControl position="topright">
         <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
           <TileLayer

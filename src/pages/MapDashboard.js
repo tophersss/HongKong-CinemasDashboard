@@ -4,8 +4,6 @@ import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import MapBox from "../components/MapBox";
 import MapInfoPanel from "../components/MapInfoPanel";
 
-
-
 const MapDashboard = () => {
   const [activeCinema, setActiveCinema] = useState(null);
   const [activeCinemaTrigger, setActiveCinemaTrigger] = useState(true);
@@ -14,14 +12,22 @@ const MapDashboard = () => {
     [0, 0],
     [0, 0],
   ]);
+  // const requestLocateToMap = useRef(true);
+  const [locateToMapTrigger, setLocateToMapTrigger] = useState(true);
 
   const HandleActiveCinemaChange = (CinemaName) => {
     // note: if CinemaName is supplied and is different from activeCinema, then take actions
-    if ( CinemaName !== null && CinemaName !== undefined && CinemaName !== activeCinema?.name ) {
+    if (
+      CinemaName !== null &&
+      CinemaName !== undefined &&
+      CinemaName !== activeCinema?.name
+    ) {
       setActiveHouseID(null);
 
       var MatchedCinemas = CinemasGeoInfo.filter((c) => c.name === CinemaName);
-      if (MatchedCinemas.length === 0 ) { return false };
+      if (MatchedCinemas.length === 0) {
+        return false;
+      }
       var CinemaObject = MatchedCinemas[0];
 
       setActiveCinema(CinemaObject);
@@ -29,7 +35,7 @@ const MapDashboard = () => {
       return true;
     }
     return false;
-  }
+  };
 
   // useEffect(() => {
   //   setActiveHouse(null);
@@ -42,8 +48,15 @@ const MapDashboard = () => {
         ActiveCinemaChangeHandler={HandleActiveCinemaChange}
         activeDistance={activeDistance}
         setActiveDistance={setActiveDistance}
+        handleLocateToMapTrigger={locateToMapTrigger}
       />
-      <MapInfoPanel activeCinema={activeCinema} ActiveCinemaChangeHandler={HandleActiveCinemaChange} activeHouseID={activeHouseID} handleSetActiveHouseID={setActiveHouseID} />
+      <MapInfoPanel
+        activeCinema={activeCinema}
+        ActiveCinemaChangeHandler={HandleActiveCinemaChange}
+        activeHouseID={activeHouseID}
+        handleSetActiveHouseID={setActiveHouseID}
+        requestLocateToMap={setLocateToMapTrigger}
+      />
 
       {/* <Paper sx={{ position: "relative", overflow: "hidden", minHeight: "100px", width: "20em", display: "inline-block" }}>
         <ChartHousesSales

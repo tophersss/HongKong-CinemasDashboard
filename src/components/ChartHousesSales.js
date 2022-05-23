@@ -32,10 +32,10 @@ const ChartHousesSales = ({
   if (isMounted.current) {
   }
   {
-    console.log(`isMounted.current: ${isMounted.current}`);
+    // console.log(`isMounted.current: ${isMounted.current}`);
     theatreGroups = groupBy(houses_sales, "theatre");
     isMounted.current = true;
-    console.log(`isMounted.current: ${isMounted.current}`);
+    // console.log(`isMounted.current: ${isMounted.current}`);
   }
 
   const afterChartCreated = (chartCallback) => {
@@ -50,10 +50,10 @@ const ChartHousesSales = ({
       (d) => d.HouseID === id
     )[0];
 
-    console.log(
-      `Object.key(houseDetails).length: ${Object.keys(houseDetails).length}`
-    );
-    console.log(houseDetails);
+    // console.log(
+    //   `Object.key(houseDetails).length: ${Object.keys(houseDetails).length}`
+    // );
+    // console.log(houseDetails);
     return houseDetails;
   }
 
@@ -62,7 +62,7 @@ const ChartHousesSales = ({
       updateSeries();
 
       // note: assign the first house of a cinema to be activeHouse
-      console.log(`assigning houseID in ChartHouseSales`);
+      // console.log(`assigning houseID in ChartHouseSales`);
       if (Object.keys(theatreGroups[activeCinemaName]).length > 0) {
         const activeCinemaObj = theatreGroups[activeCinemaName][0];
         handleSetActiveHouseID(activeCinemaObj.HouseID);
@@ -75,8 +75,8 @@ const ChartHousesSales = ({
 
   useEffect(() => {
     if (activeHouseID !== null) {
-      console.log(`activeHouseID: ${activeHouseID}`);
-      console.log(`activeCinemaName: ${activeCinemaName}`);
+      // console.log(`activeHouseID: ${activeHouseID}`);
+      // console.log(`activeCinemaName: ${activeCinemaName}`);
       const name = theatreGroups[activeCinemaName].filter(
         (d) => d.HouseID === activeHouseID
       )[0].house_name;
@@ -187,8 +187,8 @@ const ChartHousesSales = ({
         useHTML: true,
         headerFormat: "<table>",
         formatter: function () {
-          console.log(`printing this.point`);
-          console.log(this.point);
+          // console.log(`printing this.point`);
+          // console.log(this.point);
           const houseData = createHouseData(this.point.id);
           return (
             `<table><tr><th colspan="2"><h3>${this.point.name}</h3></th></tr>` +
