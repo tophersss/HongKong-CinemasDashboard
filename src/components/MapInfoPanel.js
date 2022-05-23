@@ -25,6 +25,7 @@ import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
 import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours";
 import StatCard from "./StatCard";
+import SVG from "react-inlinesvg";
 import { PickChainColor } from "../utils/ColorUtils";
 import { useEffect, useState } from "react";
 
@@ -185,6 +186,12 @@ const MapInfoPanel = ({
                 display: "inline-flex",
               }}
             >
+              <SVG 
+                src={require(`../assets/locate-on-map.svg`).default}
+                width={24}
+                height={24}
+                onClick={()=>{console.log('Locate On Map Please')}}
+              />
               <LightbulbIcon />
               <Typography
                 className="trivia__content"

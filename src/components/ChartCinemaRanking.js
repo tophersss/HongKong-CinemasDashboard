@@ -164,16 +164,6 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
           enabled: true,
         },
         tickPixelInterval: 20,
-        // labels: {
-        //   events: {
-        //     click: (e) => {
-        //       console.log(`x-axis label clicked`);
-        //       // console.log(e);
-        //       console.log(e.srcElement.innerHTML);
-        //       handleActiveCinemaChange(e.srcElement.innerHTML);
-        //     },
-        //   },
-        // },
       },
       series: {
         data: CinemasList.map((d) => {
