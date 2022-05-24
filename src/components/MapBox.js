@@ -137,7 +137,7 @@ const MapBox = ({
               {groupedByChain[chain].map((c) => (
                 <Marker
                   name={c.name}
-                  title={c.TheatreID}
+                  // title={c.TheatreID}
                   position={[c.latitude, c.longitude]}
                   icon={getIcon(c.chain)}
                   eventHandlers={{
@@ -146,11 +146,6 @@ const MapBox = ({
                       // addLine(e.target.options.name);
                       ActiveCinemaChangeHandler(c.name);
                     },
-                    // mouseout: () => {
-                    //   // setActiveCinema(null);
-                    //   setActiveHouse(null);
-                    //   setActiveDistance(null);
-                    // },
                   }}
                 >
                   <Tooltip>{c.name}</Tooltip>
