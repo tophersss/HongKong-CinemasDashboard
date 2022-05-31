@@ -154,7 +154,7 @@
   }
   
   .highcharts-tooltip text {
-    fill: #333333;
+    fill: ghostwhite;
   }
   
   .highcharts-tooltip .highcharts-header {

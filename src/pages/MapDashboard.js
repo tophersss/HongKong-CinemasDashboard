@@ -20,12 +20,15 @@ const MapDashboard = () => {
     if (
       CinemaName !== null &&
       CinemaName !== undefined &&
-      CinemaName !== activeCinema?.name
+      CinemaName !== activeCinema?.name_en
     ) {
       setActiveHouseID(null);
 
-      var MatchedCinemas = CinemasGeoInfo.filter((c) => c.name === CinemaName);
+      console.log(`HandleActiveCinemaChange: received CinemaName = ${CinemaName}`)
+
+      var MatchedCinemas = CinemasGeoInfo.filter((c) => c.name_en === CinemaName);
       if (MatchedCinemas.length === 0) {
+        console.log(``)
         return false;
       }
       var CinemaObject = MatchedCinemas[0];

@@ -10,6 +10,7 @@ import {
   Input,
   Typography,
   Box,
+  Tooltip,
 } from "@mui/material";
 import CinemaIndex from "./CinemaIndex";
 import AppBar from "@mui/material/AppBar";
@@ -23,11 +24,12 @@ import MyLocationRoundedIcon from "@mui/icons-material/MyLocationRounded";
 import DirectionsSubwayTwoToneIcon from "@mui/icons-material/DirectionsSubwayTwoTone";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
-import ChartCinemasSalesOverHours from "./ChartCinemasSalesOverHours";
+import ChartHourlyAttendance from "./ChartHourlyAttendance";
 import StatCard from "./StatCard";
 import SVG from "react-inlinesvg";
 import { PickChainColor } from "../utils/ColorUtils";
 import { useEffect, useState } from "react";
+
 
 // ! - helper function
 const GetCinemaStats = (id, type) => {
@@ -88,9 +90,8 @@ const MapInfoPanel = ({
   }, [activeCinema]);
 
   // ! - Identify active cinema's chain to define a Class for theming
-  const mapInfoPanelColorClass = `info-panel--${
-    PickChainColor(activeCinema?.chain).color
-  }`;
+  const mapInfoPanelColorClass = `info-panel--${PickChainColor(activeCinema?.chain).color
+    }`;
 
   // ! - Control Seatplan dialog open state
   const [isSeatplanOpen, setIsSeatplanOpen] = useState(false);
@@ -98,6 +99,7 @@ const MapInfoPanel = ({
   return (
     <div className={`info-panel ${mapInfoPanelColorClass}`}>
       <Paper
+        id="paper-backdrop"
         sx={{
           position: "relative",
           justifyContent: "center",
@@ -108,21 +110,16 @@ const MapInfoPanel = ({
         }}
       >
         <Box sx={{ flexGrow: 1 }}>
-          <button
+          {/* <button
             onClick={() => {
               console.log(`activeHouseID: ${activeHouseID}`);
             }}
           >
             {" "}
             show activeHouse{" "}
-          </button>
+          </button> */}
           <AppBar position="static" className="palette-header">
             <Toolbar>
-              <CinemaIndex
-                divClassName={mapInfoPanelColorClass}
-                activeCinemaID={activeCinema?.TheatreID}
-                handleActiveCinemaChange={ActiveCinemaChangeHandler}
-              />
               <Autocomplete
                 disablePortal
                 autoSelect
@@ -131,6 +128,11 @@ const MapInfoPanel = ({
                 options={cinemaNames}
                 renderInput={(params) => (
                   <div ref={params.InputProps.ref}>
+                    <CinemaIndex
+                      divClassName={mapInfoPanelColorClass}
+                      activeCinemaID={activeCinema?.TheatreID}
+                      handleActiveCinemaChange={ActiveCinemaChangeHandler}
+                    />
                     <Input
                       type="text"
                       multiline={false}
@@ -140,7 +142,7 @@ const MapInfoPanel = ({
                   </div>
                 )}
                 sx={{ paddingTop: "10px" }}
-                value={activeCinema === null ? null : activeCinema.name}
+                value={activeCinema === null ? null : activeCinema.name_en}
                 onChange={(event, newValue) => {
                   ActiveCinemaChangeHandler(newValue);
                 }}
@@ -187,15 +189,37 @@ const MapInfoPanel = ({
                 display: "inline-flex",
               }}
             >
-              <SVG
-                src={require(`../assets/locate-on-map.svg`).default}
-                width={24}
-                height={24}
-                onClick={() => {
-                  requestLocateToMap((prevState) => !prevState);
-                }}
-              />
-              <LightbulbIcon />
+
+              <Tooltip arror title="View Seatplans">
+                <div className="info-panel__util-icons-container" style={{ display: "flex" }}>
+                  <SVG
+                    src={`${process.env.PUBLIC_URL}/assets/open-seatplan.svg`}
+                    // src={require(`../assets/open-seatplan.svg`).default}
+                    width={26}
+                    height={26}
+                    onClick={() => {
+                      setIsSeatplanOpen(true);
+                    }}
+                  />
+                </div>
+              </Tooltip>
+
+              <Tooltip arror title="Locate On Map">
+                <div className="info-panel__util-icons-container" style={{ display: "flex" }}>
+                  <SVG
+                    // src={require(`../assets/locate-on-map.svg`).default}
+                    src={`${process.env.PUBLIC_URL}/assets/locate-on-map.svg`}
+                    width={26}
+                    height={26}
+                    onClick={() => {
+                      requestLocateToMap((prevState) => !prevState);
+                    }}
+                  />
+                </div>
+              </Tooltip>
+              <Tooltip title="Show Me">
+                <LightbulbIcon style={{ fontSize: "29px" }} />
+              </Tooltip>
               <Typography
                 className="trivia__content"
                 color="text.primary"
@@ -203,16 +227,16 @@ const MapInfoPanel = ({
               >
                 {/* todo: https://www.google.com/search?q=infinite+scrolling+horizontal+text+codepen&sxsrf=ALiCzsYhY7ffnc-oXQ_rhCLF1boExoI2_Q%3A1652685130677&ei=SvmBYvH6KIqa0ASvhZX4Ag&oq=text+infinite+scro&gs_lcp=Cgdnd3Mtd2l6EAMYATIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgcIABBHELADOgYIIxAnEBM6BAgjECc6CwgAEIAEELEDEIMBOgQIABBDOhEILhCABBCxAxCDARDHARDRAzoUCC4QgAQQsQMQgwEQxwEQ0QMQ1AI6EQguEIAEELEDEIMBEMcBEKMCOgUIABCABDoICAAQgAQQsQM6CggAELEDEIMBEEM6CAguEIAEELEDOgUIABDLAToECAAQHjoGCAAQChAeOgoIABAPEAUQChAeOgYIABAFEB46CAgAEAgQChAeSgQIQRgASgQIRhgAUO8MWJ8vYOA-aAFwAXgAgAFRiAGaCJIBAjE4mAEAoAEByAEKwAEB&sclient=gws-wiz */}{" "}
                 Do you know that Sunday 3pm is the most crowded session at{" "}
-                {activeCinema.name}{" "}
+                {activeCinema.name_en}{" "}
               </Typography>
             </Box>
 
-            <ChartCinemasSalesOverHours
+            <ChartHourlyAttendance
               activeCinemaID={activeCinema.TheatreID}
             />
 
             <ChartHousesSales
-              activeCinemaName={activeCinema?.name}
+              activeCinemaName={activeCinema?.name_en}
               associatedChain={activeCinema?.chain}
               activeHouseID={activeHouseID}
               handleSetActiveHouseID={handleSetActiveHouseID}

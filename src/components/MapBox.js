@@ -136,7 +136,7 @@ const MapBox = ({
             <LayerGroup>
               {groupedByChain[chain].map((c) => (
                 <Marker
-                  name={c.name}
+                  name={c.name_en}
                   // title={c.TheatreID}
                   position={[c.latitude, c.longitude]}
                   icon={getIcon(c.chain)}
@@ -144,11 +144,11 @@ const MapBox = ({
                     // click: () => {},
                     click: (e) => {
                       // addLine(e.target.options.name);
-                      ActiveCinemaChangeHandler(c.name);
+                      ActiveCinemaChangeHandler(c.name_en);
                     },
                   }}
                 >
-                  <Tooltip>{c.name}</Tooltip>
+                  <Tooltip>{c.name_en}</Tooltip>
                 </Marker>
               ))}
             </LayerGroup>

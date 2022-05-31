@@ -159,7 +159,7 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
       //   text: `Cinemas Popularity Ranking`,
       // },
       xAxis: {
-        categories: CinemasList.map((d) => d.theatreTC),
+        categories: CinemasList.map((d) => d.theatreEN),
         scrollbar: {
           enabled: true,
         },
@@ -169,7 +169,7 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
         data: CinemasList.map((d) => {
           return {
             id: d.TheatreID,
-            name: d.theatreTC,
+            name: d.theatreEN,
             className:
               TheatreID === d.TheatreID
                 ? `palette-primary`
@@ -197,7 +197,7 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
         },
         borderRadius: 4,
         style: {
-          color: "#fff",
+          color: "#f8f8ff",
         },
         headerFormat: "<table>",
         formatter: function () {

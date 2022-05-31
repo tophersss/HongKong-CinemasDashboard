@@ -1,14 +1,10 @@
 import { useState } from "react";
 import ChartCinemaRanking from "./ChartCinemaRanking";
-import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import BarChart from "./d3barchart/BarChart";
+import ListAltTwoToneIcon from '@mui/icons-material/ListAltTwoTone';
+import { Tooltip } from "@mui/material";
+
 
 const CinemaIndex = ({
   divClassName,
@@ -31,8 +27,11 @@ const CinemaIndex = ({
   console.log(`divClassName = ${divClassName}`);
 
   return (
-    <div>
-      <Button onClick={toggleDrawer(true)}>Cinema Index</Button>
+    <>
+      <Tooltip title="Show Cinema Index" >
+        <ListAltTwoToneIcon style={{cursor: "pointer"}} onClick={toggleDrawer(true)} /> 
+      </Tooltip>
+      {/* <Button onClick={toggleDrawer(true)}>Cinema Index</Button> */}
       <Drawer
         className={divClassName}
         anchor="right"
@@ -47,7 +46,7 @@ const CinemaIndex = ({
           />
         </div>
       </Drawer>
-    </div>
+    </>
   );
 };
 

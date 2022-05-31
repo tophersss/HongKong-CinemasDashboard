@@ -11,13 +11,13 @@
 
 /* ************************************************** */
 /* Dashboard Panel */
-.info-panel .MuiPaper-root {
+.info-panel .MuiPaper-root#paper-backdrop {
   top: 20px;
   left: 15px;
   margin: 10px 15px 8px 15px;
   text-align: center;
-  /* background-color: rgba(241, 241, 241, 0.15);  
-  backdrop-filter: blur(5px); */
+  /* background-color: rgba(241, 241, 241, 0.55);   */
+  /* backdrop-filter: blur(5px); */
   border: 1px solid rgba(150, 150, 150, 0.25);
 }
 
@@ -52,6 +52,9 @@
 .info-panel .MuiAutocomplete-popper {
   position: fixed !important;
   transform: translate3d(120px, 145px, 0px) !important;
+
+  /* if backdrop-filter is enabled in #paper-backdrop */
+  /* top: -75px !important; */
 }
 
 /* Trivia */
@@ -78,6 +81,13 @@
   font-size: 1.8rem;
 }
 
+/* Util Icons */
+.info-panel .info-panel__util-icons-container {
+  cursor: pointer;
+  margin: 0px 3px;
+}
+
+
 /* Chart */
 [class*="info-panel__chart"] {
   margin: 12px;
@@ -93,7 +103,8 @@
   background-color: #313e87 !important;
 }
 
-.info-panel--blue .palette-primary {
+.info-panel--blue .palette-primary , 
+.info-panel--blue .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #7863cc !important;
   fill: #7863cc !important;
 }
@@ -120,7 +131,8 @@
   background-color: #C29440!important;
 }
 
-.info-panel--yellow .palette-primary {
+.info-panel--yellow .palette-primary , 
+.info-panel--yellow .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #F7BE54 !important;
   fill: #F7BE54 !important;
 }
@@ -147,7 +159,8 @@
   background-color: #219685 !important;
 }
 
-.info-panel--turquoise .palette-primary {
+.info-panel--turquoise .palette-primary , 
+.info-panel--turquoise .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #3EB8A5 !important;
   fill: #3EB8A5 !important;
 }
@@ -174,7 +187,8 @@
   background-color: #F76E11 !important;
 }
 
-.info-panel--orange .palette-primary {
+.info-panel--orange .palette-primary ,
+.info-panel--orange .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #FF9F45 !important;
   fill: #FF9F45 !important;
 }
@@ -201,7 +215,8 @@
   background-color: #750550 !important;
 }
 
-.info-panel--burgundy .palette-primary {
+.info-panel--burgundy .palette-primary ,
+.info-panel--burgundy .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #980F5A !important;
   fill: #980F5A !important;
 }
@@ -228,7 +243,8 @@
   background-color: #8A39E1 !important;
 }
 
-.info-panel--violet .palette-primary {
+.info-panel--violet .palette-primary ,
+.info-panel--violet .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #9C51E0 !important;
   fill: #9C51E0 !important;
 }
@@ -255,7 +271,8 @@
   background-color: #005bbc !important;
 }
 
-.info-panel--ukraine .palette-primary {
+.info-panel--ukraine .palette-primary ,
+.info-panel--ukraine .info-panel__util-icons-container:hover .info-panel__util-icons {
   stroke: #ffd600 !important;
   fill: #ffd600 !important;
 }
@@ -275,6 +292,7 @@
   cursor: pointer !important;
   border-radius: 5px;
 }
+
 
 
 /* Chart Gradient */  
@@ -313,7 +331,12 @@
   fill: #7863cc;
 }
 
-/* House Details Table */
+/* Chart Hourly Attendance */
+.info-panel__chart.chart-hourly-attendance .highcharts-tooltip {
+  color: ghostwhite;
+}
+
+/* Chart Houses Sales */
 tr {
   height: 10px;
 }

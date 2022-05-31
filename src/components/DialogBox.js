@@ -152,9 +152,9 @@ export default function SeatplanDialog({
             >
               {houseList.length > 0 ? (
                 houseList.map((d) => (
-                  <MenuItem sx={{}} value={d.HouseID} name={d.house_name}>
+                  <MenuItem sx={{}} value={d.HouseID} name={d.house_alias1}>
                     {" "}
-                    {d.house_name}{" "}
+                    {d.house_alias1}{" "}
                   </MenuItem>
                 ))
               ) : (

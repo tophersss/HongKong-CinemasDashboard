@@ -33,7 +33,7 @@ const ChartHousesSales = ({
   }
   {
     // console.log(`isMounted.current: ${isMounted.current}`);
-    theatreGroups = groupBy(houses_sales, "theatre");
+    theatreGroups = groupBy(houses_sales, "theatre_en");
     isMounted.current = true;
     // console.log(`isMounted.current: ${isMounted.current}`);
   }
@@ -66,7 +66,7 @@ const ChartHousesSales = ({
       if (Object.keys(theatreGroups[activeCinemaName]).length > 0) {
         const activeCinemaObj = theatreGroups[activeCinemaName][0];
         handleSetActiveHouseID(activeCinemaObj.HouseID);
-        setActiveHouseName(activeCinemaObj.house_name);
+        setActiveHouseName(activeCinemaObj.house_alias1);
       }
 
       // setClickedHouse(null);
@@ -79,7 +79,7 @@ const ChartHousesSales = ({
       // console.log(`activeCinemaName: ${activeCinemaName}`);
       const name = theatreGroups[activeCinemaName].filter(
         (d) => d.HouseID === activeHouseID
-      )[0].house_name;
+      )[0].house_alias1;
       setActiveHouseName(name);
     }
   }, [activeHouseID]);
@@ -148,7 +148,7 @@ const ChartHousesSales = ({
         layoutAlgorithm: "squarified",
         data: theatreGroups[activeCinemaName].map((groupData, idx) => {
           return {
-            name: groupData.house_name,
+            name: groupData.house_alias1,
             // note: if house sale is 0, point.value will be set to 1 to make the houses present in chart. In reality, house sale is unknown.
             value: groupData.profit === 0 ? 1 : groupData.profit,
             colorValue: groupData.profit === 0 ? 1 : groupData.profit,
@@ -182,7 +182,7 @@ const ChartHousesSales = ({
         },
         borderRadius: 4,
         style: {
-          color: "#fff",
+          color: "#f8f8ff",
         },
         useHTML: true,
         headerFormat: "<table>",

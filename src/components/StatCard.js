@@ -137,7 +137,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
       }
       enterDelay={100}
       enterNextDelay={100}
-      leaveDelay={300}
+      leaveDelay={250}
       arrow
       followCursor={false}
     >
