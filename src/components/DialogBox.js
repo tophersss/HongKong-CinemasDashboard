@@ -120,6 +120,7 @@ export default function SeatplanDialog({
     console.log(event);
   };
 
+
   return (
     <div>
       {/* <Button variant="outlined" onClick={handleClickOpen}>
@@ -151,7 +152,8 @@ export default function SeatplanDialog({
               sx={{ color: "whitesmoke" }}
             >
               {houseList.length > 0 ? (
-                houseList.map((d) => (
+                // note: sort houseList by house_alias1 ASC
+                houseList.sort((a, b) => a.house_alias1 > b.house_alias1 ? 1 : -1).map((d) => (
                   <MenuItem sx={{}} value={d.HouseID} name={d.house_alias1}>
                     {" "}
                     {d.house_alias1}{" "}
