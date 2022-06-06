@@ -41,7 +41,20 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
     return topCinemas;
   };
 
-  const isMounted = useRef(false);
+  const GetCinemas = () => {
+    /**
+     * when activeCinema already in topN, do nothing
+     * when activeCinema > topN (i.e. not in topN), remove last item from topN, append activeCinema
+     */
+    var topCinemas = cinemas_performance_overview
+      .sort(
+        (a, b) =>
+          parseFloat(b.OverallTicketsSold ?? 0) - parseFloat(a.OverallTicketsSold ?? 0)
+      );
+
+    return topCinemas;
+  };
+
 
   const [chartOptions, setChartOptions] = useState({
     chart: {
@@ -146,10 +159,18 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
   });
 
   useEffect(() => {
-    if (TheatreID !== null) {
-      const topCinemas = GetTopCinemas(TheatreID, 500);
-      updateSeries(topCinemas);
-    }
+    // console.log(`cinema index - theatreID = ${TheatreID}; =undefined? : ${TheatreID === undefined}`)
+    // if (TheatreID !== null && TheatreID !== undefined) {
+    //   // const topCinemas = GetTopCinemas(TheatreID, 500);
+    //   const topCinemas = GetCinemas();
+    //   console.log(`topCinemas:`)
+    //   console.log(topCinemas);
+    //   updateSeries(topCinemas);
+    // };
+    const topCinemas = GetCinemas();
+    console.log(`topCinemas:`)
+    console.log(topCinemas);
+    updateSeries(topCinemas);
   }, [TheatreID]);
 
   const updateSeries = (CinemasList) => {
