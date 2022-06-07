@@ -29,6 +29,7 @@ import StatCard from "./StatCard";
 import SVG from "react-inlinesvg";
 import { PickChainColor } from "../utils/ColorUtils";
 import { useEffect, useState } from "react";
+import Trivia from "./Trivia";
 
 
 // ! - helper function
@@ -220,15 +221,11 @@ const MapInfoPanel = ({
               <Tooltip title="Show Me">
                 <LightbulbIcon style={{ fontSize: "29px" }} />
               </Tooltip>
-              <Typography
-                className="trivia__content"
-                color="text.primary"
-                variant="subtitle1"
-              >
+              <Trivia TheatreID={activeCinema.TheatreID} name={activeCinema.name_en} />
                 {/* todo: https://www.google.com/search?q=infinite+scrolling+horizontal+text+codepen&sxsrf=ALiCzsYhY7ffnc-oXQ_rhCLF1boExoI2_Q%3A1652685130677&ei=SvmBYvH6KIqa0ASvhZX4Ag&oq=text+infinite+scro&gs_lcp=Cgdnd3Mtd2l6EAMYATIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeOgcIABBHELADOgYIIxAnEBM6BAgjECc6CwgAEIAEELEDEIMBOgQIABBDOhEILhCABBCxAxCDARDHARDRAzoUCC4QgAQQsQMQgwEQxwEQ0QMQ1AI6EQguEIAEELEDEIMBEMcBEKMCOgUIABCABDoICAAQgAQQsQM6CggAELEDEIMBEEM6CAguEIAEELEDOgUIABDLAToECAAQHjoGCAAQChAeOgoIABAPEAUQChAeOgYIABAFEB46CAgAEAgQChAeSgQIQRgASgQIRhgAUO8MWJ8vYOA-aAFwAXgAgAFRiAGaCJIBAjE4mAEAoAEByAEKwAEB&sclient=gws-wiz */}{" "}
-                Do you know that Sunday 3pm is the most crowded session at{" "}
-                {activeCinema.name_en}{" "}
-              </Typography>
+                {/* Do you know that Sunday 3pm is the most crowded session at{" "} */}
+                {/* {activeCinema.name_en}{" "} */}
+              
             </Box>
 
             <ChartHourlyAttendance

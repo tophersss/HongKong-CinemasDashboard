@@ -64,7 +64,9 @@
 }
 
 .info-panel .trivia__container.MuiBox-root .trivia__content {
-  font-size: 0.85rem;
+  font-size: 1.08rem;
+  margin: 0px 5px;
+  font-family: 'VT323', cursive;
 }
 
 /* Stat Card Container */
@@ -125,6 +127,10 @@
   border-radius: 5px;
 }
 
+.info-panel--blue .trivia__container .marquee-container {
+  border: 4px dotted #313e87;
+}
+
 
 /* Yellow */
 .info-panel--yellow .palette-header {
@@ -151,6 +157,10 @@
   padding: 2px 3px;
   cursor: pointer !important;
   border-radius: 5px;
+}
+
+.info-panel--yellow .trivia__container .marquee-container {
+  border: 4px dotted #C29440;
 }
 
 
@@ -181,6 +191,10 @@
   border-radius: 5px;
 }
 
+.info-panel--turquoise .trivia__container .marquee-container {
+  border: 4px dotted #219685;
+}
+
 
 /* Orange */
 .info-panel--orange .palette-header {
@@ -207,6 +221,10 @@
   padding: 2px 3px;
   cursor: pointer !important;
   border-radius: 5px;
+}
+
+.info-panel--orange .trivia__container .marquee-container {
+  border: 4px dotted #F76E11;
 }
 
 
@@ -237,6 +255,10 @@
   border-radius: 5px;
 }
 
+.info-panel--burgundy .trivia__container .marquee-container {
+  border: 4px dotted #750550;
+}
+
 
 /* Violet */
 .info-panel--violet .palette-header {
@@ -263,6 +285,10 @@
   padding: 2px 3px;
   cursor: pointer !important;
   border-radius: 5px;
+}
+
+.info-panel--violet .trivia__container .marquee-container {
+  border: 4px dotted #8A39E1;
 }
 
 
@@ -293,6 +319,9 @@
   border-radius: 5px;
 }
 
+.info-panel--ukraine .trivia__container .marquee-container {
+  border: 4px dotted #005bbc;
+}
 
 
 /* Chart Gradient */  

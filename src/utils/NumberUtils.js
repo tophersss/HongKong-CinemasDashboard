@@ -56,3 +56,10 @@ export function commaSeparator(value) {
     }
   }
 }
+
+export function hhToAmPm(hh) {
+  var ampm = hh >= 12 ? 'pm' : 'am';
+  hh = hh % 12;
+  hh = hh ? hh : 12; // the hour '0' should be '12'
+  return `${hh}${ampm}`
+}

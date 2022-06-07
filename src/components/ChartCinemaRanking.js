@@ -12,6 +12,7 @@ CustomEvents(Highcharts);
 const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
   const GetTopCinemas = (TheatreID, topN) => {
     /**
+     * note: obsolete
      * when activeCinema already in topN, do nothing
      * when activeCinema > topN (i.e. not in topN), remove last item from topN, append activeCinema
      */
