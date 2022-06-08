@@ -219,6 +219,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
             <Typography>&nbsp;</Typography>
             <Typography
               // htmlColor={displayContent.textColor}
+              className="stat-card__percentagevalue"
               sx={{
                 mr: 1,
                 color: `${displayContent?.textColor}`,

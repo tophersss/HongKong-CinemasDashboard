@@ -1,5 +1,6 @@
 /* @import "https://code.highcharts.com/css/highcharts.css"; */
 @import url("https://fonts.googleapis.com/css2?family=VT323&family=Varela&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"); */
 
 /* ************************************************** */
 /* Map */
@@ -87,6 +88,11 @@
 /* Stat Card */
 .info-panel .stat-card__container .stat-card__primaryvalue {
   font-size: 1.8rem;
+  font-family: 'Open Sans', 'Times New Roman', Times, serif;
+}
+
+.info-panel .stat-card__container .stat-card__percentagevalue {
+  font-family: 'Open Sans', 'Times New Roman', Times, serif;
 }
 
 /* Util Icons */
