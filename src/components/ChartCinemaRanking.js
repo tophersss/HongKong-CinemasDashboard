@@ -61,7 +61,9 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
     chart: {
       height: 1500,
       spacingTop: 20,
+      marginLeft: 260,
       type: "bar",
+      style: {fontFamily: "'Varela', 'Lucida Grande', 'Lucida Sans Unicode'"},
       // scrollablePlotArea: {
       //   minHeight: 8000,
       // },
@@ -78,6 +80,7 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
     subtitle: {
       text: "Tickets Sold (k)",
       align: "right",
+      x: -15,
       y: 10,
       margin: 0,
     },
@@ -88,6 +91,7 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
       categories: [],
       className: "palette-secondary xaxis-labels",
       labels: {
+        align: "right",
         style: {
           fontSize: "0.75rem",
         },
@@ -113,6 +117,7 @@ const ChartCinemaRanking = ({ TheatreID, handleActiveCinemaChange }) => {
           enabled: false,
         },
         labels: {
+          align: "right",
           formatter: function () {
             var label = this.axis.defaultLabelFormatter.call(this);
             return abbrNum(parseFloat(label), 0);

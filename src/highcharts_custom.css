@@ -15,7 +15,7 @@
     z-index: 0;
     /* #1072 */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-family: "Varela", "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
     font-size: 12px;
     user-select: none;
     touch-action: manipulation;

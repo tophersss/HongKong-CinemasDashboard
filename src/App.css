@@ -1,4 +1,5 @@
 /* @import "https://code.highcharts.com/css/highcharts.css"; */
+@import url("https://fonts.googleapis.com/css2?family=VT323&family=Varela&display=swap");
 
 /* ************************************************** */
 /* Map */
@@ -63,6 +64,11 @@
   padding-bottom: 12px;
 }
 
+.trivia__container .marquee-container {
+  border: 6px dotted;
+}
+
+
 .info-panel .trivia__container.MuiBox-root .trivia__content {
   font-size: 1.08rem;
   margin: 0px 5px;
@@ -122,13 +128,10 @@
 
 .info-panel--blue .xaxis-labels span:hover {
   background-color: rgba(191, 206, 255, .65) !important;
-  padding: 2px 3px;
-  cursor: pointer !important;
-  border-radius: 5px;
 }
 
 .info-panel--blue .trivia__container .marquee-container {
-  border: 4px dotted #313e87;
+  border-color: #313e87;
 }
 
 
@@ -154,13 +157,10 @@
 
 .info-panel--yellow .xaxis-labels span:hover {
   background-color: rgba(255, 231, 186, .65) !important;
-  padding: 2px 3px;
-  cursor: pointer !important;
-  border-radius: 5px;
 }
 
 .info-panel--yellow .trivia__container .marquee-container {
-  border: 4px dotted #C29440;
+  border-color: #C29440;
 }
 
 
@@ -192,7 +192,7 @@
 }
 
 .info-panel--turquoise .trivia__container .marquee-container {
-  border: 4px dotted #219685;
+  border-color: #219685;
 }
 
 
@@ -218,13 +218,10 @@
 
 .info-panel--orange .xaxis-labels span:hover {
   background-color: rgba(255, 225, 197, .65) !important;
-  padding: 2px 3px;
-  cursor: pointer !important;
-  border-radius: 5px;
 }
 
 .info-panel--orange .trivia__container .marquee-container {
-  border: 4px dotted #F76E11;
+  border-color: #F76E11;
 }
 
 
@@ -250,13 +247,10 @@
 
 .info-panel--burgundy .xaxis-labels span:hover {
   background-color: rgba(239, 186, 215, .65) !important;
-  padding: 2px 3px;
-  cursor: pointer !important;
-  border-radius: 5px;
 }
 
 .info-panel--burgundy .trivia__container .marquee-container {
-  border: 4px dotted #750550;
+  border-color: #750550;
 }
 
 
@@ -282,13 +276,10 @@
 
 .info-panel--violet .xaxis-labels span:hover {
   background-color: rgba(225, 155, 193, .65) !important;
-  padding: 2px 3px;
-  cursor: pointer !important;
-  border-radius: 5px;
 }
 
 .info-panel--violet .trivia__container .marquee-container {
-  border: 4px dotted #8A39E1;
+  border-color: #8A39E1;
 }
 
 
@@ -314,13 +305,10 @@
 
 .info-panel--ukraine .xaxis-labels span:hover {
   background-color: rgba(249, 237, 173, .65) !important;
-  padding: 2px 3px;
-  cursor: pointer !important;
-  border-radius: 5px;
 }
 
 .info-panel--ukraine .trivia__container .marquee-container {
-  border: 4px dotted #005bbc;
+  border-color: #005bbc;
 }
 
 
@@ -360,6 +348,17 @@
   fill: #7863cc;
 }
 
+/* Chart Cinema Index */
+.info-panel__chart .xaxis-labels span {
+  text-align: right;
+}
+
+.info-panel__chart .xaxis-labels span:hover {
+  cursor: pointer !important;
+  border-radius: 5px;
+  padding: 1px 1.5px;
+}
+
 /* Chart Hourly Attendance */
 .info-panel__chart.chart-hourly-attendance .highcharts-tooltip {
   color: ghostwhite;
@@ -381,6 +380,8 @@ tr td {
   border-radius: 5px;
   padding: 4px;
   cursor: pointer;
+  font-family: 'Varela', Arial, 'sans-serif';
+  font-size: 1em;
 }
 
 .info-panel__chart #chart-seat-plan-button:hover {

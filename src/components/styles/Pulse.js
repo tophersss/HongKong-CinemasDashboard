@@ -2,6 +2,8 @@ import { styled } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
+// note: not in use
+
 const Pulse = ({ clickEvent }) => {
   const pulseEffects = keyframes({
     "0%": {

@@ -90,6 +90,7 @@ const ChartHousesSales = ({
       height: 285,
       // width: "100%",
       spacingTop: 20,
+      style: {fontFamily: "'Varela', 'Lucida Grande', 'Lucida Sans Unicode'"},
       events: {
         load() {
           setTimeout(this.reflow.bind(this), 0);
