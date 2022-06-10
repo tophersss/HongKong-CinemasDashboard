@@ -60,17 +60,17 @@
 }
 
 /* Trivia */
-.info-panel .trivia__container.MuiBox-root {
+.info-panel .util-bar__container.MuiBox-root {
   padding-top: 5px;
   padding-bottom: 12px;
 }
 
-.trivia__container .marquee-container {
+.util-bar__container .marquee-container {
   border: 6px dotted;
 }
 
 
-.info-panel .trivia__container.MuiBox-root .trivia__content {
+.info-panel .util-bar__container.MuiBox-root .trivia__content {
   font-size: 1.08rem;
   margin: 0px 12px;
   font-family: 'VT323', cursive;
@@ -96,9 +96,9 @@
 }
 
 /* Util Icons */
-.info-panel .info-panel__util-icons-container {
+.info-panel .util-bar__item-container {
   cursor: pointer;
-  margin: 0px 3px;
+  margin-right: 12px;
 }
 
 
@@ -118,7 +118,7 @@
 }
 
 .info-panel--blue .palette-primary , 
-.info-panel--blue .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--blue .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #7863cc !important;
   fill: #7863cc !important;
 }
@@ -136,7 +136,7 @@
   background-color: rgba(191, 206, 255, .65) !important;
 }
 
-.info-panel--blue .trivia__container .marquee-container {
+.info-panel--blue .util-bar__container .marquee-container {
   border-color: #313e87;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .info-panel--yellow .palette-primary , 
-.info-panel--yellow .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--yellow .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #F7BE54 !important;
   fill: #F7BE54 !important;
 }
@@ -165,7 +165,7 @@
   background-color: rgba(255, 231, 186, .65) !important;
 }
 
-.info-panel--yellow .trivia__container .marquee-container {
+.info-panel--yellow .util-bar__container .marquee-container {
   border-color: #C29440;
 }
 
@@ -176,7 +176,7 @@
 }
 
 .info-panel--turquoise .palette-primary , 
-.info-panel--turquoise .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--turquoise .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #3EB8A5 !important;
   fill: #3EB8A5 !important;
 }
@@ -197,7 +197,7 @@
   border-radius: 5px;
 }
 
-.info-panel--turquoise .trivia__container .marquee-container {
+.info-panel--turquoise .util-bar__container .marquee-container {
   border-color: #219685;
 }
 
@@ -208,7 +208,7 @@
 }
 
 .info-panel--orange .palette-primary ,
-.info-panel--orange .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--orange .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #FF9F45 !important;
   fill: #FF9F45 !important;
 }
@@ -226,7 +226,7 @@
   background-color: rgba(255, 225, 197, .65) !important;
 }
 
-.info-panel--orange .trivia__container .marquee-container {
+.info-panel--orange .util-bar__container .marquee-container {
   border-color: #F76E11;
 }
 
@@ -237,7 +237,7 @@
 }
 
 .info-panel--burgundy .palette-primary ,
-.info-panel--burgundy .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--burgundy .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #980F5A !important;
   fill: #980F5A !important;
 }
@@ -255,7 +255,7 @@
   background-color: rgba(239, 186, 215, .65) !important;
 }
 
-.info-panel--burgundy .trivia__container .marquee-container {
+.info-panel--burgundy .util-bar__container .marquee-container {
   border-color: #750550;
 }
 
@@ -266,7 +266,7 @@
 }
 
 .info-panel--violet .palette-primary ,
-.info-panel--violet .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--violet .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #9C51E0 !important;
   fill: #9C51E0 !important;
 }
@@ -284,7 +284,7 @@
   background-color: rgba(225, 155, 193, .65) !important;
 }
 
-.info-panel--violet .trivia__container .marquee-container {
+.info-panel--violet .util-bar__container .marquee-container {
   border-color: #8A39E1;
 }
 
@@ -295,7 +295,7 @@
 }
 
 .info-panel--ukraine .palette-primary ,
-.info-panel--ukraine .info-panel__util-icons-container:hover .info-panel__util-icons {
+.info-panel--ukraine .util-bar__item-container:hover .info-panel__util-icons {
   stroke: #ffd600 !important;
   fill: #ffd600 !important;
 }
@@ -313,7 +313,7 @@
   background-color: rgba(249, 237, 173, .65) !important;
 }
 
-.info-panel--ukraine .trivia__container .marquee-container {
+.info-panel--ukraine .util-bar__container .marquee-container {
   border-color: #005bbc;
 }
 

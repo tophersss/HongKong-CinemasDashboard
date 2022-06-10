@@ -27,7 +27,7 @@ const CinemaIndex = ({
 
   return (
     <>
-      <Tooltip title="Show Cinema Index" >
+      <Tooltip arrow title="Show Cinema Index" >
         <ListAltTwoToneIcon style={{cursor: "pointer"}} onClick={toggleDrawer(true)} /> 
       </Tooltip>
       {/* <Button onClick={toggleDrawer(true)}>Cinema Index</Button> */}

@@ -181,7 +181,7 @@ const MapInfoPanel = ({
               </Grid>
             </Grid>
             <Box
-              className="trivia__container"
+              className="util-bar__container"
               sx={{
                 pt: 2,
                 alignItems: "center",
@@ -191,8 +191,8 @@ const MapInfoPanel = ({
               }}
             >
 
-              <Tooltip arror title="View Seatplans">
-                <div className="info-panel__util-icons-container" style={{ display: "flex" }}>
+              <Tooltip arrow title="View Seatplans">
+                <div className="util-bar__item-container" style={{ display: "flex" }}>
                   <SVG
                     src={`${process.env.PUBLIC_URL}/assets/open-seatplan.svg`}
                     // src={require(`../assets/open-seatplan.svg`).default}
@@ -205,8 +205,8 @@ const MapInfoPanel = ({
                 </div>
               </Tooltip>
 
-              <Tooltip arror title="Locate On Map">
-                <div className="info-panel__util-icons-container" style={{ display: "flex" }}>
+              <Tooltip arrow title="Locate On Map">
+                <div className="util-bar__item-container" style={{ display: "flex" }}>
                   <SVG
                     // src={require(`../assets/locate-on-map.svg`).default}
                     src={`${process.env.PUBLIC_URL}/assets/locate-on-map.svg`}
@@ -217,9 +217,6 @@ const MapInfoPanel = ({
                     }}
                   />
                 </div>
-              </Tooltip>
-              <Tooltip title="Show Me">
-                <LightbulbIcon style={{ fontSize: "29px" }} />
               </Tooltip>
               <Trivia TheatreID={activeCinema.TheatreID} name={activeCinema.name_en} />              
             </Box>
