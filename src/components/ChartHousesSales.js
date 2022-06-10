@@ -188,8 +188,6 @@ const ChartHousesSales = ({
         useHTML: true,
         headerFormat: "<table>",
         formatter: function () {
-          // console.log(`printing this.point`);
-          // console.log(this.point);
           const houseData = createHouseData(this.point.id);
           return (
             `<table><tr><th colspan="2"><h3>${this.point.name}</h3></th></tr>` +
@@ -238,13 +236,6 @@ const ChartHousesSales = ({
       ) : (
         ""
       )}
-      {/* <TableHouseDetails /> */}
-      {activeHouseName == null ? "" : <h4>{activeHouseName}</h4>}
-      {/* {activeHouseName !== null ? (
-        <TableHouseDetails houseDetailsObj={createHouseData(activeHouseName)} />
-      ) : (
-        ""
-      )} */}
     </div>
   );
 };
