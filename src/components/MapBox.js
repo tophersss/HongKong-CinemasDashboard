@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import "../App.css";
 import { groupBy } from "lodash";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
@@ -9,41 +9,19 @@ import ico_mcl from "../assets/mcl.png";
 import ico_emperor from "../assets/emperor.png";
 import ico_other from "../assets/others.png";
 import ico_mtr from "../assets/mtr.png";
-import { useLeafletContext } from "@react-leaflet/core";
 import {
   MapContainer,
   Marker,
-  Popup,
   TileLayer,
-  Polygon,
   Tooltip,
   Polyline,
   LayersControl,
   LayerGroup,
-  FeatureGroup,
   useMap,
-  useMapEvent,
 } from "react-leaflet";
 import L from "leaflet";
-import { Container } from "@mui/material";
-import { act } from "@testing-library/react";
 import MarkerPulseEffect from "./MapComponents/MarkerPulseEffect";
 
-const fillBlueOptions = { fillColor: "blue" };
-const purpleOptions = { color: "purple" };
-
-const multiPolygon = [
-  [
-    [22.36795, 114.113],
-    [22.36785, 114.1155],
-    [22.36665, 114.1175],
-  ],
-  [
-    [22.3679, 114.11445],
-    [22.3679, 114.11444],
-    [22.3679, 114.11443],
-  ],
-];
 
 const getIcon = (org) => {
   const iconDirectory = {
@@ -175,7 +153,6 @@ const MapBox = ({
             pathOptions={{ color: "rgb(224,179,66)" }}
           ></Polyline>
         )}
-        <Polygon pathOptions={purpleOptions} positions={multiPolygon} />
         {activeCinema === null ? (
           <></>
         ) : (
