@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/map" element={<MapDashboard />} />
+          <Route path="/dashboard" element={<MapDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,26 +1,23 @@
-import { forwardRef, useState } from "react";
+import { useState, forwardRef } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
-import { Tabs, Tab } from "@mui/material";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import { ThemeProvider } from "@mui/material/styles";
 import { DarkTheme } from "./components/styles/DarkTheme";
 
-const clickTest = () => {
-  console.log("Button Clicked");
-};
-
-const DonutLink = () => <Link to="/donut" />;
-
-const LinkBehavior = forwardRef((props, ref) => (
-  <Link ref={ref} to="/donut" {...props} role={undefined} />
-));
 
 function App() {
-  const [tabValue, setTabValue] = useState("/donut");
+  // note: not in use
+  const [tabValue, setTabValue] = useState("/dashboard");
 
   const handleChange = (event, val) => {
     setTabValue(val);
   };
+
+  const LinkBehavior = forwardRef((props, ref) => (
+    <Link ref={ref} to="/dashboard" {...props} role={undefined} />
+  ));
 
   return (
     <ThemeProvider theme={DarkTheme}>
@@ -35,9 +32,9 @@ function App() {
           }}
         >
           <Tab
-            label="Map"
-            value="/map"
-            to="/map"
+            label="Dashboard"
+            value="/dashboard"
+            to="/dashboard"
             component={Link}
             sx={{ color: "navy" }}
           />

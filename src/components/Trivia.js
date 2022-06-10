@@ -19,7 +19,7 @@ const dayOfWeekConversion = {
 const GenerateTriviaSentences = (cinemaTriviaObj, cinemaName) => {
   const triviaMostCrowdedSession = `${dayOfWeekConversion[cinemaTriviaObj.crowd_day]} ${hhToAmPm(cinemaTriviaObj.crowd_hh)} is the most crowded session at ${cinemaName}.`
   const triviaPlayCnt = `${cinemaName} played ${cinemaTriviaObj.movie_cnt_last_month} movie shows last month.`
-  const triviaCheapestTicket = `The most affordable session offered at ${cinemaName} is ${dayOfWeekConversion[cinemaTriviaObj.cheap_day]} ${hhToAmPm(cinemaTriviaObj.cheap_hh)}, averages $${cinemaTriviaObj.cheap_avg_price} per ticket.`
+  const triviaCheapestTicket = `The most affordable session offered at ${cinemaName} is ${dayOfWeekConversion[cinemaTriviaObj.cheap_day]} ${hhToAmPm(cinemaTriviaObj.cheap_hh)}, averages $${cinemaTriviaObj.cheap_avg_price !== null ? Math.round(cinemaTriviaObj.cheap_avg_price) : "?"} per ticket.`
   const triviaMostPlayedMovie = (<>The most played movie last month was <a href={`https://hkmovie6.com/movie/${cinemaTriviaObj.most_played_hkmovie6_code}`}><i>{cinemaTriviaObj.most_played_name_en}</i></a>. ({cinemaTriviaObj.most_played_cnt} times!)</>);
 
   return shuffle([triviaMostCrowdedSession, triviaPlayCnt, triviaCheapestTicket, triviaMostPlayedMovie]);
@@ -34,9 +34,6 @@ const Trivia = ({ TheatreID, name }) => {
     var result = trivia_data.filter(
       (d) => d.TheatreID === TheatreID
     )[0];
-
-    // console.log(`printing trivia result:`)
-    // console.log(result);
 
     var sentences = GenerateTriviaSentences(result, name);
     setTriviaSentences(sentences);
