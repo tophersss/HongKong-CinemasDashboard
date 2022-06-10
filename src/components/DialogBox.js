@@ -185,7 +185,7 @@ export default function SeatplanDialog({
                 md={1}
                 sx={{ display: "flex", margin: "0 10px" }}
               >
-                <Typography sx={{ paddingRight: "5px" }}>
+                <Typography sx={{ paddingRight: "5px", color: "whitesmoke" }}>
                   {d["freq-range"]}
                 </Typography>
                 <div>
