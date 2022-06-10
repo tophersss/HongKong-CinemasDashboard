@@ -1,18 +1,16 @@
-import { useCallback, useEffect, useState } from "react";
-import {
-  Avatar,
-  Box,
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-  Tooltip,
-} from "@mui/material";
+import { useEffect, useState } from "react";
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
+
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
 import { abbrNum, percIncrease } from "../utils/NumberUtils";
-import { CopyAll } from "@mui/icons-material";
 
 const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
   const [displayContent, setDisplayContent] = useState(null);

@@ -191,7 +191,7 @@ const MapInfoPanel = ({
               }}
             >
 
-              <Tooltip arrow title="View Seatplans">
+              <Tooltip arrow title={<Typography variant="subtitle2">View Seatplans</Typography>}>
                 <div className="util-bar__item-container" style={{ display: "flex" }}>
                   <SVG
                     src={`${process.env.PUBLIC_URL}/assets/open-seatplan.svg`}
@@ -205,7 +205,7 @@ const MapInfoPanel = ({
                 </div>
               </Tooltip>
 
-              <Tooltip arrow title="Locate On Map">
+              <Tooltip arrow title={<Typography variant="subtitle2">Display On Map</Typography>}>
                 <div className="util-bar__item-container" style={{ display: "flex" }}>
                   <SVG
                     // src={require(`../assets/locate-on-map.svg`).default}

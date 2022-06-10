@@ -1,9 +1,9 @@
 import { useState } from "react";
 import ChartCinemaRanking from "./ChartCinemaRanking";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
+import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
 import ListAltTwoToneIcon from '@mui/icons-material/ListAltTwoTone';
-import { Tooltip } from "@mui/material";
 
 
 const CinemaIndex = ({
@@ -27,7 +27,7 @@ const CinemaIndex = ({
 
   return (
     <>
-      <Tooltip arrow title="Show Cinema Index" >
+      <Tooltip arrow title={<Typography variant="subtitle2">Show Cinema Index</Typography>}>
         <ListAltTwoToneIcon style={{cursor: "pointer"}} onClick={toggleDrawer(true)} /> 
       </Tooltip>
       {/* <Button onClick={toggleDrawer(true)}>Cinema Index</Button> */}
