@@ -1,6 +1,6 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { groupBy } from "../utils/ArrayUtils";
 import { commaSeparator } from "../utils/NumberUtils";
 import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
@@ -22,7 +22,6 @@ const ChartHourlyAttendance = ({ activeCinemaID }) => {
       spacingTop: 20,
       // spacingBottom: 10,
       styledMode: true,
-      // backgroundColor: 'gold',
     },
     title: {
       text: `Hourly Attendance`,
@@ -115,8 +114,6 @@ const ChartHourlyAttendance = ({ activeCinemaID }) => {
         color: "#f8f8ff",
       },
       formatter: function () {
-        console.log(`HourlyAttendance this`)
-        console.log(this)
         const sumTicketsSold = this.series.data.reduce((sum, d) => sum + +d.y, 0);
         
         return (
@@ -187,8 +184,6 @@ const ChartHourlyAttendance = ({ activeCinemaID }) => {
   });
 
   const updateSeries = () => {
-    // console.log(`useEffect triggered updateSeries()`);
-    // console.log(theatreGroups);
     // const filteredTheatreObj = theatreGroups.filter((g) => g == activeCinemaID);
     const activeCinemaObj = Object.keys(theatreGroups).map((groupName) => {
       if (groupName == activeCinemaID) {
@@ -201,8 +196,6 @@ const ChartHourlyAttendance = ({ activeCinemaID }) => {
         };
       }
     });
-    // console.log(`filteredGroup:`);
-    // console.log(theatreGroups[activeCinemaID]);
 
     setChartOptions((prevState) => ({
       // ...prevState,
