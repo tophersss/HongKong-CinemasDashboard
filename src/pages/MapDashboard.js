@@ -24,8 +24,6 @@ const MapDashboard = () => {
     ) {
       setActiveHouseID(null);
 
-      console.log(`HandleActiveCinemaChange: received CinemaName = ${CinemaName}`)
-
       var MatchedCinemas = CinemasGeoInfo.filter((c) => c.name_en === CinemaName);
       if (MatchedCinemas.length === 0) {
         console.log(``)

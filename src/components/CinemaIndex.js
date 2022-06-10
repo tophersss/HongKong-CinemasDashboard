@@ -24,7 +24,6 @@ const CinemaIndex = ({
     setOpened(state);
   };
 
-  console.log(`divClassName = ${divClassName}`);
 
   return (
     <>
