@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ChartCinemaRanking from "./ChartCinemaRanking";
+import ChartCinemaRanking from "./charts/ChartCinemaRanking";
 import Drawer from "@mui/material/Drawer";
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';

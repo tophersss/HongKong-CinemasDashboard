@@ -1,10 +1,10 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect } from "react";
-import { groupBy } from "../utils/ArrayUtils";
-import { commaSeparator } from "../utils/NumberUtils";
-import { cinemas_sales_over_hours } from "../data/CinemasSalesOverHours";
-import '../highcharts_custom.css'
+import { groupBy } from "../../utils/ArrayUtils";
+import { commaSeparator } from "../../utils/NumberUtils";
+import { cinemas_sales_over_hours } from "../../data/CinemasSalesOverHours";
+import '../../highcharts_custom.css'
 
 const ChartHourlyAttendance = ({ activeCinemaID }) => {
   const theatreGroups = groupBy(cinemas_sales_over_hours, "theatreID");

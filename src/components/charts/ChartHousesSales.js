@@ -3,16 +3,14 @@ import HighchartsReact from "highcharts-react-official";
 import { useState, useEffect, useRef } from "react";
 
 // todo: add houseID to HouseSales.js
-import { houses_sales } from "../data/HousesSales";
+import { houses_sales } from "../../data/HousesSales";
 import addTreemapModule from "highcharts/modules/treemap";
 import HighchartsHeatmap from "highcharts/modules/heatmap";
-import { groupBy } from "../utils/ArrayUtils";
-import { PickChainColor } from "../utils/ColorUtils";
-import { commaSeparator } from "../utils/NumberUtils";
-import TableHouseDetails from "./TableHouseDetails";
+import { groupBy } from "../../utils/ArrayUtils";
+import { PickChainColor } from "../../utils/ColorUtils";
+import { commaSeparator } from "../../utils/NumberUtils";
 
-import SubtitleComponent from "./SubtitleComponent";
-import { set } from "lodash";
+import SubtitleComponent from "../SubtitleComponent";
 
 addTreemapModule(Highcharts);
 HighchartsHeatmap(Highcharts);

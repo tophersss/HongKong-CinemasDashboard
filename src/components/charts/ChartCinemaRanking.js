@@ -1,11 +1,9 @@
-// import Highcharts from "highcharts";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import CustomEvents from "highcharts-custom-events";
-import { useState, useEffect, useRef } from "react";
-import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
-import { abbrNum, commaSeparator } from "../utils/NumberUtils";
-import { PickChainColor } from "../utils/ColorUtils";
+import { useState, useEffect } from "react";
+import { cinemas_performance_overview } from "../../data/CinemasPerformanceOverview";
+import { abbrNum, commaSeparator } from "../../utils/NumberUtils";
 
 CustomEvents(Highcharts);
 

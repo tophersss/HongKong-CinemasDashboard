@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "../App.css";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import MapBox from "../components/MapBox";
@@ -6,7 +6,6 @@ import MapInfoPanel from "../components/MapInfoPanel";
 
 const MapDashboard = () => {
   const [activeCinema, setActiveCinema] = useState(null);
-  const [activeCinemaTrigger, setActiveCinemaTrigger] = useState(true);
   const [activeHouseID, setActiveHouseID] = useState(null);
   const [activeDistance, setActiveDistance] = useState([
     [0, 0],

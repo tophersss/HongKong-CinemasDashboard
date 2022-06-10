@@ -1,12 +1,10 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
@@ -17,9 +15,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Select from "@mui/material/Select";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
-import SeatplanLoader from "./SeatplanLoader";
 import { houses_sales } from "../data/HousesSales";
-// import { house_seatplans } from "../data/HouseSeatplans";
+
 
 // todo: add cinemaID as prop, then create a list of houseNames for dropdown selection
 // todo: add dynamic svg import https://stackoverflow.com/questions/61339259/how-to-dynamically-import-svg-and-render-it-inline

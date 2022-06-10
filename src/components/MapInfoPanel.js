@@ -1,30 +1,24 @@
 // todo: implement dashboard
 // https://github.com/devias-io/material-kit-react
 
-import {
-  Autocomplete,
-  Card,
-  Grid,
-  Paper,
-  TextField,
-  Input,
-  Typography,
-  Box,
-  Tooltip,
-} from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Input from "@mui/material/Input";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
+
 import CinemaIndex from "./CinemaIndex";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import ChartHousesSales from "../components/ChartHousesSales";
+import ChartHousesSales from "./charts/ChartHousesSales";
 import MoneyIcon from "@mui/icons-material/Money";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import SeatplanDialog from "./DialogBox";
-import MyLocationRoundedIcon from "@mui/icons-material/MyLocationRounded";
-import DirectionsSubwayTwoToneIcon from "@mui/icons-material/DirectionsSubwayTwoTone";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
 import { cinemas_performance_overview } from "../data/CinemasPerformanceOverview";
-import ChartHourlyAttendance from "./ChartHourlyAttendance";
+import ChartHourlyAttendance from "./charts/ChartHourlyAttendance";
 import StatCard from "./StatCard";
 import SVG from "react-inlinesvg";
 import { PickChainColor } from "../utils/ColorUtils";
