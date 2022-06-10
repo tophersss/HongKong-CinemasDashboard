@@ -167,7 +167,7 @@ const StatCard = ({ cardProps, cardContent, Icon, statType }) => {
             <Grid item>
               <Avatar
                 sx={{
-                  backgroundColor: "error.main",
+                  backgroundColor: "darkslategray",
                   height: 45,
                   width: 45,
                 }}
