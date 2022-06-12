@@ -11,12 +11,11 @@ import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 import Select from "@mui/material/Select";
 import SVG, { Props as SVGProps } from "react-inlinesvg";
 import { houses_sales } from "../data/HousesSales";
-
 
 // todo: add cinemaID as prop, then create a list of houseNames for dropdown selection
 // todo: add dynamic svg import https://stackoverflow.com/questions/61339259/how-to-dynamically-import-svg-and-render-it-inline
@@ -102,7 +101,6 @@ export default function SeatplanDialog({
     }
   }, [activeHouseID]);
 
-
   const handleClickOpen = () => {
     handleOpen(true);
   };
@@ -117,7 +115,6 @@ export default function SeatplanDialog({
     console.log(event);
   };
 
-
   return (
     <div>
       {/* <Button variant="outlined" onClick={handleClickOpen}>
@@ -131,72 +128,109 @@ export default function SeatplanDialog({
         fullWidth={true}
         maxWidth="lg"
       >
-        <BootstrapDialogTitle
-          onClose={handleClose}
-        >
+        <BootstrapDialogTitle onClose={handleClose}>
           Seatplan
           {/* Seatplan - {houseName} */}
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          <FormControl variant="filled" sx={{ m: 1, minWidth: 350 }}>
-            <InputLabel color="info" id="house-selection-label">House</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={activeHouseID}
-              label="House"
-              onChange={handleDropboxChange}
-              sx={{ color: "whitesmoke" }}
-            >
-              {houseList.length > 0 ? (
-                // note: sort houseList by house_alias1 ASC
-                houseList.sort((a, b) => a.house_alias1 > b.house_alias1 ? 1 : -1).map((d) => (
-                  <MenuItem sx={{}} value={d.HouseID} name={d.house_alias1}>
-                    {" "}
-                    {d.house_alias1}{" "}
-                  </MenuItem>
-                ))
-              ) : (
-                <MenuItem> None </MenuItem>
-              )}
-            </Select>
-          </FormControl>
-          {activeHouseID === null ? (
-            ""
-          ) : (
-            <SVG
-              src={require(`../assets/seatplans/${activeHouseID}.svg`).default}
-              height={"100%"}
-              maxWidth={"100%"}
-              loader={
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
-                  <CircularProgress size={80} />
-                </Box>
-              }
-              onError={(error) => console.log(error.message)}
-              />
-          )}
-          <Grid container alignItems="center" justifyContent="center" spacing={0}>
-            {level_color_dict.map((d) => (
-              <Grid
-                item
-                xs={3}
-                sm={2}
-                md={1}
-                sx={{ display: "flex", margin: "0 10px" }}
-              >
-                <Typography sx={{ paddingRight: "5px", color: "whitesmoke" }}>
-                  {d["freq-range"]}
-                </Typography>
-                <div>
-                  <SVG
-                    width="25"
-                    height="25"
-                    src={`<svg><rect width="25" height="25" style="fill:${d.color};stroke:${d.color};stroke-width:5" />Sorry, your browser does not support inline SVG.  </svg>`}
-                  />
-                </div>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="center"
+            spacing={2}
+          >
+            <Grid item xs={12}>
+              <FormControl variant="filled" sx={{ m: 1, minWidth: 350 }}>
+                <InputLabel color="info" id="house-selection-label">
+                  House
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={activeHouseID}
+                  label="House"
+                  onChange={handleDropboxChange}
+                  sx={{ color: "whitesmoke" }}
+                >
+                  {houseList.length > 0 ? (
+                    // note: sort houseList by house_alias1 ASC
+                    houseList
+                      .sort((a, b) =>
+                        a.house_alias1 > b.house_alias1 ? 1 : -1
+                      )
+                      .map((d) => (
+                        <MenuItem
+                          sx={{}}
+                          value={d.HouseID}
+                          name={d.house_alias1}
+                        >
+                          {" "}
+                          {d.house_alias1}{" "}
+                        </MenuItem>
+                      ))
+                  ) : (
+                    <MenuItem> None </MenuItem>
+                  )}
+                </Select>
+              </FormControl>
+            </Grid>
+            {activeHouseID === null ? (
+              ""
+            ) : (
+              <Grid item xs={12}>
+                <SVG
+                  src={
+                    require(`../assets/seatplans/${activeHouseID}.svg`).default
+                  }
+                  height={"100%"}
+                  maxWidth={"100%"}
+                  loader={
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        minHeight: "50vh",
+                      }}
+                    >
+                      <CircularProgress size={80} />
+                    </Box>
+                  }
+                  onError={(error) => console.log(error.message)}
+                />
               </Grid>
-            ))}
+            )}
+            <Grid item xs={12}>
+              <Grid
+                container
+                alignItems="center"
+                justifyContent="center"
+                spacing={0}
+              >
+                {level_color_dict.map((d) => (
+                  <Grid
+                    item
+                    xs={3}
+                    sm={2}
+                    md={1}
+                    sx={{ display: "flex", margin: "0 10px" }}
+                  >
+                    <Typography
+                      sx={{ paddingRight: "5px", color: "whitesmoke" }}
+                    >
+                      {d["freq-range"]}
+                    </Typography>
+                    <div>
+                      <SVG
+                        width="25"
+                        height="25"
+                        src={`<svg><rect width="25" height="25" style="fill:${d.color};stroke:${d.color};stroke-width:5" />Sorry, your browser does not support inline SVG.  </svg>`}
+                      />
+                    </div>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
           </Grid>
         </DialogContent>
       </BootstrapDialog>
