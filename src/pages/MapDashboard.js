@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
-import MapBox from "../components/MapBox";
+import MapBox from "../components/MapComponents/MapBox";
 import MapInfoPanel from "../components/MapInfoPanel";
 
 const MapDashboard = () => {

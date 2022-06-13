@@ -4,7 +4,7 @@ import { CssBaseline } from "@mui/material";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import { ThemeProvider } from "@mui/material/styles";
-import { DarkTheme } from "./components/styles/DarkTheme";
+import { MuiTheme } from "./styles/MuiTheme";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   ));
 
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={MuiTheme}>
       <CssBaseline />
       <div className="App">
         <Tabs

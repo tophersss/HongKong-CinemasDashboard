@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material";
 
 const fonts = "'Varela', Arial, 'sans-serif'";
 
-export const DarkTheme = createTheme({
+export const MuiTheme = createTheme({
   palette: {
     mode: "light",
     primary: {

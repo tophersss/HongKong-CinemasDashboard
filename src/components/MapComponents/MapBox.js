@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import "../App.css";
+import "../../App.css";
 import { groupBy } from "lodash";
-import CinemasGeoInfo from "../data/CinemasGeoInfo.json";
-import ico_goldenharvest from "../assets/golden_harvest.png";
-import ico_cinemacity from "../assets/cinema_city.png";
-import ico_broadway from "../assets/broadway.png";
-import ico_mcl from "../assets/mcl.png";
-import ico_emperor from "../assets/emperor.png";
-import ico_other from "../assets/others.png";
-import ico_mtr from "../assets/mtr.png";
+import CinemasGeoInfo from "../../data/CinemasGeoInfo.json";
+import ico_goldenharvest from "../../assets/golden_harvest.png";
+import ico_cinemacity from "../../assets/cinema_city.png";
+import ico_broadway from "../../assets/broadway.png";
+import ico_mcl from "../../assets/mcl.png";
+import ico_emperor from "../../assets/emperor.png";
+import ico_other from "../../assets/others.png";
+import ico_mtr from "../../assets/mtr.png";
 import {
   MapContainer,
   Marker,
@@ -20,7 +20,7 @@ import {
   useMap,
 } from "react-leaflet";
 import L from "leaflet";
-import MarkerPulseEffect from "./MapComponents/MarkerPulseEffect";
+import MarkerPulseEffect from "./MarkerPulseEffect";
 
 
 const getIcon = (org) => {
