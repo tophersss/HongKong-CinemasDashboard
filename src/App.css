@@ -314,7 +314,10 @@
 }
 
 .info-panel--ukraine .util-bar__container .marquee-container {
-  border-color: #005bbc;
+  border-top-color: #005bbc;
+  border-left-color: #005bbc;
+  border-bottom-color: #ffd700;
+  border-right-color: #005bbc;
 }
 
 

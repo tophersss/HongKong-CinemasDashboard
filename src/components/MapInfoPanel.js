@@ -212,7 +212,7 @@ const MapInfoPanel = ({
                   />
                 </div>
               </Tooltip>
-              <Trivia TheatreID={activeCinema.TheatreID} name={activeCinema.name_en} />              
+              <Trivia TheatreID={activeCinema.TheatreID} name={activeCinema.name_en} chain={activeCinema.chain} />              
             </Box>
 
             <ChartHourlyAttendance
