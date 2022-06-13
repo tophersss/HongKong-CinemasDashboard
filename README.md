@@ -103,54 +103,89 @@ To make life easier, a database view was created to aggregate shows and calculat
 See below for the queries used:
 
 <img src="screenshots/data-used__1.jpg" alt="Logo" height="120" width="420">
-<details>
-    <summary>sql</summary>
-    
-	```python
-	sds
-	```sql
-	sds
+<details> 
+<summary>sql</summary>
 
+```sql
+SELECT
+    b.theatreID 
+    , a.theatre as 'theatreTC'
+    , b.name_en as 'theatreEN'
+    , SUM(a.profit) as 'OverallSales'
+    , SUM(CASE WHEN strftime('%Y-%m', a.movie_starttime) = strftime('%Y-%m', 'now', 'localtime') AND a.theatre IS NOT NULL THEN a.profit ELSE 0 END) as 'CurrentMonthSales'
+    , SUM(CASE WHEN strftime('%Y-%m', a.movie_starttime) = strftime('%Y-%m', 'now', 'localtime', '-1 month') AND a.theatre IS NOT NULL THEN a.profit ELSE 0 END) as 'PrevMonthSales'
+    , SUM(CASE WHEN strftime('%W', a.movie_starttime) = strftime('%W', 'now', 'localtime') THEN a.profit ELSE 0 END) as 'CurrentWeekSales'
+    , SUM(CASE WHEN strftime('%W', a.movie_starttime) = strftime('%W', 'now', 'localtime', '-7 days') THEN a.profit ELSE 0 END) as 'PrevWeekSales'
+    , SUM(a.ticket_sold) as 'OverallTicketsSold'
+    , SUM(CASE WHEN strftime('%Y-%m', a.movie_starttime) = strftime('%Y-%m', 'now', 'localtime') THEN a.ticket_sold ELSE 0 END) as 'CurrentMonthTicketsSold'
+    , SUM(CASE WHEN strftime('%Y-%m', a.movie_starttime) = strftime('%Y-%m', 'now', 'localtime', '-1 month') THEN a.ticket_sold ELSE 0 END) as 'PrevMonthTicketsSold'
+    , SUM(CASE WHEN strftime('%W', a.movie_starttime) = strftime('%W', 'now', 'localtime') THEN a.ticket_sold ELSE 0 END) as 'CurrentWeekTicketsSold'
+    , SUM(CASE WHEN strftime('%W', a.movie_starttime) = strftime('%W', 'now', 'localtime', '-7 days') THEN a.ticket_sold ELSE 0 END) as 'PrevWeekTicketsSold'
+FROM vShowDetails as a
+INNER JOIN Theatres as b on a.theatre = b.name
+WHERE a.theatre is not null
+GROUP BY a.theatre
+```
+</details>
 
+<br>
+
+<img src="screenshots/data-used__2.jpg" alt="Logo" height="90" width="370">
+<details> 
+<summary>sql</summary>
+
+```sql
+
+```
 </details>
 
 
+<img src="screenshots/data-used__3.jpg" alt="Logo" height="210" width="490">
+<details> 
+<summary>sql</summary>
+
+```sql
+
+```
+</details>
+
+
+<img src="screenshots/data-used__4.jpg" alt="Logo" height="210" width="385">
+<details> 
+<summary>sql</summary>
+
+```sql
+
+```
+</details>
+
+
+<img src="screenshots/data-used__5.jpg" alt="Logo" height="210" width="385">
+<details> 
+<summary>sql</summary>
+
+```sql
+
+```
+</details>
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<details>
-<summary>Database Structure</summary>
-
-`Movies` table stores the movies that were shown on cinema screen in Hong Kong since the start of this project, and has a one-to-many relationship with `Showtimes` table.
-
-Sample:
-
-|MovieID | hkmovie6_code | name | name_en | synopsis | release_date | duration | category | InTheatre | ModifiedDate | EnteredDate | 
-| :---: |  :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
-|367 | b8cd7320-59cd-4679-b99d-210d974ae001 | 壯志凌雲：獨行俠 | TOP GUN MAVERICK | … | 44706 | 130 | IIA | 1 | 1654135233 | 1652177462 | 
-|368 | b972915a-3bb6-481c-b4ac-ac2754c8cce9 | 劇場版 咒術迴戰 0 | JUJUTSU KAISEN: ZERO | … | 44699 | 105 | IIA | 1 | 1654135233 | 1652234438 | 
-|369 | 337e3399-cffb-468b-a9b3-f06b6c27991f | 壞蛋聯盟 | THE BAD GUYS | … | 44706 | 100 | I | 1 | 1654135233 | 1652263236 | 
-
-`Showtimes` table stores the information of movie showtimes, and has a one-to-many relationship with `SalesHistory` table. 
-
-Each record in `SalesHistory` represents each seat taken in a movie show.
-
-[SQLiteStudio] (https://sqlitestudio.pl/) was used to manage and query the database.
-
-</details>
 
 
 ## 👨‍💻  Technologies Used
 <div id="technologies-used"></div>
 
-* [Python 3.9](https://www.python.org/downloads/release/python-391/)
-* [Scrapy](https://pypi.org/project/Scrapy/2.5.0/)
-* [selenium](https://pypi.org/project/selenium/4.1.3/)
-* [selenium-wire](https://pypi.org/project/selenium-wire/4.6.3/)
-* [requests-html](https://pypi.org/project/requests-html/0.10.0/)
-* [lxml](https://pypi.org/project/lxml/4.6.3/)
-* [SQLite](https://www.sqlite.org/index.html)
+* [React](https://reactjs.org/)
+* [highcharts](https://www.highcharts.com/)
+* [leaflet](https://leafletjs.com/)
+
+Leaflet was created by Volodymyr Agafonkin, a Ukrainian citizen living in Kyiv. 
+As Volodymyr [expressed a few days before the invasion](https://twitter.com/LeafletJS/status/1496051256409919489):
+> If you want to help, educate yourself and others on the Russian threat, follow reputable journalists, demand severe Russian sanctions and Ukrainian support from your leaders, protest war, reach out to Ukrainian friends, donate to Ukrainian charities. Just don’t be silent.
+
+On the other hand, if you support the actions of the Russian government, 
+you are advised to [carry some seeds in your pocket](https://www.theguardian.com/world/video/2022/feb/25/ukrainian-woman-sunflower-seeds-russian-soldiers-video).
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
