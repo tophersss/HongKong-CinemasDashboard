@@ -41,8 +41,8 @@ const GenerateTriviaSentences = (cinemaTriviaObj, cinemaName, chain) => {
   const triviaMostCrowdedSession = `${dayOfWeekConversion[cinemaTriviaObj.crowd_day]} ${hhToAmPm(cinemaTriviaObj.crowd_hh)} is the most crowded session at ${cinemaName}.`
   const triviaPlayCnt = `${cinemaName} played ${cinemaTriviaObj.movie_cnt_last_month} movie shows last month.`
   const triviaCheapestTicket = `The most affordable session offered at ${cinemaName} is ${dayOfWeekConversion[cinemaTriviaObj.cheap_day]} ${hhToAmPm(cinemaTriviaObj.cheap_hh)}, averages $${cinemaTriviaObj.cheap_avg_price !== null ? Math.round(cinemaTriviaObj.cheap_avg_price) : "?"} per ticket.`
-  const triviaMostPlayedMovie = (<> The most played movie last month was <a href={`https://hkmovie6.com/movie/${cinemaTriviaObj.most_played_hkmovie6_code}`}><i>{cinemaTriviaObj.most_played_name_en}</i></a>. ({cinemaTriviaObj.most_played_cnt} times!)</>);
-  const supportUkraine = (<> {ukraineFlag()} <a href={'https://leafletjs.com/'}>Leaflet</a>, the library that is used to create this map, is developed by an Ukrainian named Volodymyr. <a href={'https://agafonkin.com/'}>Show your support!</a> </>)
+  const triviaMostPlayedMovie = (<> The most played movie last month was <a href={`https://hkmovie6.com/movie/${cinemaTriviaObj.most_played_hkmovie6_code} target="_blank"`}><i>{cinemaTriviaObj.most_played_name_en}</i></a>. ({cinemaTriviaObj.most_played_cnt} times!)</>);
+  const supportUkraine = (<> {ukraineFlag()} <a href={'https://leafletjs.com/'} target="_blank">Leaflet</a>, the library that is used to create this map, is developed by an Ukrainian named Volodymyr. <a href={'https://agafonkin.com/'} target="_blank">Show your support!</a> </>)
   
   if (chain === "Golden Harvest") {
     return [supportUkraine];
