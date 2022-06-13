@@ -1,9 +1,9 @@
-import { Typography } from '@mui/material';
-import { shuffle } from 'lodash';
 import React, { useEffect, useState } from 'react'
+import Typography from '@mui/material/Typography';
+import Marquee from 'react-fast-marquee';
 import { trivia_data } from "../data/TriviaData";
 import { hhToAmPm } from '../utils/NumberUtils';
-import Marquee from 'react-fast-marquee';
+import { shuffle } from 'lodash';
 
 
 const dayOfWeekConversion = {
@@ -17,10 +17,11 @@ const dayOfWeekConversion = {
 }
 
 const GenerateTriviaSentences = (cinemaTriviaObj, cinemaName) => {
-  const triviaMostCrowdedSession = `${dayOfWeekConversion[cinemaTriviaObj.crowd_day]} ${hhToAmPm(cinemaTriviaObj.crowd_hh)} is the most crowded session at ${cinemaName}.`
-  const triviaPlayCnt = `${cinemaName} played ${cinemaTriviaObj.movie_cnt_last_month} movie shows last month.`
-  const triviaCheapestTicket = `The most affordable session offered at ${cinemaName} is ${dayOfWeekConversion[cinemaTriviaObj.cheap_day]} ${hhToAmPm(cinemaTriviaObj.cheap_hh)}, averages $${cinemaTriviaObj.cheap_avg_price !== null ? Math.round(cinemaTriviaObj.cheap_avg_price) : "?"} per ticket.`
+  const triviaMostCrowdedSession = `🇺🇦${dayOfWeekConversion[cinemaTriviaObj.crowd_day]} ${hhToAmPm(cinemaTriviaObj.crowd_hh)} is the most crowded session at ${cinemaName}.`
+  const triviaPlayCnt = `🇺🇦${cinemaName} played ${cinemaTriviaObj.movie_cnt_last_month} movie shows last month.`
+  const triviaCheapestTicket = `🇺🇦The most affordable session offered at ${cinemaName} is ${dayOfWeekConversion[cinemaTriviaObj.cheap_day]} ${hhToAmPm(cinemaTriviaObj.cheap_hh)}, averages $${cinemaTriviaObj.cheap_avg_price !== null ? Math.round(cinemaTriviaObj.cheap_avg_price) : "?"} per ticket.`
   const triviaMostPlayedMovie = (<>The most played movie last month was <a href={`https://hkmovie6.com/movie/${cinemaTriviaObj.most_played_hkmovie6_code}`}><i>{cinemaTriviaObj.most_played_name_en}</i></a>. ({cinemaTriviaObj.most_played_cnt} times!)</>);
+  
 
   return shuffle([triviaMostCrowdedSession, triviaPlayCnt, triviaCheapestTicket, triviaMostPlayedMovie]);
 }
