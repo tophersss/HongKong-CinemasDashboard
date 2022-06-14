@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "../../App.css";
-import { groupBy } from "lodash";
+import groupBy from "lodash/groupBy";
 import CinemasGeoInfo from "../../data/CinemasGeoInfo.json";
 import ico_goldenharvest from "../../assets/golden_harvest.png";
 import ico_cinemacity from "../../assets/cinema_city.png";
