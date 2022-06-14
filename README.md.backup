@@ -130,7 +130,7 @@ GROUP BY a.theatre
 
 <br>
 
-<img src="screenshots/data-used__2.jpg" alt="Logo" height="90" width="370">
+<img src="screenshots/data-used__2.jpg" alt="Logo" height="90" width="390">
 <details> 
 <summary>sql</summary>
 
