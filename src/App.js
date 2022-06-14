@@ -32,6 +32,13 @@ function App() {
           }}
         >
           <Tab
+            label="About"
+            value="/about"
+            to="/about"
+            component={Link}
+            sx={{ color: "navy" }}
+          />
+          <Tab
             label="Dashboard"
             value="/dashboard"
             to="/dashboard"

@@ -36,7 +36,7 @@
 <h2 align="center">📊 Hong Kong Cinemas Dashboard</h2>
 
   <p align="center">
-	An interactive dashboard created to visualize cinemas' popular times, sales, and seat popularity.
+	An interactive dashboard made with real-world data to visualize cinemas' popular times, sales, and seat popularity.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
