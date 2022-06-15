@@ -581,3 +581,9 @@ pre {
 #hk-flag {
   background-image: url(https://flagicons.lipis.dev/flags/4x3/hk.svg);
 }
+
+.hero-banner button>a {
+  color: white;
+  text-decoration: unset;
+  all: initial;
+}

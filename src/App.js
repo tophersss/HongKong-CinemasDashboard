@@ -6,8 +6,6 @@ import Tabs from "@mui/material/Tabs";
 import { ThemeProvider } from "@mui/material/styles";
 import { MuiTheme } from "./styles/MuiTheme";
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-
 
 function App() {
   // note: not in use
@@ -49,14 +47,6 @@ function App() {
             component={Link}
             sx={{ color: "navy" }}
           />
-          <button onClick={()=>{
-              setTabValue("/dashboard");
-              console.log(`button clicked to change tab`)
-              }}> To Dashboard</button>
-          <GitHubIcon>
-            <a onClick={()=>setTabValue("/dashboard")}>
-            </a>
-          </GitHubIcon>
         </Tabs>
         <Outlet />
       </div>

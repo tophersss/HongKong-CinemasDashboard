@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import Avatar from '@mui/material/Avatar';
-import CardHeader from '@mui/material/CardHeader';
-import Typography from '@mui/material/Typography';
+import MuiLink from '@mui/material/Link';
 import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
+import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
 
 
 const About = () => {
@@ -27,10 +29,10 @@ const About = () => {
                     gutterBottom
                 >
                     Cinemas
-                    <br/>
+                    <br />
                     Dashboard
-                    <br/>
-                    
+                    <br />
+
                     {/* <div class="flag-outer-wrapper">
                         <a class="flag-wrapper">
                             <i id="hk-flag"/>
@@ -39,7 +41,7 @@ const About = () => {
                     {/* <img id='hk-flag' src="https://flagicons.lipis.dev/flags/4x3/hk.svg"/> */}
                     {/* &nbsp;Cinemas Dashboard */}
                 </Typography>
-                <div className="line-separator" >
+                <div className="line-separator">
 
                 </div>
                 <Typography variant="h5" align="center" color="text.secondary" paragraph>
@@ -51,9 +53,15 @@ const About = () => {
                     spacing={2}
                     justifyContent="center"
                 >
-                    <Button variant="contained">Get Started</Button>
-                    <Button variant="outlined">{<> <GitHubIcon/>&nbsp;View Code</>}</Button>
-                    <Button variant="outlined">Contact Me</Button>
+                    <Button variant="contained" component={Link} to="/dashboard">
+                        <KeyboardArrowRightRoundedIcon />Get Started
+                    </Button>
+                    <Button variant="outlined" component={MuiLink} href="https://github.com/tophersss/HongKong-CinemasDashboard" target="_bank">
+                        <GitHubIcon />&nbsp;View Code
+                    </Button>
+                    <Button variant="outlined" component={MuiLink} href="mailto:chrissssuen@gmail.com" target="_bank">
+                        <MailOutlineRoundedIcon />&nbsp;Contact Me
+                    </Button>
                 </Stack>
             </Container>
         </Box>
