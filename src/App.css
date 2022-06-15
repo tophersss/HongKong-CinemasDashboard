@@ -547,3 +547,24 @@ pre {
   }
 }
 
+
+/* ************************************************** */
+/* About */
+.flag-outer-wrapper {
+  margin-top: 25px;
+}
+
+.flag-wrapper i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eee;
+  background-position: center center;
+  background-size: 150%;
+  opacity: 1;
+}
+
+#hk-flag {
+  background-image: url(https://flagicons.lipis.dev/flags/4x3/hk.svg);
+}
