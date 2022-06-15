@@ -550,6 +550,19 @@ pre {
 
 /* ************************************************** */
 /* About */
+.hero-banner {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.line-separator {
+  /* border-bottom: 1px solid rgba(0, 0, 0, .12); */
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  margin-bottom: 25px;
+}
+
 .flag-outer-wrapper {
   margin-top: 25px;
 }

@@ -6,11 +6,12 @@ import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import GitHub from '@mui/icons-material/GitHub';
+
 
 const About = () => {
     return (
         <Box
+            className='hero-banner'
             sx={{
                 bgcolor: 'background.paper',
                 pt: 8,
@@ -30,14 +31,17 @@ const About = () => {
                     Dashboard
                     <br/>
                     
-                    <div class="flag-outer-wrapper">
+                    {/* <div class="flag-outer-wrapper">
                         <a class="flag-wrapper">
                             <i id="hk-flag"/>
                         </a>
-                    </div>
+                    </div> */}
                     {/* <img id='hk-flag' src="https://flagicons.lipis.dev/flags/4x3/hk.svg"/> */}
                     {/* &nbsp;Cinemas Dashboard */}
                 </Typography>
+                <div className="line-separator" >
+
+                </div>
                 <Typography variant="h5" align="center" color="text.secondary" paragraph>
                     An interactive dashboard made with real-world data to visualize cinemas' popular times, sales, and seat popularity.
                 </Typography>
