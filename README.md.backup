@@ -29,23 +29,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://hongkong-cinemasdashboard.netlify.app/about" target="_blank">
+    <img src="screenshots/banner.jpg" alt="Logo" width=700 height=auto />
   </a>
 
 <h2 align="center">📊 Hong Kong Cinemas Dashboard</h2>
 
   <p align="center">
-	An interactive dashboard created to visualize cinemas' popular times, sales, and seat popularity.
+	An interactive dashboard made with real-world data to visualize cinemas' popular times, sales, and seat popularity.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tophersss/HongKong-CinemasScrapers" target="_blank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://hongkong-cinemasdashboard.netlify.app/about" _target="blank">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/tophersss/HongKong-CinemasDashboard/issues" target="_blank">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/tophersss/HongKong-CinemasDashboard/issues">Request Feature</a>
   </p>
 </div>
 
@@ -72,7 +72,7 @@
       </ul>
     </li>
     <li>
-        <a href="#observations">Observations</a>
+        <a href="#Approach">Approach</a>
     </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -83,26 +83,31 @@
 
 
 <!-- ABOUT THE REPOSITORY -->
-## 🧐 About The Repository
 <div id="about-the-repository"></div>
+
+## 🧐 About The Repository
 
 A dashboard was created to explore the trends of the industry - including popular times, sales, and seat popularity. Cinemas were pinned to a map so that it shows see how they are spread out across the city.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Up and running: [https://hongkong-cinemasdashboard.netlify.app/about](https://hongkong-cinemasdashboard.netlify.app/about)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## 📚  Data Used
+
+<!-- DATA USED -->
 <div id="data-used"></div>
 
-Data were collected from over 123,000 shows and 445 movies and stored in a [database](). 
+## 📚  Data Used
 
-To make life easier, a database view was created to aggregate shows and calculate number of tickets sold and sales made. SQL query results were then exported as a JavaScript object to be used by the website.
+
+Data were collected from over 123,000 shows and 445 movies and stored in an SQLite database. Learn more in this [repo](https://github.com/tophersss/HongKong-CinemasScrapers). 
+
+To make life easier, a database view `vShowDetails` was created to aggregate shows and calculate number of tickets sold and sales made. SQL query results were then exported as a JavaScript object to be used by the website.
 
 See below for the queries used:
 
-<img src="screenshots/data-used__1.jpg" alt="Logo" height="120" width="420">
+<img src="screenshots/data-used__1.jpg" alt="Logo" height=auto width="420">
 <details> 
 <summary>sql</summary>
 
@@ -130,7 +135,7 @@ GROUP BY a.theatre
 
 <br>
 
-<img src="screenshots/data-used__2.jpg" alt="Logo" height="90" width="390">
+<img src="screenshots/data-used__2.jpg" alt="Logo" height=auto width="390">
 <details> 
 <summary>sql</summary>
 
@@ -139,7 +144,6 @@ WITH
 crowded_session AS (
 select
     a.TheatreID
-    --, (weekday || '_' || strftime('%H', a.movie_starttime)) as 'session'
     , a.weekday
     , strftime('%H', a.movie_starttime) as 'hh'
     , SUM(a.ticket_sold)
@@ -151,7 +155,6 @@ movie_cnt AS (
 select
     a.theatreID
     , SUM( CASE WHEN strftime('%Y-%m', a.movie_starttime) = strftime('%Y-%m', 'now', '-32 days') THEN 1 ELSE 0 END ) as 'cnt'
-    --, COUNT(*) as 'cnt'
 from vShowDetails as a 
 group by a.theatreID
 ) ,
@@ -199,7 +202,7 @@ AND a.TheatreID is not null
 
 <br>
 
-<img src="screenshots/data-used__3.jpg" alt="Logo" height="210" width="490">
+<img src="screenshots/data-used__3.jpg" alt="Logo" height=auto width="490">
 <details> 
 <summary>sql</summary>
 
@@ -254,22 +257,33 @@ ORDER BY theatre, sortVal, hh
 
 <br>
 
-<img src="screenshots/data-used__4.jpg" alt="Logo" height="210" width="385">
+<img src="screenshots/data-used__4.jpg" alt="Logo" height=auto width="385">
 <details> 
 <summary>sql</summary>
 
 ```sql
-select a.house_name, a.house_alias1, a.houseid, a.theatre, a.theatre_en, a.theatreid, AVG(price) AS 'avg_price', SUM(profit) as 'profit', SUM(ticket_sold) as 'ticket_sold', MIN(CAPACITY) as 'capacity', count(*) as 'nob'
-from vShowDetails as a
-where a.price is not null
-group by a.house_name, a.house_alias1, a.houseid, a.theatre, a.theatre_en, a.theatreid
-order by theatreid, profit desc
+SELECT 
+	a.house_name
+	, a.house_alias1
+	, a.houseid
+	, a.theatre
+	, a.theatre_en
+	, a.theatreid
+	, AVG(price) AS 'avg_price'
+	, SUM(profit) as 'profit'
+	, SUM(ticket_sold) as 'ticket_sold'
+	, MIN(CAPACITY) as 'capacity'
+	, count(*) as 'nob'
+FROM vShowDetails as a
+WHERE a.price is not null
+GROUP BY a.house_name, a.house_alias1, a.houseid, a.theatre, a.theatre_en, a.theatreid
+ORDER BY theatreid, profit desc
 ```
 </details>
 
 <br>
 
-<img src="screenshots/data-used__5.jpg" alt="Logo" height="210" width="385">
+<img src="screenshots/data-used__5.jpg" alt="Logo" height=auto width="385">
 <details> 
 <summary>sql</summary>
 
@@ -299,8 +313,11 @@ GROUP BY a.theatre
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## 👨‍💻  Technologies Used
+<!-- TECHNOLOGIES USED -->
 <div id="technologies-used"></div>
+
+## 👨‍💻  Technologies Used
+
 
 * [React](https://reactjs.org/)
 * [highcharts](https://www.highcharts.com/)
@@ -316,21 +333,30 @@ you are advised to [carry some seeds in your pocket](https://www.theguardian.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
 <!-- GETTING STARTED -->
-## 🚀 Getting Started
 <div id="getting-started"></div>
+
+## 🚀 Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+
+<!-- PREREQUISITES -->
 <div id="prerequisites"></div>
+
+### Prerequisites
 
 * [Node.js](https://nodejs.org/en/) - this project was developed with Node.js v.16.13.1
 
-### Installation
+
+
+<!-- INSTALLATION -->
 <div id="installation"></div>
+
+### Installation
 
 1. Clone the repo
    ```sh
@@ -351,8 +377,11 @@ To get a local copy up and running follow these simple example steps.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## 👣 Approach
+
+<!-- APPROACH -->
 <div id="approach"></div>
+
+## 👣 Approach
 
 Coming soon!
 
@@ -361,9 +390,11 @@ Coming soon!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
 <!-- LICENSE -->
-## License
 <div id="license"></div>
+
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
@@ -372,12 +403,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- CONTACT -->
-## Contact
 <div id="contact"></div>
 
-Chris Suen - [LinkedIn](https://twitter.com/twitter_handle) - chrissssuen@gmail.com
+## Contact
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Chris Suen - chrissssuen@gmail.com
+<!-- - [LinkedIn](https://twitter.com/twitter_handle)  -->
+
+
+Project Link: [https://github.com/tophersss/HongKong-CinemasData](https://github.com/tophersss/HongKong-CinemasData)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
