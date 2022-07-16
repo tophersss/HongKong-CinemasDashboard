@@ -407,8 +407,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Chris Suen - chrissssuen@gmail.com
-<!-- - [LinkedIn](https://twitter.com/twitter_handle)  -->
+Chris Suen - chrissssuen@gmail.com - [LinkedIn][linkedin-url]
 
 
 Project Link: [https://github.com/tophersss/HongKong-CinemasData](https://github.com/tophersss/HongKong-CinemasData)
@@ -443,7 +442,7 @@ Project Link: [https://github.com/tophersss/HongKong-CinemasData](https://github
 [license-shield]: https://img.shields.io/github/license/tophersss/HongKong-CinemasDashboard?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/chris-suen-617b57242/
 [product-screenshot]: images/screenshot.png
 [hkmovie6-url]: https://hkmovie6.com
 
