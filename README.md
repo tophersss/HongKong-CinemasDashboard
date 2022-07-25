@@ -38,7 +38,7 @@
   <p align="center">
 	An interactive dashboard made with real-world data to visualize cinemas' popular times, sales, and seat popularity.
     <br />
-    <a href="https://github.com/tophersss/HongKong-CinemasScrapers" target="_blank"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tophersss/HongKong-CinemasData" target="_blank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://hongkong-cinemasdashboard.netlify.app/about" _target="blank">View Demo</a>
@@ -101,7 +101,7 @@ Up and running: [https://hongkong-cinemasdashboard.netlify.app/about](https://ho
 ## 📚  Data Used
 
 
-Data were collected from over 123,000 shows and 445 movies and stored in an SQLite database. Learn more in this [repo](https://github.com/tophersss/HongKong-CinemasScrapers). 
+Data were collected from over 156,956 shows and 520 movies and stored in an SQLite database. Learn more in this [repo](https://github.com/tophersss/HongKong-CinemasScrapers). 
 
 To make life easier, a database view `vShowDetails` was created to aggregate shows and calculate number of tickets sold and sales made. SQL query results were then exported as a JavaScript object to be used by the website.
 
