@@ -151,7 +151,7 @@ const MapInfoPanel = ({
         {activeCinema === null ? (
           "Search or Click On A Cinema To Show Dashboard"
         ) : (
-          <>
+          <div class="info-panel__content-wrapper">
             <Grid
               container
               className="stat-card__container"
@@ -234,7 +234,7 @@ const MapInfoPanel = ({
               activeHouseID={activeHouseID}
               handleSetActiveHouseID={handleSetActiveHouseID}
             />
-          </>
+          </div>
         )}
       </Paper>
     </div>
