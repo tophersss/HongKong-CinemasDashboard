@@ -101,7 +101,7 @@ const MapBox = ({
         <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url=`https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=${process.env.stadiamaps_key}`
+            url={`https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=${process.env.stadiamaps_key}`}
           />
         </LayersControl.BaseLayer>
 
